@@ -13,7 +13,7 @@
       
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="images/logo1_no_background.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
     
     
@@ -669,9 +669,9 @@ HypRel.plots(dir,show=bool)
 <span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#load csv file</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Your\path\csv_inventory_file.csv&#39;</span><span class="p">)</span>
 <span class="c1">#create the variable &quot;reg&quot; containing the HypRel class</span>
-<span class="n">reg</span> <span class="o">=</span> <span class="n">HypRel</span><span class="p">(</span><span class="s1">&#39;CAP&#39;</span><span class="p">,</span><span class="s2">&quot;HT&quot;</span><span class="p">,</span><span class="n">df</span><span class="p">)</span>
-<span class="hll"><span class="c1">#Run the models and save in the &quot;results&quot; variable</span>
-</span><span class="n">results</span> <span class="o">=</span> <span class="n">reg</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="hll"><span class="n">reg</span> <span class="o">=</span> <span class="n">HypRel</span><span class="p">(</span><span class="s1">&#39;CAP&#39;</span><span class="p">,</span><span class="s2">&quot;HT&quot;</span><span class="p">,</span><span class="n">df</span><span class="p">)</span>
+</span><span class="c1">#Run the models and save in the &quot;results&quot; variable</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">reg</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 <span class="c1">#Run a evaluation for the fitted models and save on &quot;metrics&quot; variable</span>
 <span class="n">metrics</span> <span class="o">=</span> <span class="n">reg</span><span class="o">.</span><span class="n">metrics</span><span class="p">()</span>
 <span class="c1">#Return the plots for the fitted models. </span>
@@ -679,6 +679,8 @@ HypRel.plots(dir,show=bool)
 <span class="n">reg</span><span class="o">.</span><span class="n">plots</span><span class="p">(</span><span class="s1">&#39;C:\Your\path</span><span class="se">\t</span><span class="s1">o_save&#39;</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="avaliable-models">Avaliable models</h3>
+<div class="highlight"><pre><span></span><code>models = [&#39;curtis&#39;, &#39;parabolic&#39;, &#39;stoffels&#39;, &#39;henriksen&#39;,&#39;prodan_i&#39;, &#39;prodan_ii&#39;, &#39;rna&#39;]
+</code></pre></div>
 <p><em>Where</em>: 
 $$
 {Ht=tree \,height}
