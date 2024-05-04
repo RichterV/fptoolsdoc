@@ -410,6 +410,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ranking-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ranking function
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -549,6 +558,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ranking-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ranking function
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -679,7 +697,7 @@ HypRel.plots(dir,show=bool)
 <span class="n">reg</span><span class="o">.</span><span class="n">plots</span><span class="p">(</span><span class="s1">&#39;C:\Your\path</span><span class="se">\t</span><span class="s1">o_save&#39;</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="avaliable-models">Avaliable models</h3>
-<div class="highlight"><pre><span></span><code>models = [&#39;curtis&#39;, &#39;parabolic&#39;, &#39;stoffels&#39;, &#39;henriksen&#39;,&#39;prodan_i&#39;, &#39;prodan_ii&#39;, &#39;rna&#39;]
+<div class="highlight"><pre><span></span><code>models = [&#39;curtis&#39;, &#39;parabolic&#39;, &#39;stoffels&#39;, &#39;henriksen&#39;,&#39;prodan_i&#39;, &#39;prodan_ii&#39;, &#39;ann&#39;]
 </code></pre></div>
 <p><em>Where</em>: 
 $$
@@ -718,12 +736,49 @@ $$</p>
 \tag{fonte:arial 12}
 \]</div>
 <h4 id="artificial-neural-network">Artificial Neural Network</h4>
-<p>FALTA DEFINIR A ESTRUTURA DE REDE QUE VAI SER USADA
-<div class="mermaid">graph TD
-    A[Input Neuron] --&gt; B1[Hidden Neuron 1]
-    A --&gt; B2[Hidden Neuron 2]
-    B1 --&gt; C[Output Neuron]
-    B2 --&gt; C</div></p>
+<p>When selecting the 'ann' model, 4 different structures of artificial neural networks will be tested. Only the result from 1 model will be returned. The model returned will be selected by the ranking function.
+<div class="mermaid">---
+title: ANN parameters
+---
+classDiagram
+    class MLPRegressor {
+      Epochs: 3000
+      Activation: logistic
+      Solver Mode: lbfgs
+      Batch size: dynamic
+      Larning rate init: 0.1
+      Learning rate mode: adaptive
+    }
+
+    class Model-0 {
+      Hidden layer sizes: (4,5)
+    }
+    class Model_1 {
+      Hidden layer sizes: (4,2)
+    }
+    class Model_2 {
+      Hidden layer sizes: (3,2)
+    }
+    class Model_3 {
+      Hidden layer sizes: (4,4)
+    }
+
+    MLPRegressor &lt;|-- Model-0
+    MLPRegressor &lt;|-- Model_1
+    MLPRegressor &lt;|-- Model_2
+    MLPRegressor &lt;|-- Model_3</div></p>
+<h4 id="ranking-function">Ranking function</h4>
+<p>For the 'ann' model, the module <a href="https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html">sklearn.neural_network.MLPRegressor</a> is used.</p>
+<p>To select the best-performing models and rank them accordingly, the following metrics are obtained:</p>
+<div class="highlight"><pre><span></span><code>* Mean Absolute Error (MAE)
+* Mean Absolute Percentage Error (MAPE)
+* Mean Squared Error (MSE)
+* Root Mean Squared Error (RMSE)
+* R Squared
+* Explained Variance
+* Mean Error
+</code></pre></div>
+<p>After obtaining the metric for each tested model, the values are normalized from 0 to 10. The worst model receives a score of 0, and the best model receives a score of 10.</p>
 
 
 
