@@ -673,10 +673,14 @@ HypRel.get_coef()
     subgraph plots
         runText3[Generate plots]
     end
+    subgraph coefficients
+        runText4[Return coefficients]
+    end
     %% Links para os subgráficos:
     HypRel-Module --&gt; run
     HypRel-Module --&gt; metrics
     HypRel-Module --&gt; plots
+    HypRel-Module --&gt; coefficients
 </div>
 <p>Create a variable for the HypRel Class</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">hyp_rel_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 3</span>
@@ -689,7 +693,9 @@ HypRel.get_coef()
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#load csv file</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#load csv file</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Your\path\csv_inventory_file.csv&#39;</span><span class="p">)</span>
 <span class="c1">#create the variable &quot;reg&quot; containing the HypRel class</span>
 <span class="hll"><span class="n">reg</span> <span class="o">=</span> <span class="n">HypRel</span><span class="p">(</span><span class="s1">&#39;CAP&#39;</span><span class="p">,</span><span class="s2">&quot;HT&quot;</span><span class="p">,</span><span class="n">df</span><span class="p">)</span>
@@ -700,6 +706,8 @@ HypRel.get_coef()
 <span class="c1">#Return the plots for the fitted models. </span>
 <span class="c1">#If show=True, will print on screen all the heigth and residuals plots. #If a directory is passed, will save all the plots in the directory.</span>
 <span class="n">reg</span><span class="o">.</span><span class="n">plots</span><span class="p">(</span><span class="s1">&#39;C:\Your\path</span><span class="se">\t</span><span class="s1">o_save&#39;</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1">#Get the coefficients for each model fitted</span>
+<span class="n">df_coefficients</span> <span class="o">=</span>  <span class="n">reg</span><span class="o">.</span><span class="n">get_coef</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="avaliable-models">Avaliable models</h3>
 <div class="highlight"><pre><span></span><code>models = [&#39;curtis&#39;, &#39;parabolic&#39;, &#39;stoffels&#39;, &#39;henriksen&#39;,&#39;prodan_i&#39;, &#39;prodan_ii&#39;, &#39;ann&#39;]
