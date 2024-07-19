@@ -469,6 +469,26 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="plot_alocation_qgis.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Forest Inventory Planing QGIS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -803,7 +823,8 @@
 <li>Explanation about ANN below.</li>
 </ol>
 <h4 id="artificial-neural-network">Artificial Neural Network</h4>
-<p>When selecting the 'ann' model, 4 different structures of artificial neural networks will be tested. Only the result from 1 model will be returned. The model returned will be selected by the ranking function.
+<p>When selecting the 'ann' model, 4 different structures of artificial neural networks will be tested. Only the result from 1 model will be returned. The model returned will be selected by the ranking function.<br />
+For the 'ann' model, the module <a href="https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html">sklearn.neural_network.MLPRegressor</a> is used.
 <div class="mermaid">---
 title: ANN parameters
 ---
@@ -835,7 +856,6 @@ classDiagram
     MLPRegressor &lt;|-- Model_2
     MLPRegressor &lt;|-- Model_3</div></p>
 <h4 id="ranking-function">Ranking function</h4>
-<p>For the 'ann' model, the module <a href="https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html">sklearn.neural_network.MLPRegressor</a> is used.</p>
 <p>To select the best-performing models and rank them accordingly, the following metrics are obtained:</p>
 <table>
 <thead>
@@ -1000,7 +1020,7 @@ classDiagram
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.footer", "content.code.annotate"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["content.footnote.tooltips", "navigation.footer", "content.code.annotate"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="assets/javascripts/bundle.1e8ae164.min.js"></script>
