@@ -393,6 +393,26 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bug_report.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bug Report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -490,12 +510,12 @@
 </tbody>
 </table>
 <h2 id="class-functions">Class Functions</h2>
-<p class="annotate"><div class="highlight"><span class="filename">functions and parameters</span><pre><span></span><code><span class="n">PlotAlocation</span><span class="o">.</span><span class="n">create_plots</span><span class="p">(</span><span class="n">distribuition</span><span class="p">,</span> <span class="n">plot_format</span><span class="p">,</span> <span class="n">plot_area</span><span class="p">,</span>
+<p class="annotate"><div class="highlight"><span class="filename">functions and parameters</span><pre><span></span><code><span class="n">PlotAlocation</span><span class="o">.</span><span class="n">create_plots</span><span class="p">(</span><span class="n">distribution</span><span class="p">,</span> <span class="n">plot_format</span><span class="p">,</span> <span class="n">plot_area</span><span class="p">,</span>
                             <span class="n">sample_number</span><span class="p">,</span> <span class="n">min_border_distance</span><span class="p">,</span> 
                             <span class="n">save_buffer</span><span class="p">,</span> <span class="n">show_plot</span><span class="p">,</span> <span class="n">save_dir</span><span class="p">)</span>  <span class="c1">#(1) </span>
 </code></pre></div></p>
 <ol>
-<li><strong>distribuition</strong> = Type of distribution or allocation that the plots should be subjected to.<br />
+<li><strong>distribution</strong> = Type of distribution or allocation that the plots should be subjected to.<br />
 <strong>plot_format</strong> = Format of the plot that will be installed.<br />
 <strong>plot_area</strong> = Area of the plot that will be installed.    <br />
 <strong>sample_number</strong> = Could be the number of plots or the percentage of the total area that will be sampled. If <code>value &lt;</code> 1 it will be understood as a percentage. If <code>value &gt;= 1</code> it will be understood that you are setting the quantity of plots to allocate.<br />
@@ -538,7 +558,7 @@
 <span class="normal">4</span>
 <span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">fptools.inventory_plots</span> <span class="kn">import</span> <span class="n">PlotAlocation</span> <span class="c1">#(1)</span>
 <span class="n">plots</span> <span class="o">=</span> <span class="n">PlotAlocation</span><span class="p">(</span><span class="s1">&#39;example/shapefile/path.shp&#39;</span><span class="p">,</span><span class="n">epsg</span><span class="o">=</span><span class="s1">&#39;32722&#39;</span><span class="p">)</span> <span class="c1">#(2)</span>
-<span class="n">plots</span><span class="o">.</span><span class="n">create_plots</span><span class="p">(</span><span class="n">distribuition</span> <span class="o">=</span> <span class="s2">&quot;random&quot;</span><span class="p">,</span> <span class="n">sample_number</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span>
+<span class="n">plots</span><span class="o">.</span><span class="n">create_plots</span><span class="p">(</span><span class="n">distribution</span> <span class="o">=</span> <span class="s2">&quot;random&quot;</span><span class="p">,</span> <span class="n">sample_number</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span>
                     <span class="n">min_border_distance</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">save_dir</span><span class="o">=</span><span class="s1">&#39;points.shp&#39;</span><span class="p">,</span>
                     <span class="n">show_plot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">save_buffer</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#(3)</span>
 </code></pre></div></td></tr></table></div></p>
