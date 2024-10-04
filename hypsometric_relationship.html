@@ -715,9 +715,10 @@
 </table>
 <h3 id="class-functions">Class Functions</h3>
 <p class="annotate"><div class="highlight"><span class="filename">functions and parameters</span><pre><span></span><code>  <span class="n">HypRel</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>  
-  <span class="n">HypRel</span><span class="o">.</span><span class="n">metrics</span><span class="p">()</span>  
+  <span class="n">HypRel</span><span class="o">.</span><span class="n">view_metrics</span><span class="p">()</span>  
   <span class="n">HypRel</span><span class="o">.</span><span class="n">plots</span><span class="p">(</span><span class="nb">dir</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">show</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="c1">#(1) </span>
   <span class="n">HypRel</span><span class="o">.</span><span class="n">get_coef</span><span class="p">()</span>
+  <span class="n">HypRel</span><span class="o">.</span><span class="n">predict</span><span class="p">()</span>
 </code></pre></div></p>
 <ol>
 <li><strong>dir</strong> = The directory you want to save your plots! 
@@ -737,7 +738,7 @@
 <td>Fit the models</td>
 </tr>
 <tr>
-<td><strong>.metrics()</strong></td>
+<td><strong>.view_metrics()</strong></td>
 <td>Return a table of metrics of each evaluated model</td>
 </tr>
 <tr>
@@ -747,6 +748,10 @@
 <tr>
 <td><strong>.get_coef()</strong></td>
 <td>Return the coefficients for each model</td>
+</tr>
+<tr>
+<td><strong>.predict()</strong></td>
+<td>Return the predict heights and used models in new columns</td>
 </tr>
 </tbody>
 </table>
@@ -772,11 +777,15 @@
     subgraph coefficients
         runText4[Return coefficients]
     end
+    subgraph predict
+        runText5[Return the estimated heights and used functions]
+    end
     %% Links para os subgráficos:
     HypRel-Module --&gt; run
     HypRel-Module --&gt; metrics
     HypRel-Module --&gt; plots
     HypRel-Module --&gt; coefficients
+    HypRel-Module --&gt; predict
 </div>
 <p>Create a variable for the HypRel Class</p>
 <p class="annotate"><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">hyp_rel_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">3</span>
@@ -784,20 +793,23 @@
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Your\path\csv_inventory_file.csv&#39;</span><span class="p">)</span> <span class="c1">#(1)</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Your\path\csv_inventory_file.csv&#39;</span><span class="p">)</span> <span class="c1">#(1)</span>
 <span class="n">reg</span> <span class="o">=</span> <span class="n">HypRel</span><span class="p">(</span><span class="s1">&#39;CAP&#39;</span><span class="p">,</span><span class="s2">&quot;HT&quot;</span><span class="p">,</span><span class="n">df</span><span class="p">)</span> <span class="c1">#(2)</span>
 <span class="n">results</span> <span class="o">=</span> <span class="n">reg</span><span class="o">.</span><span class="n">run</span><span class="p">()</span> <span class="c1">#(3) </span>
-<span class="hll"><span class="n">metrics</span> <span class="o">=</span> <span class="n">reg</span><span class="o">.</span><span class="n">metrics</span><span class="p">()</span> <span class="c1">#(4) </span>
+<span class="hll"><span class="n">metrics</span> <span class="o">=</span> <span class="n">reg</span><span class="o">.</span><span class="n">view_metrics</span><span class="p">()</span> <span class="c1">#(4) </span>
 </span><span class="n">reg</span><span class="o">.</span><span class="n">plots</span><span class="p">(</span><span class="s1">&#39;C:\Your\path</span><span class="se">\t</span><span class="s1">o_save&#39;</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#(5) </span>
 <span class="n">df_coefficients</span> <span class="o">=</span>  <span class="n">reg</span><span class="o">.</span><span class="n">get_coef</span><span class="p">()</span> <span class="c1">#(6) </span>
+<span class="n">final_results</span> <span class="o">=</span>  <span class="n">reg</span><span class="o">.</span><span class="n">predict</span><span class="p">()</span> <span class="c1">#(7) </span>
 </code></pre></div></td></tr></table></div></p>
 <ol>
 <li>Load your csv file.</li>
 <li>Create the variable <code>reg</code> containing the HypRel class.</li>
 <li>Run the models and save in the <code>results</code> variable.</li>
-<li>Run a evaluation for the fitted models and save on <code>metrics</code> variable.</li>
-<li>Return the plots for the fitted models.</li>
-<li>Get the coefficients for each model fitted.</li>
+<li>Evaluate the fitted models and save the metrics in the <code>metrics</code> variable.</li>
+<li>Generate the plots for the fitted models.</li>
+<li>Retrieve the coefficients for each fitted model.</li>
+<li>Obtain the final heights and the models used for estimation.</li>
 </ol>
 <h3 id="available-models">Available models</h3>
 <div class="annotate">
