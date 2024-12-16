@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="index.html">
+        <link rel="prev" href="volumetrics.html">
       
       
-        <link rel="next" href="plot_alocation_qgis.html">
+        <link rel="next" href="bug_report.html">
       
       
       <link rel="icon" href="images/logo1_no_background.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Getting Started - ForestPy Tools</title>
+        <title>Assortments - ForestPy Tools</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#getting-started" class="md-skip">
+        <a href="#assortments" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Getting Started
+              Assortments
             
           </span>
         </div>
@@ -250,19 +250,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="getting_started.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="getting_started.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -271,7 +262,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -360,10 +350,30 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="assortments.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Assortments
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="assortments.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -372,6 +382,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#class-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class Parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-of-assortments-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example of assortments table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -436,6 +502,50 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#class-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class Parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-of-assortments-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example of assortments table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -449,15 +559,174 @@
                   
 
 
-<h1 id="getting-started">Getting Started</h1>
+<h1 id="assortments">Assortments</h1>
 <hr />
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This library is under development, none of the presented solutions are available for download.</p>
 </div>
-<p>To begin processing your forest data, as easily as possible, first install <em>FP Tools</em>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">fptools</span>
+<p>Obtain the products generated by the forest inventory based on a product table. Use fitted taper functions to estimate commercial and non-commercial volume generated by the forest. Estimate volumes using fitted volumetric equations.</p>
+<h3 id="class-parameters">Class Parameters</h3>
+<div class="highlight"><pre><span></span><code>Assortments(df, assortments_priority=None)
 </code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>df</strong></td>
+<td>The dataframe containing the assortments data.</td>
+</tr>
+<tr>
+<td><strong>assortments_priority</strong></td>
+<td>(Optional) The name of the column who defines the assortments priority. If <code>None</code>, uses the default order from the dataframe.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-of-assortments-table">Example of assortments table</h3>
+<table>
+<thead>
+<tr>
+<th>Product</th>
+<th>Length min (m)</th>
+<th>Length max (m)</th>
+<th>D min (cm)</th>
+<th>Loss (cm)</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prod. 1</td>
+<td>10</td>
+<td>10</td>
+<td>12</td>
+<td>0.5</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Prod. 2</td>
+<td>2</td>
+<td>2</td>
+<td>8</td>
+<td>0.5</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Prod. 3</td>
+<td>1</td>
+<td>1.5</td>
+<td>2</td>
+<td>0.5</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>*<em>The column order must be followed.</em></p>
+<h3 id="class-functions">Class Functions</h3>
+<p class="annotate"><div class="highlight"><span class="filename">functions and parameters</span><pre><span></span><code>  <span class="n">Assortments</span><span class="o">.</span><span class="n">get_assortments</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">model_path</span><span class="p">,</span> <span class="n">trees_df</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="p">,</span> <span class="n">tree_height</span><span class="p">,</span>
+                              <span class="n">stump</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">initial_height</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="c1">#(1)</span>
+  <span class="n">Assortments</span><span class="o">.</span><span class="n">get_taper_volumes</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">model_path</span><span class="p">,</span> <span class="n">trees_df</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="p">,</span>
+                                <span class="n">tree_height</span><span class="p">,</span> <span class="n">bark_factor</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">stump</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span> <span class="c1">#(2)</span>
+  <span class="n">Assortments</span><span class="o">.</span><span class="n">get_volumes</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">model_path</span><span class="p">,</span> <span class="n">trees_df</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="p">,</span>
+                          <span class="n">tree_height</span><span class="p">,</span> <span class="n">bark_factor</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="c1">#(3)</span>
+</code></pre></div></p>
+<ol>
+<li>
+<p><strong>model</strong> = The name of the taper function or 'ann' to be used to calculate the assortments.<br />
+<strong>model_path</strong> = Path to the <code>.json</code> file containing the coefficients of the fitted models or the <code>.pkl</code> file containing the fitted artificial neural network.<br />
+<strong>trees_df</strong> = Pandas DataFrame containing the inventory for which the assortments should be calculated.<br />
+<strong>tree_dbh</strong> = The name of the column containing the diameter at breast height (DBH) values in centimeters.<br />
+<strong>tree_height</strong> = The name of the column containing the total height values of the trees in meters.<br />
+<strong>stump</strong> = (Optional) Stump height value (meters) to be considered in the assortment calculation. If <code>stump==None</code>, it defaults to <code>0.1</code>.<br />
+<strong>initial_height</strong> = (Optional) Height (meters) at which the products begin to be generated. Useful for cases where the base of the tree was damaged by fire or used for resin extraction.</p>
+</li>
+<li>
+<p><strong>model</strong> = The name of the taper function or taper 'ann' to be used to calculate the volume.<br />
+<strong>model_path</strong> = Path to the <code>.json</code> file containing the coefficients of the fitted models or the <code>.pkl</code> file containing the fitted artificial neural network.<br />
+<strong>trees_df</strong> = Pandas DataFrame containing the inventory for which the volumes should be calculated.<br />
+<strong>tree_dbh</strong> = The name of the column containing the diameter at breast height (DBH) values in centimeters.<br />
+<strong>tree_height</strong> = The name of the column containing the total height values of the trees in meters.<br />
+<strong>bark_factor</strong> = (Optional) Value of the bark factor to be used to calculate volumes without bark.<br />
+<strong>stump</strong> = (Optional) Stump height value (meters) to be considered in the volumes calculation. If <code>stump==None</code>, it defaults to <code>0.1</code>.  </p>
+</li>
+<li>
+<p><strong>model</strong> = The name of the volumetric function or volumetric 'ann' to be used to calculate the volume.<br />
+<strong>model_path</strong> = Path to the <code>.json</code> file containing the coefficients of the fitted models or the <code>.pkl</code> file containing the fitted artificial neural network.<br />
+<strong>trees_df</strong> = Pandas DataFrame containing the inventory for which the volumes should be calculated.<br />
+<strong>tree_dbh</strong> = The name of the column containing the diameter at breast height (DBH) values in centimeters.<br />
+<strong>tree_height</strong> = The name of the column containing the total height values of the trees in meters.<br />
+<strong>bark_factor</strong> = (Optional) Value of the bark factor to be used to calculate volumes without bark.  </p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>.get_assortments()</strong></td>
+<td>Returns the <code>trees_df</code> dataframe with additional columns indicating the number of products generated for each assortment, as well as the volume generated for each assortment in each tree. Calculates also the comercial volume, the total volume of the tree and also the wasted volume.</td>
+</tr>
+<tr>
+<td><strong>.get_taper_volumes()</strong></td>
+<td>Returns the <code>trees_df</code> with the volumes calculated based on the integration of taper functions. It calculates the total volume with bark and without bark.</td>
+</tr>
+<tr>
+<td><strong>.get_volumes()</strong></td>
+<td>Returns the <code>trees_df</code> with the volumes calculated based on the fitted volumetric functions. It calculates the total volume with bark and without bark.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-usage">Example Usage</h3>
+<p class="annotate"><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">taper_functions_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">fptools.assortments</span> <span class="kn">import</span> <span class="n">Assortments</span> <span class="c1">#(1)</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> <span class="c1">#(2)</span>
+</code></pre></div></td></tr></table></div></p>
+<ol>
+<li>Import <code>Assortments</code> class.</li>
+<li>Import <code>pandas</code> for data manipulation.</li>
+</ol>
+<p>Create a variable for the Volumetrics Class</p>
+<p class="annotate"><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">taper_functions_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">assortments_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Your\path\csv_tree_cubage_file.csv&#39;</span><span class="p">)</span> <span class="c1">#(1)</span>
+<span class="n">inventory_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Your\path\csv_tree_cubage_file.csv&#39;</span><span class="p">)</span> <span class="c1">#(2)</span>
+
+<span class="hll"><span class="n">Prod</span> <span class="o">=</span> <span class="n">Assortments</span><span class="p">(</span><span class="n">assortments_df</span><span class="p">)</span> <span class="c1">#(3)</span>
+</span>
+
+<span class="n">assortments</span> <span class="o">=</span> <span class="n">Prod</span><span class="o">.</span><span class="n">get_assortments</span><span class="p">(</span><span class="s1">&#39;kozak&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;D:\Your\path\for\taper_functions_coefficients.json&quot;</span><span class="p">,</span>
+                                   <span class="n">inventory_df</span><span class="p">,</span> <span class="s2">&quot;DAP&quot;</span><span class="p">,</span> <span class="s2">&quot;HT&quot;</span><span class="p">)</span> <span class="c1">#(4)</span>
+<span class="n">taper_volumes</span> <span class="o">=</span> <span class="n">Prod</span><span class="o">.</span><span class="n">get_taper_volumes</span><span class="p">(</span><span class="s1">&#39;bi&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;D:\Your\path\for\taper_functions_coefficients.json&quot;</span><span class="p">,</span>
+                                       <span class="n">inventario</span><span class="p">,</span> <span class="s2">&quot;DAP&quot;</span><span class="p">,</span> <span class="s2">&quot;HT&quot;</span><span class="p">,</span> <span class="mf">.9</span><span class="p">)</span> <span class="c1">#(5)             </span>
+<span class="n">volumes</span> <span class="o">=</span> <span class="n">Prod</span><span class="o">.</span><span class="n">get_volumes</span><span class="p">(</span><span class="s1">&#39;meyer&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;D:\Your\path\for\taper_functions_coefficients.json&quot;</span><span class="p">,</span>
+                           <span class="n">inventario</span><span class="p">,</span> <span class="s2">&quot;DAP&quot;</span><span class="p">,</span> <span class="s2">&quot;HT&quot;</span><span class="p">,</span> <span class="mf">.85</span><span class="p">)</span> <span class="c1">#(6)</span>
+</code></pre></div></td></tr></table></div></p>
+<ol>
+<li>Load your assortments df from a csv file.</li>
+<li>Load your inventory df from a csv file.</li>
+<li>Create the variable <code>Prod</code> containing the <code>Assortments</code> class and using the <code>assortments_df</code> dataframe as products.</li>
+<li>Calculate assortments for each tree in the <code>inventory_df</code> using the <code>kozak</code> model, the <code>DAP</code> column for DBH values and the <code>HT</code> column for the tree height values.</li>
+<li>Calculate volumes with integration of <code>bi</code> function for each tree in the <code>inventory_df</code> using the <code>bi</code> model, the <code>DAP</code> column for DBH values and the <code>HT</code> column for the tree height values. Also uses a bark factor of <code>90%</code>.</li>
+<li>Calculate volumes with volumetric function for each tree in the <code>inventory_df</code> using the <code>meyer</code> model, the <code>DAP</code> column for DBH values and the <code>HT</code> column for the tree height values. Also uses a bark factor of <code>85%</code>.</li>
+</ol>
 
 
 
@@ -487,7 +756,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
+          <a href="volumetrics.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Volumetrics">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -497,20 +766,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Home
+                Volumetrics
               </div>
             </div>
           </a>
         
         
           
-          <a href="plot_alocation_qgis.html" class="md-footer__link md-footer__link--next" aria-label="Next: Forest Inventory Planing QGIS">
+          <a href="bug_report.html" class="md-footer__link md-footer__link--next" aria-label="Next: Bug Report">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Forest Inventory Planing QGIS
+                Bug Report
               </div>
             </div>
             <div class="md-footer__button md-icon">
