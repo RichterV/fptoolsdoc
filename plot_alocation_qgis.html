@@ -475,6 +475,26 @@
   
   
     <li class="md-nav__item">
+      <a href="forest_report.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Forest Report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="bug_report.html" class="md-nav__link">
         
   
@@ -599,10 +619,12 @@
 <h4 id="installation-via-zip-file">Installation via zip file</h4>
 <p>If you prefer, <a href="https://github.com/RichterV/ForestPyTools-QGIS-module">click here</a> to download the ZIP file containing the plugin files. For more information about installation, see the <a href="https://docs.qgis.org/3.34/en/docs/user_manual/plugins/plugins.html">QGIS plugins installation guide</a>.</p>
 <h2 id="plugin-interface">Plugin Interface</h2>
-<figure>
-<figcaption>This is the plugin interface. Below, you will learn how to configure and allocate your plots.</figcaption>
-<img _="," alt="Plugin interface" height="417" src="images/plugin_interface.png" width="387" />
+<figure style="display: inline-block; text-align: center;">
+  <figcaption>This is the plugin interface. Below, you will learn how to configure and allocate your plots.</figcaption>
+  <img src="images/plugin_interface.png" alt="Plugin interface" 
+       style="width: 387px; height: 417px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
 </figure>
+
 <h2 id="plugin-basics">Plugin Basics</h2>
 <table>
 <thead>
@@ -625,6 +647,10 @@
 <td>The shapefile with the polygon of the area.</td>
 </tr>
 <tr>
+<td><strong>Use a column to define plots number</strong></td>
+<td>If selected, allows the user to choose a column to define the number of plots per polygon.</td>
+</tr>
+<tr>
 <td><strong>Plot area</strong></td>
 <td>Area in square meters that each plot will have.</td>
 </tr>
@@ -633,8 +659,12 @@
 <td>Could be the number of plots or the percentage of the total area that will be sampled. If <code>value &lt; 1</code> it will be understood as a percentage. If <code>value &gt;= 1</code> it will be understood that you are setting the quantity of plots to allocate.</td>
 </tr>
 <tr>
+<td><strong>By hectare</strong></td>
+<td>If selected, applies the value of <code>Sample numbers or sample percentage</code> per hectare. The value must be greater than 1.</td>
+</tr>
+<tr>
 <td><strong>Minimum border distance (meters)</strong></td>
-<td>(Optional) Define the minimum distance in meters that each plot will have from the border.</td>
+<td>(Optional) Defines the minimum distance in meters that each plot will have from the border.</td>
 </tr>
 <tr>
 <td><strong>EPSG</strong></td>
