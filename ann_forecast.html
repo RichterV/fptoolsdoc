@@ -569,6 +569,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Ann Forecast
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="ann_forecast.html" class="md-nav__link md-nav__link--active">
         
   
@@ -578,6 +589,100 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#class-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class Parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ann-trainer" class="md-nav__link">
+    <span class="md-ellipsis">
+      ANN Trainer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ANN Trainer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ann-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ann structures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ann-predictor" class="md-nav__link">
+    <span class="md-ellipsis">
+      ANN Predictor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ANN Predictor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-functions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -703,6 +808,89 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#class-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class Parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ann-trainer" class="md-nav__link">
+    <span class="md-ellipsis">
+      ANN Trainer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ANN Trainer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ann-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ann structures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ann-predictor" class="md-nav__link">
+    <span class="md-ellipsis">
+      ANN Predictor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ANN Predictor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-functions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -717,6 +905,192 @@
 
 
 <h1 id="ann-forecast">ANN Forecast</h1>
+<hr />
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This library is under development, none of the presented solutions are available for download.</p>
+</div>
+<p>Use continuous forest inventory databases to predict forest growth and production. Utilize artificial neural networks for greater flexibility. With this module, you will be able to estimate volume, the number of stems, basal area, among other variables of interest.</p>
+<hr />
+<h2 id="class-parameters">Class Parameters</h2>
+<h2 id="ann-trainer">ANN Trainer</h2>
+<div class="highlight"><pre><span></span><code>AnnTrainer(df, y, *train_columns, iterator=None)
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>df</strong></td>
+<td>The dataframe containing the continous processed forest inventory data.</td>
+</tr>
+<tr>
+<td><strong>y</strong></td>
+<td>The target variable for training the ANN (Y), the variable on which the ANN will be trained to predict.</td>
+</tr>
+<tr>
+<td><strong>*train_columns</strong></td>
+<td>(<code>*args</code>) Names of the columns that will be used to train the artificial neural network so that it can predict the values of Y. Must be numeric.</td>
+</tr>
+<tr>
+<td><strong>iterator</strong></td>
+<td>(Optional) Name of the column that contains the <code>iterator</code>. An artificial neural network will be adjusted for each <code>iterator</code>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="class-functions">Class Functions</h3>
+<p class="annotate"><div class="highlight"><span class="filename">functions and parameters</span><pre><span></span><code>  <span class="n">AnnTrainer</span><span class="o">.</span><span class="n">fit_model</span><span class="p">(</span><span class="n">save_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span><span class="c1">#(1)</span>
+</code></pre></div></p>
+<ol>
+<li><strong>save_dir</strong> = Directory where the <code>.pkl</code> ann file will be saved.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.fit_model()</td>
+<td>Adjust the model using <code>*train_columns</code> to predict the variable Y.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ann-structures">Ann structures</h3>
+<p>6 different structures of artificial neural networks will be tested. Only the result from 1 model will be returned. The model returned will be selected by the ranking function.<br />
+For the 'ann' model, the module <a href="https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html">sklearn.neural_network.MLPRegressor</a> is used.
+<div class="mermaid">---
+title: ANN Parameters
+---
+classDiagram
+    direction LR
+
+    class MLPRegressor {
+      Epochs: 3000
+      Activation: logistic
+      Solver Mode: lbfgs
+      Batch size: dynamic
+      Learning rate init: 0.1
+      Learning rate mode: adaptive
+    }
+
+    class Model-0 {
+      Hidden layer sizes: (15, 25, 20, 30, 10)
+    }
+    class Model-1 {
+      Hidden layer sizes: (35, 10, 25, 35, 15)
+
+    }
+    class Model-2 {
+      Hidden layer sizes: (25, 15, 30, 20)
+
+    }
+    class Model-3 {
+      Hidden layer sizes: (15, 35, 45)
+    }
+    class Model-4 {
+      Hidden layer sizes: (35, 10, 25, 35, 15)
+    }
+    class Model-5 {
+       Hidden layer sizes: (35, 10, 25, 35, 15, 20, 15, 30)
+    }
+
+
+    MLPRegressor &lt;|-- Model-0
+    MLPRegressor &lt;|-- Model-1
+    MLPRegressor &lt;|-- Model-2
+    MLPRegressor &lt;|-- Model-3
+    MLPRegressor &lt;|-- Model-4
+    MLPRegressor &lt;|-- Model-5</div></p>
+<h2 id="ann-predictor">ANN Predictor</h2>
+<div class="highlight"><pre><span></span><code>AnnPredictor(pkl_file)
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>pkl_file</strong></td>
+<td>Directory of the <code>.pkl</code> file that will be used for prediction.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="class-functions_1">Class Functions</h5>
+<p class="annotate"><div class="highlight"><span class="filename">functions and parameters</span><pre><span></span><code>  <span class="n">AnnPredictor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span><span class="c1">#(1)</span>
+</code></pre></div></p>
+<ol>
+<li>Returns the prediction of <code>Y</code> for the <code>*args</code> columns. The <code>*args</code> columns must be the same as those used in <code>*train_columns</code> for training.  </li>
+</ol>
+<h3 id="example-usage">Example Usage</h3>
+<p class="annotate"><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">ann_forecast_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">fptools.forecast</span> <span class="kn">import</span> <span class="n">AnnTrainer</span><span class="p">,</span> <span class="n">AnnPredictor</span> <span class="c1">#(1)</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> <span class="c1">#(2)</span>
+</code></pre></div></td></tr></table></div></p>
+<ol>
+<li>Import <code>AnnTrainer</code> and <code>AnnPredictor</code> class.</li>
+<li>Import <code>pandas</code> for data manipulation.</li>
+</ol>
+<p class="annotate"><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">ann_forecast_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">df_train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Your\path\continuous_inventory_data.csv&#39;</span><span class="p">)</span> <span class="c1">#(1)</span>
+<span class="n">df_predictions</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Your\path\new_inventory_data.csv&#39;</span><span class="p">)</span> <span class="c1">#(2)</span>
+<span class="n">columns_used_for_training</span> <span class="o">=</span> <span class="p">[</span>
+<span class="hll">                            <span class="s2">&quot;age&quot;</span><span class="p">,</span>
+</span>                            <span class="s2">&quot;shafts&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;basal-area&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;HMAX&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;DMAX&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;DG&quot;</span>
+                            <span class="p">]</span> <span class="c1">#(3)</span>
+<span class="n">ann_train</span> <span class="o">=</span> <span class="n">AnnTrainer</span><span class="p">(</span><span class="n">df_train</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;commercial-volume&quot;</span><span class="p">,</span>
+                       <span class="o">*</span><span class="n">columns_used_for_training</span><span class="p">,</span>
+                        <span class="n">iterator</span><span class="o">=</span><span class="s2">&quot;Genetic Material&quot;</span><span class="p">)</span> <span class="c1">#(4)</span>
+<span class="n">ann_train_metrics</span> <span class="o">=</span> <span class="n">ann_train</span><span class="o">.</span><span class="n">fit_model</span><span class="p">(</span>
+                                        <span class="n">save_dir</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:\Your\path\output&quot;</span><span class="p">)</span> <span class="c1">#(5)</span>
+
+
+<span class="n">ann_predictor</span> <span class="o">=</span> <span class="n">AnnPredictor</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Your\path\output\comercial-volume_ann_predictor_GM-A.pkl&quot;</span><span class="p">)</span> <span class="c1">#(6)</span>
+
+
+<span class="n">predicted_commercial_volume</span> <span class="o">=</span> <span class="n">ann_predictor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">df_predictions</span><span class="p">,</span> <span class="o">*</span><span class="n">columns_used_for_training</span><span class="p">)</span> <span class="c1">#(7)</span>
+</code></pre></div></td></tr></table></div></p>
+<ol>
+<li>Load your CSV file for training de ann.</li>
+<li>Load your CSV file for predictions.</li>
+<li>Create a list containing the names of the columns that will be used to predict Y. </li>
+<li>Create the variable <code>ann_train</code> containing the <code>AnnTrainer</code> class using the column <code>comercial-volume</code> as the <code>y</code>, the <code>columns_used_for_training</code> as <code>x</code> and the column <code>Genetic Material</code> as iterator.  </li>
+<li>Adjust the ann models, saving the <code>.pkl</code> files in the folder <code>C:\Your\path\output</code>, and save the training metrics in the variable <code>ann_train_metrics</code>.  </li>
+<li>Load the adjusted model for <code>Genetic Material A</code> and save it in the variable <code>ann_predictor</code>.  </li>
+<li>Make predictions of <code>commercial-volume</code> using the columns <code>columns_used_for_training</code> from <code>df_predictions</code>.</li>
+</ol>
 
 
 
@@ -846,9 +1220,9 @@
     
       <script src="assets/javascripts/bundle.1e8ae164.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
       
-        <script src="popup.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs" type="module"></script>
       

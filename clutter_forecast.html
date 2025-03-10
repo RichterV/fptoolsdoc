@@ -1042,7 +1042,7 @@
 <p class="admonition-title">Warning</p>
 <p>This library is under development, none of the presented solutions are available for download.</p>
 </div>
-<p>Use continuous forest inventory databases to predict forest growth and production. Utilize traditional methods such as the Clutter model or artificial neural networks for greater flexibility. With this module, you will be able to estimate volume, the number of stems, basal area, among other variables of interest.</p>
+<p>Use continuous forest inventory databases to predict forest growth and production. Utilize traditional method Clutter model. With this module, you will be able to estimate volume and basal area.</p>
 <hr />
 <h2 id="class-parameters">Class Parameters</h2>
 <h2 id="clutter-trainer">Clutter Trainer</h2>
@@ -1058,7 +1058,7 @@
 <tbody>
 <tr>
 <td><strong>df</strong></td>
-<td>The dataframe containing the processed forest inventory data.</td>
+<td>The dataframe containing the continous processed forest inventory data.</td>
 </tr>
 <tr>
 <td><strong>age1</strong></td>
@@ -1288,7 +1288,7 @@
 <li>Import <code>ClutterTrainer</code> and <code>ClutterPredictor</code> class.</li>
 <li>Import <code>pandas</code> for data manipulation.</li>
 </ol>
-<p class="annotate"><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">taper_functions_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 3</span>
+<p class="annotate"><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">clutter_forecast_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 3</span>
 <span class="normal"> 4</span>
 <span class="normal"> 5</span>
 <span class="normal"> 6</span>
@@ -1328,12 +1328,12 @@
 <div class="swiper">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
-    <!-- Slides -->
+    <!-- Slides contendo os gráficos -->
     <div class="swiper-slide">
-      <img src="images/clutter_forecast/basal_area.png" alt="First Image" class="swiper-image">
+      <div id="ba2-chart" class="plot-container"></div>
     </div>
     <div class="swiper-slide">
-      <img src="images/clutter_forecast/volume.png" alt="Second Image" class="swiper-image">
+      <div id="volume-chart" class="plot-container"></div>
     </div>
   </div>
 
@@ -1345,178 +1345,73 @@
   <div class="swiper-button-next"></div>
 </div>
 
-<!-- Modal para tela cheia -->
-<div id="fullscreen-modal" class="fullscreen-modal">
-  <span class="close-modal">&times;</span>
-  <img id="fullscreen-img" class="fullscreen-img">
-
-  <!-- Botões de navegação -->
-  <button id="prev-img" class="modal-nav prev">&#10094;</button>
-  <button id="next-img" class="modal-nav next">&#10095;</button>
-</div>
-
-<style>
-/* Personaliza os botões de navegação do Swiper */
-.swiper-button-next, 
-.swiper-button-prev {
-  color: rgba(139, 195, 75, 1) !important; /* Verde */
-  background: rgba(0, 0, 0, 0.3); /* Fundo semitransparente */
-  padding: 15px;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-}
-
-/* Efeito hover ao passar o mouse */
-.swiper-button-next:hover, 
-.swiper-button-prev:hover {
-  background: rgba(139, 195, 75, 0.8); /* Verde mais forte no hover */
-}
-
-/* Ajusta o tamanho do ícone dentro dos botões */
-.swiper-button-next::after, 
-.swiper-button-prev::after {
-  font-size: 20px; /* Tamanho do ícone */
-  color: white; /* Mantém o ícone branco para contraste */
-}
-
-
-/* Estiliza o modal em tela cheia */
-.fullscreen-modal {
-  display: none; /* Inicialmente oculto */
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.fullscreen-img {
-  max-width: 90%;
-  max-height: 90%;
-}
-
-.close-modal {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 40px;
-  color: rgba(139, 195, 75, 1);
-  cursor: pointer;
-}
-
-/* Estilização dos botões de navegação */
-.modal-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.5);
-  border: none;
-  color: white;
-  font-size: 30px;
-  cursor: pointer;
-  padding: 3px;
-  border-radius: 50%;
-}
-
-.prev {
-  left: 20px;
-}
-
-.next {
-  right: 20px;
-}
-
-.modal-nav:hover {
-  background: rgba(139, 195, 75, 1);
-}
-</style>
+<script src="js/plot_charts.js"></script>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  var modal = document.getElementById("fullscreen-modal");
-  var modalImg = document.getElementById("fullscreen-img");
-  var closeModal = document.querySelector(".close-modal");
-  var prevBtn = document.getElementById("prev-img");
-  var nextBtn = document.getElementById("next-img");
-
-  var images = document.querySelectorAll(".swiper-image");
-  var currentIndex = 0;
-
-  // Inicializa o Swiper
-  var swiper = new Swiper('.swiper', {
-    loop: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  });
-
-  // Abre o modal ao clicar na imagem
-  images.forEach((img, index) => {
-    img.addEventListener("click", function () {
-      modal.style.display = "flex";
-      modalImg.src = this.src;
-      currentIndex = index;
+    var swiper = new Swiper('.swiper', {
+        loop: true,
+        slidesPerView: 1,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        speed: 500,
+        on: {
+          init: function () {
+            generatePlots();
+          }
+        }
     });
-  });
 
-  // Fecha o modal ao clicar no botão de fechar
-  closeModal.addEventListener("click", function () {
-    modal.style.display = "none";
-  });
+    function generatePlots() {
+        var data = {
+            Age: [2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+            BA2: [10.45, 12.75, 14.54, 15.98, 17.16, 18.13, 18.94, 19.64, 20.24, 20.76, 21.21, 21.62, 21.98, 22.30, 22.59, 22.85, 23.09, 23.31, 23.51, 23.70, 23.87],
+            BA2_max_error: [11.24, 13.70, 15.64, 17.19, 18.45, 19.49, 20.37, 21.11, 21.76, 22.32, 22.81, 23.24, 23.63, 23.97, 24.29, 24.57, 24.83, 25.06, 25.28, 25.48, 25.66],
+            BA2_min_error: [9.67, 11.79, 13.45, 14.78, 15.87, 16.76, 17.52, 18.16, 18.71, 19.20, 19.62, 19.99, 20.33, 20.62, 20.89, 21.14, 21.36, 21.56, 21.75, 21.92, 22.07],
+            Volume: [31.01, 46.19, 60.24, 72.83, 83.97, 93.80, 102.49, 110.19, 117.05, 123.18, 128.70, 133.67, 138.19, 142.30, 146.05, 149.50, 152.66, 155.59, 158.30, 160.81, 163.15],
+            Volume_max_error: [35.22, 52.46, 68.43, 82.73, 95.38, 106.55, 116.41, 125.16, 132.95, 139.92, 146.18, 151.83, 156.96, 161.63, 165.89, 169.80, 173.40, 176.72, 179.80, 182.65, 185.31],
+            Volume_min_error: [26.79, 39.91, 52.06, 62.94, 72.57, 81.06, 88.56, 95.22, 101.15, 106.45, 111.21, 115.51, 119.42, 122.97, 126.21, 129.19, 131.92, 134.45, 136.79, 138.96, 140.98]
+        };
 
-  // Fecha o modal ao clicar fora da imagem
-  modal.addEventListener("click", function (e) {
-    if (e.target === modal) {
-      modal.style.display = "none";
+        document.getElementById('ba2-chart').innerHTML = '';
+        document.getElementById('volume-chart').innerHTML = '';
+
+        plotBA2ByAge('ba2-chart', data);
+        plotVolumeByAge('volume-chart', data);
     }
-  });
-
-  // Função para atualizar a imagem no modal
-  function updateModalImage(index) {
-    if (index < 0) {
-      index = images.length - 1;
-    } else if (index >= images.length) {
-      index = 0;
-    }
-    modalImg.src = images[index].src;
-    currentIndex = index;
-  }
-
-  // Botão "Próximo"
-  nextBtn.addEventListener("click", function () {
-    updateModalImage(currentIndex + 1);
-  });
-
-  // Botão "Anterior"
-  prevBtn.addEventListener("click", function () {
-    updateModalImage(currentIndex - 1);
-  });
-
-  // Permite navegação com teclado
-  document.addEventListener("keydown", function (e) {
-    if (modal.style.display === "flex") {
-      if (e.key === "ArrowRight") {
-        updateModalImage(currentIndex + 1);
-      } else if (e.key === "ArrowLeft") {
-        updateModalImage(currentIndex - 1);
-      } else if (e.key === "Escape") {
-        modal.style.display = "none";
-      }
-    }
-  });
 });
 </script>
+
+<style>
+  .plot-container {
+    width: 100%;
+    height: 500px;
+  }
+  .swiper-button-next, 
+  .swiper-button-prev {
+    color: rgba(139, 195, 75, 1) !important;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+  }
+  .swiper-button-next:hover, 
+  .swiper-button-prev:hover {
+    background: rgba(139, 195, 75, 0.8);
+  }
+  .swiper-button-next::after, 
+  .swiper-button-prev::after {
+    font-size: 20px;
+    color: white;
+  }
+</style>
 
 
 
@@ -1646,9 +1541,9 @@ document.addEventListener("DOMContentLoaded", function () {
     
       <script src="assets/javascripts/bundle.1e8ae164.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
       
-        <script src="popup.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs" type="module"></script>
       

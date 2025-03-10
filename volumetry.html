@@ -1404,7 +1404,7 @@
 <li><span class="arithmatex">\( h_i \)</span>: Segment height (m)</li>
 </ul>
 <h4 id="artificial-neural-network">Artificial Neural Network</h4>
-<p>When selecting the 'ann' model, 5 different structures of artificial neural networks will be tested. Only the result from 1 model will be returned. The model returned will be selected by the ranking function.<br />
+<p>When selecting the 'ann' model, 6 different structures of artificial neural networks will be tested. Only the result from 1 model will be returned. The model returned will be selected by the ranking function.<br />
 For the 'ann' model, the module <a href="https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html">sklearn.neural_network.MLPRegressor</a> is used.
 <div class="mermaid">---
 title: ANN Parameters
@@ -1422,31 +1422,33 @@ classDiagram
     }
 
     class Model-0 {
-      Hidden layer sizes: (4,5)
-      'relogisticlu' activation
+      Hidden layer sizes: (15, 25, 20, 30, 10)
     }
     class Model-1 {
-      Hidden layer sizes: (4,2)
-      'logistic' activation
+      Hidden layer sizes: (35, 10, 25, 35, 15)
+
     }
     class Model-2 {
-      Hidden layer sizes: (3,2)
-      'logistic' activation
+      Hidden layer sizes: (25, 15, 30, 20)
+
     }
     class Model-3 {
-      Hidden layer sizes: (4,4)
-      'logistic' activation
+      Hidden layer sizes: (15, 35, 45)
     }
     class Model-4 {
-      Hidden layer sizes: (4,4)
-      'relu' activation
+      Hidden layer sizes: (35, 10, 25, 35, 15)
     }
+    class Model-5 {
+       Hidden layer sizes: (35, 10, 25, 35, 15, 20, 15, 30)
+    }
+
 
     MLPRegressor &lt;|-- Model-0
     MLPRegressor &lt;|-- Model-1
     MLPRegressor &lt;|-- Model-2
     MLPRegressor &lt;|-- Model-3
-    MLPRegressor &lt;|-- Model-4</div></p>
+    MLPRegressor &lt;|-- Model-4
+    MLPRegressor &lt;|-- Model-5</div></p>
 <h3 id="available-volumetric-models">Available volumetric models</h3>
 <div class="annotate">
 <h4 id="spurr-model"><li>Spurr Model</li></h4>
@@ -1664,9 +1666,9 @@ classDiagram
     
       <script src="assets/javascripts/bundle.1e8ae164.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
       
-        <script src="popup.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs" type="module"></script>
       
