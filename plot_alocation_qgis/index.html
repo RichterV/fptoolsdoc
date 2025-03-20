@@ -851,10 +851,29 @@
 <h4 id="installation-via-zip-file">Installation via zip file</h4>
 <p>If you prefer, <a href="https://github.com/RichterV/ForestPyTools-QGIS-module">click here</a> to download the ZIP file containing the plugin files. For more information about installation, see the <a href="https://docs.qgis.org/3.34/en/docs/user_manual/plugins/plugins.html">QGIS plugins installation guide</a>.</p>
 <figure style="display: inline-block; text-align: center;">
-  <figcaption>To use FPTPlotAlocation, you must first install the scikit-learn package in the "OSGeo4W Shell" by running the command: "pip install scikit-learn".</figcaption>
+  <figcaption>
+    During the plugin installation, the code will attempt to install version 1.5.2 of the external package scikit-learn.
+    If an error occurs, consider installing it manually in the "OSGeo4W Shell" by running the command:
+    <code id="command">pip install scikit-learn==1.5.2</code>
+    <button onclick="copyToClipboard()" 
+            style="margin-left: 8px; padding: 5px 10px; border: none; background-color: #8BC34B; color: white; border-radius: 5px; cursor: pointer;">
+      Copy command
+    </button>
+  </figcaption>
   <img src="../images/os_geo_scikit_learn.png" alt="Plugin interface" 
        style="width: 514px; height: 99px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
 </figure>
+
+<script>
+  function copyToClipboard() {
+    const commandText = document.getElementById("command").innerText;
+    navigator.clipboard.writeText(commandText).then(() => {
+      alert("Command copied to clipboard!");
+    }).catch(err => {
+      console.error("Failed to copy:", err);
+    });
+  }
+</script>
 
 <h2 id="plugin-interface">Plugin Interface</h2>
 <figure style="display: inline-block; text-align: center;">
