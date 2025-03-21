@@ -864,14 +864,49 @@
        style="width: 514px; height: 99px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
 </figure>
 
+<!-- Toast container -->
+<div id="toast" style="
+  visibility: hidden;
+  min-width: 200px;
+  background-color: #8BC34B;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px 16px;
+  position: fixed;
+  z-index: 1000;
+  bottom: 30px;
+  right: 30px;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+">
+  Copied to clipboard!
+</div>
+
 <script>
   function copyToClipboard() {
-    const commandText = document.getElementById("command").innerText;
-    navigator.clipboard.writeText(commandText).then(() => {
-      alert("Command copied to clipboard!");
-    }).catch(err => {
-      console.error("Failed to copy:", err);
+    const text = document.getElementById("command").innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      showToast("Copied to clipboard!");
     });
+  }
+
+  function showToast(message) {
+    const toast = document.getElementById("toast");
+    toast.textContent = message;
+    toast.style.visibility = "visible";
+    toast.style.opacity = "1";
+    toast.style.transform = "translateY(0)";
+
+    setTimeout(() => {
+      toast.style.opacity = "0";
+      toast.style.transform = "translateY(20px)";
+      setTimeout(() => {
+        toast.style.visibility = "hidden";
+      }, 400);
+    }, 2000); // Toast visible for 2 seconds
   }
 </script>
 
