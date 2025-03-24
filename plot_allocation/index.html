@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../plot_alocation_qgis/">
+        <link rel="prev" href="../plot_allocation_qgis/">
       
       
         <link rel="next" href="../cubage_planning/">
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#plot-alocation" class="md-skip">
+        <a href="#plot-allocation" class="md-skip">
           Skip to content
         </a>
       
@@ -164,7 +164,7 @@
           </li>
         
           <li class="md-select__item">
-            <a href="../pt-BR/plot_alocation/" hreflang="pt-BR" class="md-select__link">
+            <a href="../pt-BR/plot_allocation/" hreflang="pt-BR" class="md-select__link">
               Português
             </a>
           </li>
@@ -341,7 +341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../plot_alocation_qgis/" class="md-nav__link">
+      <a href="../plot_allocation_qgis/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -879,17 +879,17 @@
 
 
 
-<h1 id="plot-alocation">Plot alocation</h1>
+<h1 id="plot-allocation">Plot allocation</h1>
 <hr />
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This library is under development, none of the presented solutions are available for download.</p>
 </div>
 <p>Allows the allocation of sampling plots with various types of sampling and plot formats.
-If you prefer a visual interface, consider using the <a href="../plot_alocation_qgis/">QGIS module</a>.</p>
+If you prefer a visual interface, consider using the <a href="../plot_allocation_qgis/">QGIS module</a>.</p>
 <hr />
 <h2 id="class-parameters">Class Parameters</h2>
-<div class="highlight"><pre><span></span><code>PlotAlocation(shp_dir, epsg)
+<div class="highlight"><pre><span></span><code>PlotAllocation(shp_dir, epsg)
 </code></pre></div>
 <table>
 <thead>
@@ -910,7 +910,7 @@ If you prefer a visual interface, consider using the <a href="../plot_alocation_
 </tbody>
 </table>
 <h2 id="class-functions">Class Functions</h2>
-<p class="annotate"><div class="highlight"><span class="filename">functions and parameters</span><pre><span></span><code><span class="n">PlotAlocation</span><span class="o">.</span><span class="n">create_plots</span><span class="p">(</span><span class="n">distribution</span><span class="p">,</span> <span class="n">plot_format</span><span class="p">,</span> <span class="n">plot_area</span><span class="p">,</span> <span class="n">sample_number</span><span class="p">,</span>
+<p class="annotate"><div class="highlight"><span class="filename">functions and parameters</span><pre><span></span><code><span class="n">PlotAllocation</span><span class="o">.</span><span class="n">create_plots</span><span class="p">(</span><span class="n">distribution</span><span class="p">,</span> <span class="n">plot_format</span><span class="p">,</span> <span class="n">plot_area</span><span class="p">,</span> <span class="n">sample_number</span><span class="p">,</span>
                             <span class="n">by_hectare</span><span class="p">,</span> <span class="n">min_border_distance</span><span class="p">,</span> <span class="n">rectangle_size</span><span class="p">,</span>
                             <span class="n">x_y_angle</span><span class="p">,</span> <span class="n">save_buffer</span><span class="p">,</span> <span class="n">show_plot</span><span class="p">,</span> <span class="n">save_dir</span><span class="p">)</span>
 </code></pre></div></p>
@@ -997,51 +997,51 @@ If you prefer a visual interface, consider using the <a href="../plot_alocation_
 </div>
 <h2 id="example-usage">Example Usage</h2>
 <h5 id="random-distribution">Random distribution</h5>
-<p class="annotate"><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">plot_alocation_example_1.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<p class="annotate"><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">plot_allocation_example_1.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.inventory_plots</span><span class="w"> </span><span class="kn">import</span> <span class="n">PlotAlocation</span> <span class="c1">#(1)</span>
-<span class="n">plots</span> <span class="o">=</span> <span class="n">PlotAlocation</span><span class="p">(</span><span class="s1">&#39;example/shapefile/path.shp&#39;</span><span class="p">,</span><span class="n">epsg</span><span class="o">=</span><span class="s1">&#39;32722&#39;</span><span class="p">)</span> <span class="c1">#(2)</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.inventory_plots</span><span class="w"> </span><span class="kn">import</span> <span class="n">PlotAllocation</span> <span class="c1">#(1)</span>
+<span class="n">plots</span> <span class="o">=</span> <span class="n">PlotAllocation</span><span class="p">(</span><span class="s1">&#39;example/shapefile/path.shp&#39;</span><span class="p">,</span><span class="n">epsg</span><span class="o">=</span><span class="s1">&#39;32722&#39;</span><span class="p">)</span> <span class="c1">#(2)</span>
 <span class="n">plots</span><span class="o">.</span><span class="n">create_plots</span><span class="p">(</span><span class="n">distribution</span><span class="o">=</span><span class="s2">&quot;random&quot;</span><span class="p">,</span> <span class="n">sample_number</span><span class="o">=</span><span class="s2">&quot;n_par&quot;</span><span class="p">,</span> <span class="n">plot_area</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span>
                     <span class="n">min_border_distance</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">save_dir</span><span class="o">=</span><span class="s2">&quot;C:\Users\Desktop&quot;</span><span class="p">,</span>
                     <span class="n">show_plot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">save_buffer</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#(3)</span>
 </code></pre></div></td></tr></table></div></p>
 <ol>
-<li>Import <code>PlotAlocation</code> class.  </li>
-<li>Create the <code>plots</code> variable with <code>PlotAlocation</code> class. Defines the boundary area shapefile path and the epsg.</li>
+<li>Import <code>PlotAllocation</code> class.  </li>
+<li>Create the <code>plots</code> variable with <code>PlotAllocation</code> class. Defines the boundary area shapefile path and the epsg.</li>
 <li>Create the plots with <code>random</code> distribuition, using "n_par" column on the atributte table  to define the number of plots, <code>plot area = 400 m²</code>, a minimum border distance of 20 meters and save the shapefile in <code>C:\Users\Desktop</code>.</li>
 </ol>
 <h5 id="systematic-custom-distribution">Systematic custom distribution</h5>
-<p class="annotate"><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">plot_alocation_example_2.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<p class="annotate"><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">plot_allocation_example_2.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.inventory_plots</span><span class="w"> </span><span class="kn">import</span> <span class="n">PlotAlocation</span> <span class="c1">#(1)</span>
-<span class="n">plots</span> <span class="o">=</span> <span class="n">PlotAlocation</span><span class="p">(</span><span class="s1">&#39;example/shapefile/path.shp&#39;</span><span class="p">,</span><span class="n">epsg</span><span class="o">=</span><span class="s1">&#39;32722&#39;</span><span class="p">)</span> <span class="c1">#(2)</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.inventory_plots</span><span class="w"> </span><span class="kn">import</span> <span class="n">PlotAllocation</span> <span class="c1">#(1)</span>
+<span class="n">plots</span> <span class="o">=</span> <span class="n">PlotAllocation</span><span class="p">(</span><span class="s1">&#39;example/shapefile/path.shp&#39;</span><span class="p">,</span><span class="n">epsg</span><span class="o">=</span><span class="s1">&#39;32722&#39;</span><span class="p">)</span> <span class="c1">#(2)</span>
 <span class="n">plots</span><span class="o">.</span><span class="n">create_plots</span><span class="p">(</span><span class="n">distribution</span><span class="o">=</span><span class="s2">&quot;systematic custom&quot;</span><span class="p">,</span> <span class="n">x_y_angle</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">45</span><span class="p">),</span>
                     <span class="n">plot_area</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">min_border_distance</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">save_dir</span><span class="o">=</span><span class="s2">&quot;C:\Users\Desktop&quot;</span><span class="p">,</span>
                     <span class="n">show_plot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">save_buffer</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#(3)</span>
 </code></pre></div></td></tr></table></div></p>
 <ol>
-<li>Import <code>PlotAlocation</code> class.  </li>
-<li>Create the <code>plots</code> variable with <code>PlotAlocation</code> class. Defines the boundary area shapefile path and the epsg.</li>
+<li>Import <code>PlotAllocation</code> class.  </li>
+<li>Create the <code>plots</code> variable with <code>PlotAllocation</code> class. Defines the boundary area shapefile path and the epsg.</li>
 <li>Create the plots with <code>systematic custom</code> distribuition, <code>plot area = 400 m²</code>, with <code>x distance = 100 meters</code>, <code>y distance = 50 meters</code> and 45º of grid rotation, with a minimum border distance of 20 meters and save the shapefile in <code>C:\Users\Desktop</code>.</li>
 </ol>
 <h5 id="rectangle-plot-format">Rectangle plot format</h5>
-<p class="annotate"><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">plot_alocation_example_3.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<p class="annotate"><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">plot_allocation_example_3.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.inventory_plots</span><span class="w"> </span><span class="kn">import</span> <span class="n">PlotAlocation</span> <span class="c1">#(1)</span>
-<span class="n">plots</span> <span class="o">=</span> <span class="n">PlotAlocation</span><span class="p">(</span><span class="s1">&#39;example/shapefile/path.shp&#39;</span><span class="p">,</span><span class="n">epsg</span><span class="o">=</span><span class="s1">&#39;32722&#39;</span><span class="p">)</span> <span class="c1">#(2)</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.inventory_plots</span><span class="w"> </span><span class="kn">import</span> <span class="n">PlotAllocation</span> <span class="c1">#(1)</span>
+<span class="n">plots</span> <span class="o">=</span> <span class="n">PlotAllocation</span><span class="p">(</span><span class="s1">&#39;example/shapefile/path.shp&#39;</span><span class="p">,</span><span class="n">epsg</span><span class="o">=</span><span class="s1">&#39;32722&#39;</span><span class="p">)</span> <span class="c1">#(2)</span>
 <span class="n">plots</span><span class="o">.</span><span class="n">create_plots</span><span class="p">(</span><span class="n">distribution</span><span class="o">=</span><span class="s2">&quot;best sampling&quot;</span><span class="p">,</span> <span class="n">rectangle_size</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">),</span> 
                     <span class="n">min_border_distance</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">save_dir</span><span class="o">=</span><span class="s2">&quot;C:\Users\Desktop&quot;</span><span class="p">,</span>
                     <span class="n">show_plot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">save_buffer</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#(3)</span>
 </code></pre></div></td></tr></table></div></p>
 <ol>
-<li>Import <code>PlotAlocation</code> class.  </li>
-<li>Create the <code>plots</code> variable with <code>PlotAlocation</code> class. Defines the boundary area shapefile path and the epsg.</li>
+<li>Import <code>PlotAllocation</code> class.  </li>
+<li>Create the <code>plots</code> variable with <code>PlotAllocation</code> class. Defines the boundary area shapefile path and the epsg.</li>
 <li>Create the plots with <code>best sampling</code> distribuition, a <code>rectangle width (x) = 20 meters</code> and <code>height (y) = 30 meters</code>, with a minimum border distance of 20 meters and save the shapefile in <code>C:\Users\Desktop</code>.</li>
 </ol>
 
@@ -1073,7 +1073,7 @@ If you prefer a visual interface, consider using the <a href="../plot_alocation_
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../plot_alocation_qgis/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Inventory Planning QGIS">
+          <a href="../plot_allocation_qgis/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Inventory Planning QGIS">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
