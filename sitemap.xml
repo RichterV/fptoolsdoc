@@ -196,4 +196,82 @@
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/volumetry/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Nonevolumetry/"/>
     </url>
+    <url>
+        <loc>Nonept-BR/alocacao_de_parcelas/</loc>
+        <lastmod>2025-03-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/alocacao_de_parcelas/"/>
+    </url>
+    <url>
+        <loc>Nonept-BR/alocacao_de_parcelas_qgis/</loc>
+        <lastmod>2025-03-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/alocacao_de_parcelas_qgis/"/>
+    </url>
+    <url>
+        <loc>Nonept-BR/estratificador/</loc>
+        <lastmod>2025-03-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/estratificador/"/>
+    </url>
+    <url>
+        <loc>Nonept-BR/planejamento_de_cubagem/</loc>
+        <lastmod>2025-03-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/planejamento_de_cubagem/"/>
+    </url>
+    <url>
+        <loc>Nonept-BR/primeiros_passos/</loc>
+        <lastmod>2025-03-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/primeiros_passos/"/>
+    </url>
+    <url>
+        <loc>Nonept-BR/prognose_por_modelo_de_clutter/</loc>
+        <lastmod>2025-03-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/prognose_por_modelo_de_clutter/"/>
+    </url>
+    <url>
+        <loc>Nonept-BR/prognose_por_rna/</loc>
+        <lastmod>2025-03-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/prognose_por_rna/"/>
+    </url>
+    <url>
+        <loc>Nonept-BR/relacao_hipsometrica/</loc>
+        <lastmod>2025-03-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/relacao_hipsometrica/"/>
+    </url>
+    <url>
+        <loc>Nonept-BR/relatorio_florestal/</loc>
+        <lastmod>2025-03-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/relatorio_florestal/"/>
+    </url>
+    <url>
+        <loc>Nonept-BR/reportar_falhas/</loc>
+        <lastmod>2025-03-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/reportar_falhas/"/>
+    </url>
+    <url>
+        <loc>Nonept-BR/sobre_o_autor/</loc>
+        <lastmod>2025-03-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/sobre_o_autor/"/>
+    </url>
+    <url>
+        <loc>Nonept-BR/sortimentos/</loc>
+        <lastmod>2025-03-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/sortimentos/"/>
+    </url>
+    <url>
+        <loc>Nonept-BR/volumetria/</loc>
+        <lastmod>2025-03-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/volumetria/"/>
+    </url>
 </urlset>
