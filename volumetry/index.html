@@ -1305,12 +1305,16 @@
 </table>
 <h3 id="class-functions">Class Functions</h3>
 <p class="annotate"><div class="highlight"><span class="filename">functions and parameters</span><pre><span></span><code>  <span class="n">Volumetry</span><span class="o">.</span><span class="n">get_volumes</span><span class="p">()</span>  
-  <span class="n">Volumetry</span><span class="o">.</span><span class="n">fit_taper_functions</span><span class="p">(</span><span class="n">models</span><span class="p">,</span> <span class="n">iterator</span><span class="p">,</span> <span class="n">save_dir</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>  <span class="c1">#(1)</span>
+  <span class="n">Volumetry</span><span class="o">.</span><span class="n">fit_taper_functions</span><span class="p">(</span><span class="n">models</span><span class="p">,</span> <span class="n">iterator</span><span class="p">,</span> <span class="n">save_dir</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span><span class="c1">#(1)!</span>
+
   <span class="n">Volumetry</span><span class="o">.</span><span class="n">fit_volumetric_functions</span><span class="p">(</span><span class="n">models</span><span class="p">,</span> <span class="n">iterator</span><span class="p">,</span> <span class="n">vol_column</span><span class="p">,</span>
-                                       <span class="n">save_dir</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="c1">#(2)</span>
-  <span class="n">Volumetry</span><span class="o">.</span><span class="n">get_individual_diameter</span><span class="p">(</span><span class="n">hi</span><span class="p">,</span> <span class="n">tree_height</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="p">)</span> <span class="c1">#(3)</span>
-  <span class="n">Volumetry</span><span class="o">.</span><span class="n">get_individual_taper_volume</span><span class="p">(</span><span class="n">tree_height</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="p">,</span> <span class="n">stump</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span> <span class="c1">#(4)</span>
-  <span class="n">Volumetry</span><span class="o">.</span><span class="n">get_individual_volume</span><span class="p">(</span><span class="n">tree_height</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="p">)</span> <span class="c1">#(5)</span>
+                                       <span class="n">save_dir</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span><span class="c1">#(2)!</span>
+
+  <span class="n">Volumetry</span><span class="o">.</span><span class="n">get_individual_diameter</span><span class="p">(</span><span class="n">hi</span><span class="p">,</span> <span class="n">tree_height</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="p">)</span><span class="c1">#(3)!</span>
+
+  <span class="n">Volumetry</span><span class="o">.</span><span class="n">get_individual_taper_volume</span><span class="p">(</span><span class="n">tree_height</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="p">,</span> <span class="n">stump</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span><span class="c1">#(4)!</span>
+
+  <span class="n">Volumetry</span><span class="o">.</span><span class="n">get_individual_volume</span><span class="p">(</span><span class="n">tree_height</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="p">)</span><span class="c1">#(5)!</span>
 </code></pre></div></p>
 <ol>
 <li><strong>models</strong> = (Optional) List of models to be fitted! If <code>models == None</code> uses all available models.                                     <br />
@@ -1361,27 +1365,39 @@
 </table>
 <h3 id="example-usage">Example Usage</h3>
 <p class="annotate"><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">taper_functions_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.volumetry</span><span class="w"> </span><span class="kn">import</span> <span class="n">Volumetry</span> <span class="c1">#(1)</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span> <span class="c1">#(2)</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.volumetry</span><span class="w"> </span><span class="kn">import</span> <span class="n">Volumetry</span><span class="c1">#(1)!</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span><span class="c1">#(2)!</span>
 </code></pre></div></td></tr></table></div></p>
 <ol>
 <li>Import <code>Volumetry</code> class.</li>
 <li>Import <code>pandas</code> for data manipulation.</li>
 </ol>
 <p>Create a variable for the Volumetry Class</p>
-<p class="annotate"><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">taper_functions_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Your\path\csv_tree_cubage_file.csv&#39;</span><span class="p">)</span> <span class="c1">#(1)</span>
-<span class="n">vol</span> <span class="o">=</span> <span class="n">Volumetry</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">tree_identifier</span><span class="o">=</span><span class="s1">&#39;arvore_id&#39;</span><span class="p">,</span> <span class="n">tree_height</span><span class="o">=</span><span class="s1">&#39;HT&#39;</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="o">=</span><span class="s1">&#39;DAP&#39;</span><span class="p">,</span> <span class="n">segment_height</span><span class="o">=</span><span class="s1">&#39;HT segmento&#39;</span><span class="p">,</span> <span class="n">segment_diameter</span><span class="o">=</span><span class="s1">&#39;Dsegmento&#39;</span><span class="p">,</span><span class="n">tree_bark</span><span class="o">=</span><span class="s1">&#39;Casca&#39;</span><span class="p">)</span> <span class="c1">#(2)</span>
-<span class="n">calculated_volumes_df</span> <span class="o">=</span> <span class="n">vol</span><span class="o">.</span><span class="n">get_volumes</span><span class="p">()</span> <span class="c1">#(3) </span>
-<span class="hll"><span class="n">metrics</span> <span class="o">=</span> <span class="n">vol</span><span class="o">.</span><span class="n">fit_taper_functions</span><span class="p">()</span> <span class="c1">#(4) </span>
-</span><span class="n">vol</span><span class="o">.</span><span class="n">get_individual_diameter</span><span class="p">(</span><span class="mf">1.3</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span> <span class="c1">#(5)</span>
-<span class="n">vol</span><span class="o">.</span><span class="n">get_individual_taper_volume</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mf">22.8</span><span class="p">)</span> <span class="c1">#(6)</span>
-<span class="n">vol</span><span class="o">.</span><span class="n">get_individual_volume</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mf">22.8</span><span class="p">)</span> <span class="c1">#(7)</span>
+<p class="annotate"><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">taper_functions_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Your\path\csv_tree_cubage_file.csv&#39;</span><span class="p">)</span><span class="c1">#(1)!</span>
+
+<span class="n">vol</span> <span class="o">=</span> <span class="n">Volumetry</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">tree_identifier</span><span class="o">=</span><span class="s1">&#39;arvore_id&#39;</span><span class="p">,</span> <span class="n">tree_height</span><span class="o">=</span><span class="s1">&#39;HT&#39;</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="o">=</span><span class="s1">&#39;DAP&#39;</span><span class="p">,</span> <span class="n">segment_height</span><span class="o">=</span><span class="s1">&#39;HT segmento&#39;</span><span class="p">,</span> <span class="n">segment_diameter</span><span class="o">=</span><span class="s1">&#39;Dsegmento&#39;</span><span class="p">,</span><span class="n">tree_bark</span><span class="o">=</span><span class="s1">&#39;Casca&#39;</span><span class="p">)</span><span class="c1">#(2)!</span>
+<span class="hll">
+</span><span class="n">calculated_volumes_df</span> <span class="o">=</span> <span class="n">vol</span><span class="o">.</span><span class="n">get_volumes</span><span class="p">()</span><span class="c1">#(3)!</span>
+
+<span class="n">metrics</span> <span class="o">=</span> <span class="n">vol</span><span class="o">.</span><span class="n">fit_taper_functions</span><span class="p">()</span><span class="c1">#(4)!</span>
+
+<span class="n">vol</span><span class="o">.</span><span class="n">get_individual_diameter</span><span class="p">(</span><span class="mf">1.3</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span><span class="c1">#(5)!</span>
+
+<span class="n">vol</span><span class="o">.</span><span class="n">get_individual_taper_volume</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mf">22.8</span><span class="p">)</span><span class="c1">#(6)!</span>
+
+<span class="n">vol</span><span class="o">.</span><span class="n">get_individual_volume</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mf">22.8</span><span class="p">)</span><span class="c1">#(7)!</span>
 </code></pre></div></td></tr></table></div></p>
 <ol>
 <li>Load your csv file.</li>
@@ -1706,7 +1722,7 @@ classDiagram
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.footnote.tooltips", "navigation.footer", "content.code.annotate"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.footnote.tooltips", "navigation.footer", "content.code.annotate"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>

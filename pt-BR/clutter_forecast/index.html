@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../forest_report/">
+      
+      
+        <link rel="next" href="../ann_forecast/">
       
       
       <link rel="icon" href="../../images/logo1_no_background.png">
@@ -16,7 +20,7 @@
     
     
       
-        <title>Clutter Forecast - ForestPy Tools</title>
+        <title>Modelo de Clutter - ForestPy Tools</title>
       
     
     
@@ -70,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#clutter-forecast" class="md-skip">
+        <a href="#modelo-de-clutter" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -105,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Clutter Forecast
+              Modelo de Clutter
             
           </span>
         </div>
@@ -306,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../primeiros_passos/" class="md-nav__link">
+      <a href="../getting_started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -335,7 +339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../alocacao_de_parcelas_qgis/" class="md-nav__link">
+      <a href="../plot_allocation_qgis/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -356,7 +360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../alocacao_de_parcelas/" class="md-nav__link">
+      <a href="../plot_allocation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -377,7 +381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../planejamento_de_cubagem/" class="md-nav__link">
+      <a href="../cubage_planning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -398,7 +402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../relacao_hipsometrica/" class="md-nav__link">
+      <a href="../hypsometric_relationship/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -419,7 +423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../volumetria/" class="md-nav__link">
+      <a href="../volumetry/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -440,7 +444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sortimentos/" class="md-nav__link">
+      <a href="../assortments/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -461,7 +465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../relatorio_florestal/" class="md-nav__link">
+      <a href="../forest_report/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -479,17 +483,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
         
           
           <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -504,7 +510,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             Prognose
@@ -515,10 +521,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../prognose_por_modelo_de_clutter/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Modelo de Clutter
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -528,6 +555,176 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parametros-da-classe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parâmetros da Classe
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cluttertrainer" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClutterTrainer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ClutterTrainer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-entrada-para-o-modelo-de-clutter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplo de entrada para o modelo de Clutter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcoes-da-classe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funções da Classe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelos-de-clutter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelos de Clutter
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelos de Clutter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#previsao-da-area-basal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Previsão da área basal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#previsao-do-volume" class="md-nav__link">
+    <span class="md-ellipsis">
+      Previsão do volume
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Previsão do volume">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notação
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametros-da-classe_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parâmetros da Classe
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clutterpredictor" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClutterPredictor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ClutterPredictor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funcoes-da-classe_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funções da Classe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-grafico-de-saida-da-previsao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplo de Gráfico de Saída da Previsão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referências
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -540,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../prognose_por_rna/" class="md-nav__link">
+      <a href="../ann_forecast/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -569,7 +766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../estratificador/" class="md-nav__link">
+      <a href="../stratifier/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -626,7 +823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reportar_falhas/" class="md-nav__link">
+      <a href="../bug_report/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -648,7 +845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sobre_o_autor/" class="md-nav__link">
+      <a href="../about_the_author/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -697,75 +894,75 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#class-parameters" class="md-nav__link">
+  <a href="#parametros-da-classe" class="md-nav__link">
     <span class="md-ellipsis">
-      Class Parameters
+      Parâmetros da Classe
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#clutter-trainer" class="md-nav__link">
+  <a href="#cluttertrainer" class="md-nav__link">
     <span class="md-ellipsis">
-      Clutter Trainer
+      ClutterTrainer
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Clutter Trainer">
+    <nav class="md-nav" aria-label="ClutterTrainer">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-of-clutter-input" class="md-nav__link">
+  <a href="#exemplo-de-entrada-para-o-modelo-de-clutter" class="md-nav__link">
     <span class="md-ellipsis">
-      Example of clutter input
+      Exemplo de entrada para o modelo de Clutter
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#class-functions" class="md-nav__link">
+  <a href="#funcoes-da-classe" class="md-nav__link">
     <span class="md-ellipsis">
-      Class Functions
+      Funções da Classe
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#clutter-models" class="md-nav__link">
+  <a href="#modelos-de-clutter" class="md-nav__link">
     <span class="md-ellipsis">
-      Clutter models
+      Modelos de Clutter
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Clutter models">
+    <nav class="md-nav" aria-label="Modelos de Clutter">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#basal-area-prediction" class="md-nav__link">
+  <a href="#previsao-da-area-basal" class="md-nav__link">
     <span class="md-ellipsis">
-      Basal area prediction
+      Previsão da área basal
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#volume-prediction" class="md-nav__link">
+  <a href="#previsao-do-volume" class="md-nav__link">
     <span class="md-ellipsis">
-      Volume prediction
+      Previsão do volume
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Volume prediction">
+    <nav class="md-nav" aria-label="Previsão do volume">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#notation" class="md-nav__link">
+  <a href="#notacao" class="md-nav__link">
     <span class="md-ellipsis">
-      Notation
+      Notação
     </span>
   </a>
   
@@ -787,28 +984,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#class-parameters_1" class="md-nav__link">
+  <a href="#parametros-da-classe_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Class Parameters
+      Parâmetros da Classe
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#clutter-predictor" class="md-nav__link">
+  <a href="#clutterpredictor" class="md-nav__link">
     <span class="md-ellipsis">
-      Clutter Predictor
+      ClutterPredictor
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Clutter Predictor">
+    <nav class="md-nav" aria-label="ClutterPredictor">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#class-functions_1" class="md-nav__link">
+  <a href="#funcoes-da-classe_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Class Functions
+      Funções da Classe
     </span>
   </a>
   
@@ -824,9 +1021,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#example-of-output-prediction-plot" class="md-nav__link">
+  <a href="#exemplo-de-grafico-de-saida-da-previsao" class="md-nav__link">
     <span class="md-ellipsis">
-      Example of output prediction plot
+      Exemplo de Gráfico de Saída da Previsão
     </span>
   </a>
   
@@ -838,9 +1035,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
+  <a href="#referencias" class="md-nav__link">
     <span class="md-ellipsis">
-      References
+      Referências
     </span>
   </a>
   
@@ -862,66 +1059,66 @@
 
 
 
-<h1 id="clutter-forecast">Clutter Forecast</h1>
+<h1 id="modelo-de-clutter">Modelo de Clutter</h1>
 <hr />
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This library is under development, none of the presented solutions are available for download.</p>
+<p>Esta biblioteca está em desenvolvimento, nenhuma das soluções apresentadas está disponível para download.</p>
 </div>
-<p>Use continuous forest inventory databases to predict forest growth and production. Utilize traditional method Clutter model. With this module, you will be able to estimate volume and basal area.</p>
+<p>Use bancos de dados de inventário florestal contínuo para prever o crescimento e a produção da floresta. Utilize o método tradicional do modelo de Clutter. Com este módulo, você poderá estimar o volume e a área basal.</p>
 <hr />
-<h2 id="class-parameters">Class Parameters</h2>
-<h2 id="clutter-trainer">Clutter Trainer</h2>
+<h2 id="parametros-da-classe">Parâmetros da Classe</h2>
+<h2 id="cluttertrainer">ClutterTrainer</h2>
 <div class="highlight"><pre><span></span><code>ClutterTrainer(df, age1, age2, ba1, ba2, site, vol, iterator=None)
 </code></pre></div>
 <table>
 <thead>
 <tr>
-<th>Parameters</th>
-<th>Description</th>
+<th>Parâmetros</th>
+<th>Descrição</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>df</strong></td>
-<td>The dataframe containing the continous processed forest inventory data.</td>
+<td>O dataframe contendo os dados processados do inventário florestal contínuo.</td>
 </tr>
 <tr>
 <td><strong>age1</strong></td>
-<td>Name of the column containing the age of the previously sampled plot.</td>
+<td>Nome da coluna contendo a idade da parcela amostrada anteriormente.</td>
 </tr>
 <tr>
 <td><strong>age2</strong></td>
-<td>Name of the column containing the age of the subsequently sampled plot.</td>
+<td>Nome da coluna contendo a idade da parcela amostrada posteriormente.</td>
 </tr>
 <tr>
 <td><strong>ba1</strong></td>
-<td>Name of the column containing the basal area of the previously sampled plot.</td>
+<td>Nome da coluna contendo a área basal da parcela amostrada anteriormente.</td>
 </tr>
 <tr>
 <td><strong>ba2</strong></td>
-<td>Name of the column containing the basal area of the subsequently sampled plot.</td>
+<td>Nome da coluna contendo a área basal da parcela amostrada posteriormente.</td>
 </tr>
 <tr>
 <td><strong>site</strong></td>
-<td>Name of the column containing the site index of the stand.</td>
+<td>Nome da coluna contendo o índice de sítio do povoamento.</td>
 </tr>
 <tr>
 <td><strong>vol</strong></td>
-<td>Name of the column containing the volume of the subsequently sampled plot.</td>
+<td>Nome da coluna contendo o volume da parcela amostrada posteriormente.</td>
 </tr>
 <tr>
 <td><strong>iterator</strong></td>
-<td>(Optional) Name of an iterator that will be used to group the data. Example of an iterator: Genetic material, Stratum.</td>
+<td>(Opcional) Nome de um iterador que será usado para agrupar os dados. Exemplo de um iterador: Material genético, Estrato.</td>
 </tr>
 </tbody>
 </table>
-<h5 id="example-of-clutter-input">Example of clutter input</h5>
+<h5 id="exemplo-de-entrada-para-o-modelo-de-clutter">Exemplo de entrada para o modelo de Clutter</h5>
 <table>
 <thead>
 <tr>
-<th>Iterator</th>
-<th>Plot</th>
+<th>Iterador</th>
+<th>Parcela</th>
 <th>age1</th>
 <th>age2</th>
 <th>ba1</th>
@@ -1013,41 +1210,41 @@
 </tr>
 </tbody>
 </table>
-<h3 id="class-functions">Class Functions</h3>
-<p class="annotate"><div class="highlight"><span class="filename">functions and parameters</span><pre><span></span><code>  <span class="n">ClutterTrainer</span><span class="o">.</span><span class="n">fit_model</span><span class="p">(</span><span class="n">save_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span><span class="c1">#(1)</span>
+<h3 id="funcoes-da-classe">Funções da Classe</h3>
+<p class="annotate"><div class="highlight"><span class="filename">functions and parameters</span><pre><span></span><code>  <span class="n">ClutterTrainer</span><span class="o">.</span><span class="n">fit_model</span><span class="p">(</span><span class="n">save_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span><span class="c1">#(1)!</span>
 </code></pre></div></p>
 <ol>
-<li><strong>save_dir</strong> = Directory where the coefficients and parameters of the trained models will be saved.</li>
+<li><strong>save_dir</strong> = Diretório onde os coeficientes e parâmetros dos modelos treinados serão salvos.</li>
 </ol>
 <table>
 <thead>
 <tr>
-<th>Parameters</th>
-<th>Description</th>
+<th>Parâmetros</th>
+<th>Descrição</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>.fit_model()</td>
-<td>Adjust the models for predicting basal area and volume.</td>
+<td>Ajusta os modelos para prever a área basal e o volume.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="clutter-models">Clutter models</h3>
+<h3 id="modelos-de-clutter">Modelos de Clutter</h3>
 <div class="annotate">
-<h4 id="basal-area-prediction"><li>Basal area prediction</li></h4>
+<h4 id="previsao-da-area-basal"><li>Previsão da área basal</li></h4>
 <div class="arithmatex">\[
 \operatorname{lnb_2}^{\text{est}} =b_0 + b_1 \cdot x_1 + b_2 \cdot x_2 + b_3 \cdot x_3 + b_4 \cdot \frac{1}{I_2} + b_5 \cdot S
 \]</div>
-<h4 id="volume-prediction"><li>Volume prediction</li></h4>
+<h4 id="previsao-do-volume"><li>Previsão do volume</li></h4>
 <div class="arithmatex">\[
 \operatorname{lnv_2} = b_0 + b_1 \cdot \frac{1}{I_2} + b_2 \cdot S + b_3 \cdot \operatorname{lnb_2}^{\text{est} }
 \]</div>
 </div>
-<h6 id="notation">Notation</h6>
+<h6 id="notacao">Notação</h6>
 <ul>
-<li><span class="arithmatex">\( β_n \)</span>: Fitted parameters</li>
-<li><span class="arithmatex">\( I \)</span>: Age</li>
+<li><span class="arithmatex">\( β_n \)</span>: Parâmetros ajustados</li>
+<li><span class="arithmatex">\( I \)</span>: Idade</li>
 <li>
 <div class="arithmatex">\[\operatorname{x_1} = \ln(β_1) \cdot \frac{\operatorname{I_1}}{\operatorname{I}_2}\]</div>
 </li>
@@ -1057,62 +1254,66 @@
 <li>
 <div class="arithmatex">\[\operatorname{x_3} = \left( 1 - \frac{\operatorname{I}_1}{\operatorname{I}_2} \right) \cdot \operatorname{S}\]</div>
 </li>
-<li><span class="arithmatex">\( S \)</span>: Forest site</li>
+<li><span class="arithmatex">\( S \)</span>: Índice de sítio da floresta</li>
 </ul>
 <hr />
-<h2 id="class-parameters_1">Class Parameters</h2>
-<h2 id="clutter-predictor">Clutter Predictor</h2>
+<h2 id="parametros-da-classe_1">Parâmetros da Classe</h2>
+<h2 id="clutterpredictor">ClutterPredictor</h2>
 <div class="highlight"><pre><span></span><code>ClutterPredictor(coefs_file, age1, site, ba1, iterator=None)
 </code></pre></div>
 <table>
 <thead>
 <tr>
-<th>Parameters</th>
-<th>Description</th>
+<th>Parâmetros</th>
+<th>Descrição</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>coefs_file</strong></td>
-<td>Directory of the <code>json</code> file containing the coefficients and parameters of the fitted models.</td>
+<td>Diretório do arquivo <code>json</code> contendo os coeficientes e parâmetros dos modelos ajustados.</td>
 </tr>
 <tr>
 <td><strong>age1</strong></td>
-<td>Name of the column containing the age of the previously sampled plot.</td>
+<td>Nome da coluna contendo a idade da parcela amostrada anteriormente.</td>
 </tr>
 <tr>
 <td><strong>ba1</strong></td>
-<td>Name of the column containing the basal area of the previously sampled plot.</td>
+<td>Nome da coluna contendo a área basal da parcela amostrada anteriormente.</td>
 </tr>
 <tr>
 <td><strong>site</strong></td>
-<td>Name of the column containing the site index of the stand.</td>
+<td>Nome da coluna contendo o índice de sítio do povoamento.</td>
 </tr>
 <tr>
 <td><strong>iterator</strong></td>
-<td>(Optional) Name of an iterator that will be used for predictions.</td>
+<td>(Opcional) Nome de um iterador que será usado para previsões.</td>
 </tr>
 </tbody>
 </table>
-<h5 id="class-functions_1">Class Functions</h5>
-<p class="annotate"><div class="highlight"><span class="filename">functions and parameters</span><pre><span></span><code>  <span class="n">ClutterTrainer</span><span class="o">.</span><span class="n">get_coefs</span><span class="p">()</span><span class="c1">#(1)</span>
-  <span class="n">ClutterTrainer</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">age2</span><span class="p">)</span><span class="c1">#(2)</span>
-  <span class="n">ClutterTrainer</span><span class="o">.</span><span class="n">predict_range</span><span class="p">(</span><span class="n">age_range</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span><span class="n">show_plots</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="c1">#(3)</span>
+<h5 id="funcoes-da-classe_1">Funções da Classe</h5>
+<p class="annotate"><div class="highlight"><span class="filename">funções e parâmetros</span><pre><span></span><code>  <span class="n">ClutterTrainer</span><span class="o">.</span><span class="n">get_coefs</span><span class="p">()</span><span class="c1">#(1)!</span>
+
+  <span class="n">ClutterTrainer</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">age2</span><span class="p">)</span><span class="c1">#(2)!</span>
+
+  <span class="n">ClutterTrainer</span><span class="o">.</span><span class="n">predict_range</span><span class="p">(</span><span class="n">age_range</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span><span class="n">show_plots</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="c1">#(3)!</span>
 </code></pre></div></p>
 <ol>
-<li>Returns the loaded coefficients from <code>coefs_file</code>.  </li>
-<li>Returns the prediction made for <code>age2</code>.  </li>
-<li>Returns the prediction made for a specified age range in <code>age_range</code> as a tuple.<br />
-   If <code>show_plots=True</code>, displays the plots of the performed predictions.  </li>
+<li>Retorna os coeficientes carregados do <code>coefs_file</code>.  </li>
+<li>Retorna a previsão feita para <code>age2</code>.  </li>
+<li>Retorna a previsão feita para um intervalo de idades especificado em <code>age_range</code> como uma tupla.<br />
+   Se <code>show_plots=True</code>, exibe os gráficos das previsões realizadas.  </li>
 </ol>
 <h3 id="example-usage">Example Usage</h3>
 <p class="annotate"><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">clutter_forecast_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">fptools</span><span class="o">.</span><span class="n">forecast</span> <span class="kn">import</span><span class="w"> </span><span class="nn">ClutterTrainer</span><span class="o">,</span><span class="w"> </span><span class="nn">ClutterPredictor</span> <span class="c1">#(1)</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span> <span class="c1">#(2)</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">fptools</span><span class="o">.</span><span class="n">forecast</span> <span class="kn">import</span><span class="w"> </span><span class="nn">ClutterTrainer</span><span class="o">,</span><span class="w"> </span><span class="nn">ClutterPredictor</span><span class="c1">#(1)!</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span><span class="c1">#(2)!</span>
 </code></pre></div></td></tr></table></div></p>
 <ol>
-<li>Import <code>ClutterTrainer</code> and <code>ClutterPredictor</code> class.</li>
-<li>Import <code>pandas</code> for data manipulation.</li>
+<li>Importa as classes <code>ClutterTrainer</code> e <code>ClutterPredictor</code>.</li>
+<li>Importa o <code>pandas</code> para manipulação de dados.</li>
 </ol>
 <p class="annotate"><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">clutter_forecast_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -1126,30 +1327,38 @@
 <span class="normal">12</span>
 <span class="normal">13</span>
 <span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Your\path\clutter_data.csv&#39;</span><span class="p">)</span> <span class="c1">#(1)</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Your\path\clutter_data.csv&#39;</span><span class="p">)</span><span class="c1">#(1)!</span>
+
 <span class="n">c_train</span> <span class="o">=</span> <span class="n">ClutterTrainer</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="s2">&quot;age-column1&quot;</span><span class="p">,</span><span class="s2">&quot;age-column2&quot;</span><span class="p">,</span> <span class="s2">&quot;basal-area1&quot;</span><span class="p">,</span>
-                         <span class="s2">&quot;basal-area1&quot;</span><span class="p">,</span><span class="s2">&quot;site-column&quot;</span><span class="p">,</span><span class="s2">&quot;volume-target&quot;</span><span class="p">,</span>
-<span class="hll">                         <span class="n">iterator</span><span class="o">=</span><span class="s2">&quot;Genetic Material&quot;</span><span class="p">)</span> <span class="c1">#(2)</span>
-</span><span class="n">c_train_metrics</span> <span class="o">=</span> <span class="n">c_train</span><span class="o">.</span><span class="n">fit_model</span><span class="p">(</span><span class="n">save_dir</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:\Your\path\output&quot;</span><span class="p">)</span> <span class="c1">#(3)</span>
+<span class="hll">                         <span class="s2">&quot;basal-area1&quot;</span><span class="p">,</span><span class="s2">&quot;site-column&quot;</span><span class="p">,</span><span class="s2">&quot;volume-target&quot;</span><span class="p">,</span>
+</span>                         <span class="n">iterator</span><span class="o">=</span><span class="s2">&quot;Genetic Material&quot;</span><span class="p">)</span><span class="c1">#(2)!</span>
 
-<span class="c1">#</span>
+<span class="n">c_train_metrics</span> <span class="o">=</span> <span class="n">c_train</span><span class="o">.</span><span class="n">fit_model</span><span class="p">(</span><span class="n">save_dir</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:\Your\path\output&quot;</span><span class="p">)</span><span class="c1">#(3)!</span>
+
 <span class="n">c_predictor</span> <span class="o">=</span> <span class="n">ClutterPredictor</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Your\path\output\all_coefficients.json&quot;</span><span class="p">,</span>
-                             <span class="mf">2.35</span><span class="p">,</span><span class="mf">9.27</span><span class="p">,</span><span class="mf">9.13</span><span class="p">,</span> <span class="n">iterator</span><span class="o">=</span><span class="s2">&quot;type-x&quot;</span><span class="p">)</span> <span class="c1">#(4)</span>
+                             <span class="mf">2.35</span><span class="p">,</span><span class="mf">9.27</span><span class="p">,</span><span class="mf">9.13</span><span class="p">,</span> <span class="n">iterator</span><span class="o">=</span><span class="s2">&quot;type-x&quot;</span><span class="p">)</span><span class="c1">#(4)!</span>
 
-<span class="n">ba_vol_predicted</span> <span class="o">=</span> <span class="n">c_predictor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="c1">#(5)</span>
-<span class="n">coef</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">get_coefs</span><span class="p">()</span> <span class="c1">#(6)</span>
-<span class="n">ba_vol_range_predicted</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">predict_range</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">12</span><span class="p">),</span> <span class="n">show_plots</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#(7)</span>
+
+<span class="n">ba_vol_predicted</span> <span class="o">=</span> <span class="n">c_predictor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="c1">#(5)!</span>
+
+<span class="n">coef</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">get_coefs</span><span class="p">()</span><span class="c1">#(6)!</span>
+
+<span class="n">ba_vol_range_predicted</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">predict_range</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">12</span><span class="p">),</span> <span class="n">show_plots</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="c1">#(7)!</span>
 </code></pre></div></td></tr></table></div></p>
 <ol>
-<li>Load your CSV file.  </li>
-<li>Create the variable <code>c_train</code> containing the <code>ClutterTrainer</code> class.  </li>
-<li>Adjust the Clutter model, saving the coefficients and parameters in the folder <code>C:\Your\path\output</code>, and save the training metrics in the variable <code>c_train_metrics</code>.  </li>
-<li>Create a variable containing the predictor. This predictor will use the saved model <code>C:\Your\path\output\all_coefficients.json</code> to apply an inventory with an age of <code>2.35</code>, a site index of <code>9.27</code>, and a basal area of <code>9.13</code> to predict future volume production and basal area.  </li>
-<li>Make the prediction for this plantation when it reaches <code>4</code> years old and save the results in <code>ba_vol_predicted</code>.  </li>
-<li>Obtain the model coefficients and save them in the variable <code>coef</code>.  </li>
-<li>Make the prediction for this plantation from <code>2</code> to <code>12</code> years, generating a graph showing the evolution of basal area and volume over this period, along with the confidence level.  </li>
+<li>Carregue seu arquivo CSV.  </li>
+<li>Crie a variável <code>c_train</code> contendo a classe <code>ClutterTrainer</code>.  </li>
+<li>Ajuste o modelo de Clutter, salvando os coeficientes e parâmetros na pasta <code>C:\Your\path\output</code>, e salve as métricas do treinamento na variável <code>c_train_metrics</code>.  </li>
+<li>Crie uma variável contendo o preditor. Esse preditor usará o modelo salvo <code>C:\Your\path\output\all_coefficients.json</code> para aplicar um inventário com idade de <code>2.35</code>, um índice de sítio de <code>9.27</code> e uma área basal de <code>9.13</code>, a fim de prever a produção futura de volume e área basal.  </li>
+<li>Faça a previsão para essa plantação quando atingir <code>4</code> anos e salve os resultados em <code>ba_vol_predicted</code>.  </li>
+<li>Obtenha os coeficientes do modelo e salve-os na variável <code>coef</code>.  </li>
+<li>Faça a previsão para essa plantação de <code>2</code> a <code>12</code> anos, gerando um gráfico que mostre a evolução da área basal e do volume ao longo desse período, juntamente com o nível de confiança.  </li>
 </ol>
-<h3 id="example-of-output-prediction-plot">Example of output prediction plot</h3>
+<h3 id="exemplo-de-grafico-de-saida-da-previsao">Exemplo de Gráfico de Saída da Previsão</h3>
 <!-- Slider main container -->
 <div class="swiper">
   <!-- Additional required wrapper -->
@@ -1374,7 +1583,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 </style>
 
-<h2 id="references">References</h2>
+<h2 id="referencias">Referências</h2>
 <section id="references">
   <div>
     <p><strong>CLUTTER, J. L.; FORTSON, J. C.; PIENAAR, L. V.; BRISTER, G. H.; BAILEY, R. L.</strong> (1983). 
@@ -1405,6 +1614,44 @@ document.addEventListener("DOMContentLoaded", function () {
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../forest_report/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Relatório Florestal">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Relatório Florestal
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../ann_forecast/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Redes Neurais artificiais">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Próximo
+              </span>
+              <div class="md-ellipsis">
+                Redes Neurais artificiais
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -1462,7 +1709,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.footnote.tooltips", "navigation.footer", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.footnote.tooltips", "navigation.footer", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
