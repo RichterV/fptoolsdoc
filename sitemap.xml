@@ -43,13 +43,6 @@
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/clutter_forecast/"/>
     </url>
     <url>
-        <loc>Nonecubage_planning/</loc>
-        <lastmod>2025-04-01</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonecubage_planning/"/>
-        <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/cubage_planning/"/>
-    </url>
-    <url>
         <loc>Noneforest_report/</loc>
         <lastmod>2025-04-01</lastmod>
         <changefreq>daily</changefreq>
@@ -90,6 +83,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Nonestratifier/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/stratifier/"/>
+    </url>
+    <url>
+        <loc>Nonetree_volume_planning/</loc>
+        <lastmod>2025-04-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonetree_volume_planning/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/tree_volume_planning/"/>
     </url>
     <url>
         <loc>Nonevolumetry/</loc>
@@ -141,13 +141,6 @@
         <xhtml:link rel="alternate" hreflang="en" href="Noneclutter_forecast/"/>
     </url>
     <url>
-        <loc>Nonept-BR/cubage_planning/</loc>
-        <lastmod>2025-04-01</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/cubage_planning/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonecubage_planning/"/>
-    </url>
-    <url>
         <loc>Nonept-BR/forest_report/</loc>
         <lastmod>2025-04-01</lastmod>
         <changefreq>daily</changefreq>
@@ -188,6 +181,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/stratifier/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Nonestratifier/"/>
+    </url>
+    <url>
+        <loc>Nonept-BR/tree_volume_planning/</loc>
+        <lastmod>2025-04-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/tree_volume_planning/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonetree_volume_planning/"/>
     </url>
     <url>
         <loc>Nonept-BR/volumetry/</loc>

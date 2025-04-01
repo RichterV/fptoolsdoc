@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../plot_allocation/">
+        <link rel="prev" href="../hypsometric_relationship/">
       
       
-        <link rel="next" href="../hypsometric_relationship/">
+        <link rel="next" href="../volumetry/">
       
       
       <link rel="icon" href="../images/logo1_no_background.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Cubage Planning - ForestPy Tools</title>
+        <title>Tree Volume Planninng - ForestPy Tools</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cubage-planning" class="md-skip">
+        <a href="#tree-volume-planning" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cubage Planning
+              Tree Volume Planninng
             
           </span>
         </div>
@@ -162,7 +162,7 @@
           </li>
         
           <li class="md-select__item">
-            <a href="../pt-BR/cubage_planning/" hreflang="pt-BR" class="md-select__link">
+            <a href="../pt-BR/tree_volume_planning/" hreflang="pt-BR" class="md-select__link">
               Português
             </a>
           </li>
@@ -378,6 +378,27 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../hypsometric_relationship/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hypsometric Relationship
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -394,7 +415,7 @@
           
   
   <span class="md-ellipsis">
-    Cubage Planning
+    Tree Volume Planninng
     
   </span>
   
@@ -406,7 +427,7 @@
         
   
   <span class="md-ellipsis">
-    Cubage Planning
+    Tree Volume Planninng
     
   </span>
   
@@ -459,27 +480,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../hypsometric_relationship/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Hypsometric Relationship
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -811,7 +811,7 @@
 
 
 
-<h1 id="cubage-planning">Cubage Planning</h1>
+<h1 id="tree-volume-planning">Tree Volume Planning</h1>
 <hr />
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -820,7 +820,7 @@
 <p>Use forest inventory data to plan the trees to be sampled for volume measurement, ensuring sufficient sampling of the plantation.</p>
 <hr />
 <h3 id="class-parameters">Class Parameters</h3>
-<div class="language-text highlight"><pre><span></span><code>CubagePlanning(df, tree_dbh, tree_height)
+<div class="language-text highlight"><pre><span></span><code>TreeVolumePlanning(df, tree_dbh, tree_height)
 </code></pre></div>
 <table>
 <thead>
@@ -845,13 +845,13 @@
 </tbody>
 </table>
 <h3 id="class-functions">Class Functions</h3>
-<div class="language-py3 highlight"><span class="filename">functions and parameters</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  <span class="n">CubagePlanning</span><span class="o">.</span><span class="n">resume</span><span class="p">(</span><span class="n">n_classes</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">dbh_classes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">height_classes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<div class="language-py3 highlight"><span class="filename">functions and parameters</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  <span class="n">TreeVolumePlanning</span><span class="o">.</span><span class="n">resume</span><span class="p">(</span><span class="n">n_classes</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">dbh_classes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">height_classes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>                        <span class="n">only_height_classes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">only_dbh_classes</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="c1">#(1)!</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  <span class="n">CubagePlanning</span><span class="o">.</span><span class="n">p_resume</span><span class="p">(</span><span class="n">n_classes</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">dbh_classes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">height_classes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  <span class="n">TreeVolumePlanning</span><span class="o">.</span><span class="n">p_resume</span><span class="p">(</span><span class="n">n_classes</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">dbh_classes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">height_classes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                          <span class="n">only_height_classes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">only_dbh_classes</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="c1">#(2)!</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  <span class="n">CubagePlanning</span><span class="o">.</span><span class="n">get_values</span><span class="p">(</span><span class="n">n_cubage_trees</span><span class="p">,</span> <span class="n">n_classes</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">dbh_classes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">height_classes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  <span class="n">TreeVolumePlanning</span><span class="o">.</span><span class="n">get_values</span><span class="p">(</span><span class="n">n_measured_trees</span><span class="p">,</span> <span class="n">n_classes</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">dbh_classes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">height_classes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>                            <span class="n">only_height_classes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">only_dbh_classes</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="c1">#(3)!</span>
 </span></code></pre></div>
 <ol>
@@ -870,7 +870,7 @@
 <strong>only_dbh_classes</strong> = (Optional) only DBH classes will be used for the summary.</p>
 </li>
 <li>
-<p><strong>n_cubage_trees</strong> = Number of trees that will be selected for cubage. The default is 10. <br />
+<p><strong>n_measured_trees</strong> = Number of trees that will be selected for volume measurement. The default is 10. <br />
 <strong>n_classes</strong> = Number of classes to which the values of height and diameter at breast height will be subjected.                                       <br />
 <strong>dbh_classes</strong> = (Optional) Number of DBH classes to which the values of diameter at breast height will be subjected. If <code>None</code>, uses <code>n_classes</code> value.  <br />
 <strong>height_classes</strong> = (Optional) Number of height classes to which the values of height will be subjected.  If <code>None</code>, uses <code>n_classes</code> value.  <br />
@@ -902,11 +902,11 @@
 </table>
 <h3 id="example-usage">Example Usage</h3>
 <p class="annotate"><div class="language-py3 highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">taper_functions_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.cubage_planning</span><span class="w"> </span><span class="kn">import</span> <span class="n">CubagePlanning</span><span class="c1">#(1)!</span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.tree_volume_planning</span><span class="w"> </span><span class="kn">import</span> <span class="n">TreeVolumePlanning</span><span class="c1">#(1)!</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span><span class="c1">#(2)!</span>
 </span></code></pre></div></td></tr></table></div></p>
 <ol>
-<li>Import <code>CubagePlanning</code> class.</li>
+<li>Import <code>TreeVolumePlanning</code> class.</li>
 <li>Import <code>pandas</code> for data manipulation.</li>
 </ol>
 <p>Create a variable for the Volumetrics Class</p>
@@ -920,17 +920,17 @@
 <span class="normal"><a href="#__codelineno-2-10">10</a></span>
 <span class="normal"><a href="#__codelineno-2-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Your\path\csv_inventory_file.csv&#39;</span><span class="p">)</span><span class="c1">#(1)!</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">cub</span> <span class="o">=</span> <span class="n">CubagePlanning</span><span class="p">(</span><span class="n">df</span> <span class="p">,</span><span class="s1">&#39;DAP&#39;</span><span class="p">,</span><span class="s1">&#39;HT&#39;</span><span class="p">)</span><span class="c1">#(2)!</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">cub</span> <span class="o">=</span> <span class="n">TreeVolumePlanning</span><span class="p">(</span><span class="n">df</span> <span class="p">,</span><span class="s1">&#39;DAP&#39;</span><span class="p">,</span><span class="s1">&#39;HT&#39;</span><span class="p">)</span><span class="c1">#(2)!</span>
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="hll">
 </span></span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="n">resume</span> <span class="o">=</span> <span class="n">cub</span><span class="o">.</span><span class="n">resume</span><span class="p">()</span><span class="c1">#(3)!</span>
 </span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a>
 </span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="n">percentual_resume</span> <span class="o">=</span> <span class="n">cub</span><span class="o">.</span><span class="n">p_resume</span><span class="p">()</span><span class="c1">#(4)!</span>
 </span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="n">results</span> <span class="o">=</span> <span class="n">cub</span><span class="o">.</span><span class="n">get_values</span><span class="p">(</span><span class="n">n_cubage_trees</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span><span class="c1">#(5)!</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="n">results</span> <span class="o">=</span> <span class="n">cub</span><span class="o">.</span><span class="n">get_values</span><span class="p">(</span><span class="n">n_measured_trees</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span><span class="c1">#(5)!</span>
 </span></code></pre></div></td></tr></table></div></p>
 <ol>
 <li>Load your csv file.</li>
-<li>Create the variable <code>cub</code> containing the <code>CubagePlanning</code> class, using column <code>DAP</code> for the DBH values and the column <code>HT</code> for the heights values.</li>
+<li>Create the variable <code>cub</code> containing the <code>TreeVolumePlanning</code> class, using column <code>DAP</code> for the DBH values and the column <code>HT</code> for the heights values.</li>
 <li>Get a summary of how many trees from the provided dataframe are in each class and save on <code>resume</code> variable.</li>
 <li>Get a summary of the percentage of trees from the provided dataframe in each class and save on <code>percentual_resume</code> variable.</li>
 <li>Get a dataframe indicating how many trees should be sampled for volume measurement in each class, based on the percentage representation of each class in the total inventory and save on <code>results</code> variable.</li>
@@ -964,7 +964,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../plot_allocation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Inventory Planning">
+          <a href="../hypsometric_relationship/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Hypsometric Relationship">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -974,20 +974,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Inventory Planning
+                Hypsometric Relationship
               </div>
             </div>
           </a>
         
         
           
-          <a href="../hypsometric_relationship/" class="md-footer__link md-footer__link--next" aria-label="Next: Hypsometric Relationship">
+          <a href="../volumetry/" class="md-footer__link md-footer__link--next" aria-label="Next: Volumetry">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Hypsometric Relationship
+                Volumetry
               </div>
             </div>
             <div class="md-footer__button md-icon">
