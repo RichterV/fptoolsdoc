@@ -856,7 +856,7 @@
 <p>Generate a forest report based on estimated heights and volumes using the other modules of ForestPyTools. Obtain volume values and tree types per hectare at various specific levels of the forest stand, along with other metrics. Get the report in xlsx (Excel) or json format.</p>
 <hr />
 <h3 id="class-parameters">Class Parameters</h3>
-<div class="highlight"><pre><span></span><code>ForestReport(df, plot_id, plot_size, tree_type, tree_dbh,
+<div class="language-text highlight"><pre><span></span><code>ForestReport(df, plot_id, plot_size, tree_type, tree_dbh,
              tree_height,group_levels = None, tree_vol_with_bark = None 
              tree_vol_withou_bark = None, iterator=None)
 </code></pre></div>
@@ -911,10 +911,10 @@
 </tbody>
 </table>
 <h3 id="class-functions">Class Functions</h3>
-<p class="annotate"><div class="highlight"><span class="filename">functions and parameters</span><pre><span></span><code>  <span class="n">ForestReport</span><span class="o">.</span><span class="n">update_tree_types</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="c1">#(1)!</span>
-  <span class="n">ForestReport</span><span class="o">.</span><span class="n">view_tree_types</span><span class="p">()</span>
-  <span class="n">ForestReport</span><span class="o">.</span><span class="n">get_report</span><span class="p">(</span><span class="nb">dir</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;xlsx&quot;</span><span class="p">)</span><span class="c1">#(2)!</span>
-</code></pre></div></p>
+<p class="annotate"><div class="language-py3 highlight"><span class="filename">functions and parameters</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  <span class="n">ForestReport</span><span class="o">.</span><span class="n">update_tree_types</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="c1">#(1)!</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="n">ForestReport</span><span class="o">.</span><span class="n">view_tree_types</span><span class="p">()</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  <span class="n">ForestReport</span><span class="o">.</span><span class="n">get_report</span><span class="p">(</span><span class="nb">dir</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;xlsx&quot;</span><span class="p">)</span><span class="c1">#(2)!</span>
+</span></code></pre></div></p>
 <ol>
 <li><strong>df</strong> = DataFrame containing the tree types present in the forest inventory. If <code>None</code>, the library's default DataFrame is used.</li>
 <li><strong>dir</strong> = Directory where the report will be saved.<br />
@@ -1002,45 +1002,45 @@
 </li>
 </ul>
 <h3 id="example-usage">Example Usage</h3>
-<p class="annotate"><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">forest_report_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.forest_report</span><span class="w"> </span><span class="kn">import</span> <span class="n">ForestReport</span><span class="c1">#(1)!</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span><span class="c1">#(2)!</span>
-</code></pre></div></td></tr></table></div></p>
+<p class="annotate"><div class="language-py3 highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">forest_report_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.forest_report</span><span class="w"> </span><span class="kn">import</span> <span class="n">ForestReport</span><span class="c1">#(1)!</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span><span class="c1">#(2)!</span>
+</span></code></pre></div></td></tr></table></div></p>
 <ol>
 <li>Import <code>ForestReport</code> class.</li>
 <li>Import <code>pandas</code> for data manipulation.</li>
 </ol>
 <p>Create a variable for the ForestReport Class</p>
-<p class="annotate"><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">forest_report_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">inventory_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Your\path\processed_inventory.csv&#39;</span><span class="p">)</span><span class="c1">#(1)!</span>
-
-<span class="n">tree_df_types</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Your\path\tree_df_types.csv&#39;</span><span class="p">)</span><span class="c1">#(2)!</span>
-<span class="hll">
-</span><span class="n">Report</span> <span class="o">=</span> <span class="n">ForestReport</span><span class="p">(</span><span class="n">inventory_data</span><span class="p">,</span><span class="n">plot_id</span> <span class="o">=</span> <span class="s2">&quot;plot_identifier&quot;</span><span class="p">,</span><span class="n">plot_size</span> <span class="o">=</span> <span class="s1">&#39;plot_size_column&#39;</span><span class="p">,</span>
-                      <span class="n">tree_type</span><span class="o">=</span><span class="s1">&#39;tree_type_tag&#39;</span><span class="p">,</span> <span class="n">group_levels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Farm&#39;</span><span class="p">,</span> <span class="s1">&#39;Stand&#39;</span><span class="p">],</span>
-                      <span class="n">tree_height</span><span class="o">=</span><span class="s2">&quot;best_predicted_height (m)&quot;</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="o">=</span><span class="s2">&quot;DBH (cm)&quot;</span><span class="p">,</span>
-                      <span class="n">tree_vol_with_bark</span><span class="o">=</span><span class="s2">&quot;Tree_volume&quot;</span><span class="p">,</span><span class="n">tree_vol_without_bark</span><span class="o">=</span> <span class="s2">&quot;Tree_volume_no_bark&quot;</span><span class="p">,</span>
-                      <span class="n">iterator</span><span class="o">=</span><span class="s2">&quot;forest stratum&quot;</span><span class="p">)</span><span class="c1">#(3)</span>
-
-<span class="n">Report</span><span class="o">.</span><span class="n">view_tree_types</span><span class="p">()</span><span class="c1">#(4)</span>
-
-<span class="n">Report</span><span class="o">.</span><span class="n">update_tree_types</span><span class="p">(</span><span class="n">tree_df_types</span><span class="p">)</span><span class="c1">#(5)</span>
-
-<span class="n">Report</span><span class="o">.</span><span class="n">get_report</span><span class="p">(</span><span class="nb">dir</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Desktop&quot;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;json&quot;</span><span class="p">)</span><span class="c1">#(6)</span>
-</code></pre></div></td></tr></table></div></p>
+<p class="annotate"><div class="language-py3 highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">forest_report_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">inventory_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Your\path\processed_inventory.csv&#39;</span><span class="p">)</span><span class="c1">#(1)!</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">tree_df_types</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Your\path\tree_df_types.csv&#39;</span><span class="p">)</span><span class="c1">#(2)!</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="hll">
+</span></span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="n">Report</span> <span class="o">=</span> <span class="n">ForestReport</span><span class="p">(</span><span class="n">inventory_data</span><span class="p">,</span><span class="n">plot_id</span> <span class="o">=</span> <span class="s2">&quot;plot_identifier&quot;</span><span class="p">,</span><span class="n">plot_size</span> <span class="o">=</span> <span class="s1">&#39;plot_size_column&#39;</span><span class="p">,</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a>                      <span class="n">tree_type</span><span class="o">=</span><span class="s1">&#39;tree_type_tag&#39;</span><span class="p">,</span> <span class="n">group_levels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Farm&#39;</span><span class="p">,</span> <span class="s1">&#39;Stand&#39;</span><span class="p">],</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a>                      <span class="n">tree_height</span><span class="o">=</span><span class="s2">&quot;best_predicted_height (m)&quot;</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="o">=</span><span class="s2">&quot;DBH (cm)&quot;</span><span class="p">,</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a>                      <span class="n">tree_vol_with_bark</span><span class="o">=</span><span class="s2">&quot;Tree_volume&quot;</span><span class="p">,</span><span class="n">tree_vol_without_bark</span><span class="o">=</span> <span class="s2">&quot;Tree_volume_no_bark&quot;</span><span class="p">,</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a>                      <span class="n">iterator</span><span class="o">=</span><span class="s2">&quot;forest stratum&quot;</span><span class="p">)</span><span class="c1">#(3)</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="n">Report</span><span class="o">.</span><span class="n">view_tree_types</span><span class="p">()</span><span class="c1">#(4)</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="n">Report</span><span class="o">.</span><span class="n">update_tree_types</span><span class="p">(</span><span class="n">tree_df_types</span><span class="p">)</span><span class="c1">#(5)</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16"></a>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="n">Report</span><span class="o">.</span><span class="n">get_report</span><span class="p">(</span><span class="nb">dir</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Desktop&quot;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;json&quot;</span><span class="p">)</span><span class="c1">#(6)</span>
+</span></code></pre></div></td></tr></table></div></p>
 <ol>
 <li>Load your procesed inventory data df from a csv file.</li>
 <li>Load your tree types df from a csv file.</li>
@@ -1177,7 +1177,7 @@ Define the column <code>forest stratum</code> as the main iterator in which the 
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.footnote.tooltips", "navigation.footer", "content.code.annotate"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.footnote.tooltips", "navigation.footer", "content.code.annotate", "content.code.select"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
