@@ -640,22 +640,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#previsao-da-area-basal" class="md-nav__link">
+  <a href="#predicao-da-area-basal" class="md-nav__link">
     <span class="md-ellipsis">
-      Previsão da área basal
+      Predição da área basal
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#previsao-do-volume" class="md-nav__link">
+  <a href="#predicao-do-volume" class="md-nav__link">
     <span class="md-ellipsis">
-      Previsão do volume
+      Predição do volume
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Previsão do volume">
+    <nav class="md-nav" aria-label="Predição do volume">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -962,22 +962,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#previsao-da-area-basal" class="md-nav__link">
+  <a href="#predicao-da-area-basal" class="md-nav__link">
     <span class="md-ellipsis">
-      Previsão da área basal
+      Predição da área basal
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#previsao-do-volume" class="md-nav__link">
+  <a href="#predicao-do-volume" class="md-nav__link">
     <span class="md-ellipsis">
-      Previsão do volume
+      Predição do volume
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Previsão do volume">
+    <nav class="md-nav" aria-label="Predição do volume">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1253,29 +1253,25 @@
 </table>
 <h3 id="modelos-de-clutter">Modelos de Clutter</h3>
 <div class="annotate">
-<h4 id="previsao-da-area-basal"><li>Previsão da área basal</li></h4>
+<h4 id="predicao-da-area-basal"><li>Predição da área basal</li></h4>
 <div class="arithmatex">\[
-\operatorname{lnb_2}^{\text{est}} =b_0 + b_1 \cdot x_1 + b_2 \cdot x_2 + b_3 \cdot x_3 + b_4 \cdot \frac{1}{I_2} + b_5 \cdot S
+\ln G_2 = \ln G_1 \left( \frac{t_1}{t_2} \right) + \alpha_0 \left( 1 - \frac{t_1}{t_2} \right) + \alpha_1 \left( 1 - \frac{t_1}{t_2} \right) S
 \]</div>
-<h4 id="previsao-do-volume"><li>Previsão do volume</li></h4>
+<h4 id="predicao-do-volume"><li>Predição do volume</li></h4>
 <div class="arithmatex">\[
-\operatorname{lnv_2} = b_0 + b_1 \cdot \frac{1}{I_2} + b_2 \cdot S + b_3 \cdot \operatorname{lnb_2}^{\text{est} }
+\ln V_2 = \beta_0 + \beta_1 \cdot \frac{1}{t_2} + \beta_2 \cdot S + \beta_3 \cdot \ln G_2
 \]</div>
 </div>
 <h6 id="notacao">Notação</h6>
 <ul>
-<li><span class="arithmatex">\( β_n \)</span>: Parâmetros ajustados</li>
-<li><span class="arithmatex">\( I \)</span>: Idade</li>
-<li>
-<div class="arithmatex">\[\operatorname{x_1} = \ln(β_1) \cdot \frac{\operatorname{I_1}}{\operatorname{I}_2}\]</div>
-</li>
-<li>
-<div class="arithmatex">\[\operatorname{x_2} = 1 - \frac{\operatorname{I}_1}{\operatorname{I}_2}\]</div>
-</li>
-<li>
-<div class="arithmatex">\[\operatorname{x_3} = \left( 1 - \frac{\operatorname{I}_1}{\operatorname{I}_2} \right) \cdot \operatorname{S}\]</div>
-</li>
-<li><span class="arithmatex">\( S \)</span>: Índice de sítio da floresta</li>
+<li><span class="arithmatex">\( G_1 \)</span>: Área basal inicial (na idade <span class="arithmatex">\( t_1 \)</span>) em m²·ha⁻¹  </li>
+<li><span class="arithmatex">\( G_2 \)</span>: Área basal final (na idade <span class="arithmatex">\( t_2 \)</span>) em m²·ha⁻¹  </li>
+<li><span class="arithmatex">\( t_1 \)</span>: Idade inicial em meses ou anos  </li>
+<li><span class="arithmatex">\( t_2 \)</span>: Idade final em meses ou anos  </li>
+<li><span class="arithmatex">\( S \)</span>: Índice de sítio, adimensional, <span class="arithmatex">\( f(\text{idade índice}, t_i) \)</span>  </li>
+<li><span class="arithmatex">\( \alpha_0, \alpha_1 \)</span>: Coeficientes a serem ajustados  </li>
+<li><span class="arithmatex">\( V_2 \)</span>: Volume final (na idade <span class="arithmatex">\( t_2 \)</span>) em m³·ha⁻¹  </li>
+<li><span class="arithmatex">\( \beta_i \)</span>: Coeficientes a serem ajustados  </li>
 </ul>
 <hr />
 <h2 id="parametros-da-classe_1">Parâmetros da Classe</h2>
@@ -1607,8 +1603,12 @@ document.addEventListener("DOMContentLoaded", function () {
 <h2 id="referencias">Referências</h2>
 <section id="references">
   <div>
-    <p><strong>CLUTTER, J. L.; FORTSON, J. C.; PIENAAR, L. V.; BRISTER, G. H.; BAILEY, R. L.</strong> (1983). 
-    <em>Timber management: a quantitative approach</em>. New York: John Wiley & Sons, 333 p.</p>
+    <p><strong>CLUTTER, J. L.; FORTSON, J. C.; PIENAAR, L. V.; BRISTER, G. H.; BAILEY, R. L.</strong> (1983).  
+    <em>Timber management: a quantitative approach</em>. New York: John Wiley & Sons, 333p.</p>
+  </div>
+  <div>
+    <p><strong>ARCE, JULIO EDUARDO; DOBNER JR., MARIO.</strong> (2024).  
+    <em>Manejo e planejamento de florestas plantadas: com ênfase nos gêneros Pinus e Eucalyptus</em>. Curitiba, PR: Ed. dos Autores, 419p.</p>
   </div>
 </section>
 

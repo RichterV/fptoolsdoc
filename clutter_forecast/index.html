@@ -632,11 +632,11 @@
           <li class="md-nav__item">
   <a href="#clutter-models" class="md-nav__link">
     <span class="md-ellipsis">
-      Clutter models
+      Clutter Models
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Clutter models">
+    <nav class="md-nav" aria-label="Clutter Models">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -954,11 +954,11 @@
           <li class="md-nav__item">
   <a href="#clutter-models" class="md-nav__link">
     <span class="md-ellipsis">
-      Clutter models
+      Clutter Models
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Clutter models">
+    <nav class="md-nav" aria-label="Clutter Models">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1251,31 +1251,27 @@
 </tr>
 </tbody>
 </table>
-<h3 id="clutter-models">Clutter models</h3>
+<h3 id="clutter-models">Clutter Models</h3>
 <div class="annotate">
 <h4 id="basal-area-prediction"><li>Basal area prediction</li></h4>
 <div class="arithmatex">\[
-\operatorname{lnb_2}^{\text{est}} =b_0 + b_1 \cdot x_1 + b_2 \cdot x_2 + b_3 \cdot x_3 + b_4 \cdot \frac{1}{I_2} + b_5 \cdot S
+\ln G_2 = \ln G_1 \left( \frac{t_1}{t_2} \right) + \alpha_0 \left( 1 - \frac{t_1}{t_2} \right) + \alpha_1 \left( 1 - \frac{t_1}{t_2} \right) S
 \]</div>
 <h4 id="volume-prediction"><li>Volume prediction</li></h4>
 <div class="arithmatex">\[
-\operatorname{lnv_2} = b_0 + b_1 \cdot \frac{1}{I_2} + b_2 \cdot S + b_3 \cdot \operatorname{lnb_2}^{\text{est} }
+\ln V_2 = \beta_0 + \beta_1 \cdot \frac{1}{t_2} + \beta_2 \cdot S + \beta_3 \cdot \ln G_2
 \]</div>
 </div>
 <h6 id="notation">Notation</h6>
 <ul>
-<li><span class="arithmatex">\( β_n \)</span>: Fitted parameters</li>
-<li><span class="arithmatex">\( I \)</span>: Age</li>
-<li>
-<div class="arithmatex">\[\operatorname{x_1} = \ln(β_1) \cdot \frac{\operatorname{I_1}}{\operatorname{I}_2}\]</div>
-</li>
-<li>
-<div class="arithmatex">\[\operatorname{x_2} = 1 - \frac{\operatorname{I}_1}{\operatorname{I}_2}\]</div>
-</li>
-<li>
-<div class="arithmatex">\[\operatorname{x_3} = \left( 1 - \frac{\operatorname{I}_1}{\operatorname{I}_2} \right) \cdot \operatorname{S}\]</div>
-</li>
-<li><span class="arithmatex">\( S \)</span>: Forest site</li>
+<li><span class="arithmatex">\( G_1 \)</span>: Initial basal area (at age <span class="arithmatex">\( t_1 \)</span>) in m²·ha⁻¹  </li>
+<li><span class="arithmatex">\( G_2 \)</span>: Final basal area (at age <span class="arithmatex">\( t_2 \)</span>) in m²·ha⁻¹  </li>
+<li><span class="arithmatex">\( t_1 \)</span>: Initial age in months or years  </li>
+<li><span class="arithmatex">\( t_2 \)</span>: Final age in months or years  </li>
+<li><span class="arithmatex">\( S \)</span>: Site index, dimensionless, <span class="arithmatex">\( f(\text{site age}, t_i) \)</span>  </li>
+<li><span class="arithmatex">\( \alpha_0, \alpha_1 \)</span>: Coefficients to be estimated  </li>
+<li><span class="arithmatex">\( V_2 \)</span>: Final volume (at age <span class="arithmatex">\( t_2 \)</span>) in m³·ha⁻¹  </li>
+<li><span class="arithmatex">\( \beta_i \)</span>: Coefficients to be estimated  </li>
 </ul>
 <hr />
 <h2 id="class-parameters_1">Class Parameters</h2>
@@ -1601,8 +1597,12 @@ document.addEventListener("DOMContentLoaded", function () {
 <h2 id="references">References</h2>
 <section id="references">
   <div>
-    <p><strong>CLUTTER, J. L.; FORTSON, J. C.; PIENAAR, L. V.; BRISTER, G. H.; BAILEY, R. L.</strong> (1983). 
-    <em>Timber management: a quantitative approach</em>. New York: John Wiley & Sons, 333 p.</p>
+    <p><strong>CLUTTER, J. L.; FORTSON, J. C.; PIENAAR, L. V.; BRISTER, G. H.; BAILEY, R. L.</strong> (1983).  
+    <em>Timber management: a quantitative approach</em>. New York: John Wiley & Sons, 333p.</p>
+  </div>
+  <div>
+    <p><strong>ARCE, JULIO EDUARDO; DOBNER JR., MARIO.</strong> (2024).  
+    <em>Manejo e planejamento de florestas plantadas: com ênfase nos gêneros Pinus e Eucalyptus</em>. Curitiba, PR: Ed. dos Autores, 419p.</p>
   </div>
 </section>
 
