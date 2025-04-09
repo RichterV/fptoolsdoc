@@ -52,6 +52,8 @@
     
       <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -508,6 +510,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#usage-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Example
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -950,6 +961,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#usage-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Example
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1122,6 +1142,57 @@
 </div>
 </div>
 </div>
+<h2 id="usage-example">Usage Example</h2>
+<p>Consider the data from 3 fictitious forest stands, located in a forest near the Federal University of Santa Maria, Frederico Westphalen Campus, Brazil.<br />
+<a href="../downloads/plot_allocation_qgis/exemplo_shapefile.zip" download style="text-decoration: none; font-weight: bold;">
+  <i class="fa-solid fa-file-arrow-down" style="margin-right: 8px;"></i>Download example shapefile.
+</a></p>
+<figure style="display: inline-block; text-align: center;">
+  <figcaption>
+    View of the shapefile boundaries
+  </figcaption>
+  <img src="../images/plot_allocation_qgis/shapefile.jpg" alt="Plugin interface" 
+       style="width: 436px; height: 752px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);" />
+</figure>
+
+<p>Attribute table information:</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>talhao</th>
+<th>area_ha</th>
+<th>n_par</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>A</td>
+<td>4,049</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>B</td>
+<td>15,521</td>
+<td>5</td>
+</tr>
+<tr>
+<td>3</td>
+<td>C</td>
+<td>39,964</td>
+<td>14</td>
+</tr>
+</tbody>
+</table>
+<figure style="display: inline-block; text-align: center;">
+  <figcaption>
+    Example of plot allocation using the "best sampling" distribution, square plots of 400m², 1 meter border distance, and using the "n_par" column from the attribute table to define the number of plots.
+  </figcaption>
+  <img src="../images/plot_allocation_qgis/exemplo_alocacao.jpg" alt="Plugin interface" 
+       style="width: 941px; height: 752px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);" />
+</figure>
 
 
 

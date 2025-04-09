@@ -52,6 +52,8 @@
     
       <link rel="stylesheet" href="../../assets/css/swiper-bundle.min.css">
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -508,6 +510,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#exemplo-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplo de Uso
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -949,6 +960,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#exemplo-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplo de Uso
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1123,6 +1143,57 @@
 </div>
 </div>
 </div>
+<h2 id="exemplo-de-uso">Exemplo de Uso</h2>
+<p>Considere os dados de 3 talhões fictícios, delimitados em uma floresta próxima a Universidade Federal de Santa Maria, Campus Frederico Westphalen, RS-Brasil.<br />
+<a href="../../downloads/plot_allocation_qgis/exemplo_shapefile.zip" download style="text-decoration: none; font-weight: bold;">
+  <i class="fa-solid fa-file-arrow-down" style="margin-right: 8px;"></i>Baixar shapefile de exemplo.
+</a></p>
+<figure style="display: inline-block; text-align: center;">
+  <figcaption>
+    Visão das limitações do shapefile
+  </figcaption>
+  <img src="../../images/plot_allocation_qgis/shapefile.jpg" alt="Interface do plugin" 
+       style="width: 436px; height: 752px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);" />
+</figure>
+
+<p>Informações da tabela de atributos:  </p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>talhao</th>
+<th>area_ha</th>
+<th>n_par</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>A</td>
+<td>4,049</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>B</td>
+<td>15,521</td>
+<td>5</td>
+</tr>
+<tr>
+<td>3</td>
+<td>C</td>
+<td>39,964</td>
+<td>14</td>
+</tr>
+</tbody>
+</table>
+<figure style="display: inline-block; text-align: center;">
+  <figcaption>
+    Exemplo de alocação de parcelas usando a distriubição "best sampling", parcelas quadradas de 400m², distância de borda de 1 metro e usando a coluna "n_par" da tabela de atributos para definir o número de parcelas.
+  </figcaption>
+  <img src="../../images/plot_allocation_qgis/exemplo_alocacao.jpg" alt="Interface do plugin" 
+       style="width: 941px; height: 752px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);" />
+</figure>
 
 
 
