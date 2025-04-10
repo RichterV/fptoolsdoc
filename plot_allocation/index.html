@@ -1121,6 +1121,41 @@ If you prefer a visual interface, consider using the <a href="../plot_allocation
 </div>
 </div>
 <h2 id="example-usage">Example Usage</h2>
+<p>Consider the data from 3 fictitious forest stands, located in a forest near the Federal University of Santa Maria, Frederico Westphalen Campus, Brazil.<br />
+<a href="../downloads/plot_allocation_qgis/exemplo_shapefile.zip" download style="text-decoration: none; font-weight: bold;">
+  <i class="fa-solid fa-file-arrow-down" style="margin-right: 8px;"></i>Download example shapefile.
+</a></p>
+<p>Attribute table information:  </p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>talhao</th>
+<th>area_ha</th>
+<th>n_par</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>A</td>
+<td>4,049</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>B</td>
+<td>15,521</td>
+<td>5</td>
+</tr>
+<tr>
+<td>3</td>
+<td>C</td>
+<td>39,964</td>
+<td>14</td>
+</tr>
+</tbody>
+</table>
 <h5 id="random-distribution">Random distribution</h5>
 <p class="annotate"><div class="language-py3 highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">plot_allocation_example_1.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
@@ -1128,19 +1163,46 @@ If you prefer a visual interface, consider using the <a href="../plot_allocation
 <span class="normal"><a href="#__codelineno-1-4">4</a></span>
 <span class="normal"><a href="#__codelineno-1-5">5</a></span>
 <span class="normal"><a href="#__codelineno-1-6">6</a></span>
-<span class="normal"><a href="#__codelineno-1-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.inventory_plots</span><span class="w"> </span><span class="kn">import</span> <span class="n">PlotAllocation</span><span class="c1">#(1)!</span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.inventory_plots</span><span class="w"> </span><span class="kn">import</span> <span class="n">PlotAllocation</span><span class="c1">#(1)!</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">plots</span> <span class="o">=</span> <span class="n">PlotAllocation</span><span class="p">(</span><span class="s1">&#39;example/shapefile/path.shp&#39;</span><span class="p">,</span><span class="n">epsg</span><span class="o">=</span><span class="s1">&#39;32722&#39;</span><span class="p">)</span><span class="c1">#(2)!</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">plots</span> <span class="o">=</span> <span class="n">PlotAllocation</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;your/path/exemplo_shapefile.shp&quot;</span><span class="p">,</span> <span class="n">epsg</span><span class="o">=</span><span class="s1">&#39;32722&#39;</span><span class="p">)</span><span class="c1">#(2)!</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">plots</span><span class="o">.</span><span class="n">create_plots</span><span class="p">(</span><span class="n">distribution</span><span class="o">=</span><span class="s2">&quot;random&quot;</span><span class="p">,</span> <span class="n">sample_number</span><span class="o">=</span><span class="s2">&quot;n_par&quot;</span><span class="p">,</span> <span class="n">plot_area</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>                    <span class="n">min_border_distance</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">save_dir</span><span class="o">=</span><span class="s2">&quot;C:\Users\Desktop&quot;</span><span class="p">,</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>                    <span class="n">show_plot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">save_buffer</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="c1">#(3)!</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">plots</span><span class="o">.</span><span class="n">create_plots</span><span class="p">(</span><span class="n">distribution</span><span class="o">=</span><span class="s2">&quot;random&quot;</span><span class="p">,</span> <span class="n">sample_number</span><span class="o">=</span><span class="s2">&quot;n_par&quot;</span><span class="p">,</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>                   <span class="n">plot_area</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">min_border_distance</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> 
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>                   <span class="n">save_dir</span><span class="o">=</span><span class="s2">&quot;C:/Users/Desktop&quot;</span><span class="p">,</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>                   <span class="n">show_plot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">save_buffer</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="c1">#(3)!</span>
 </span></code></pre></div></td></tr></table></div></p>
 <ol>
 <li>Import <code>PlotAllocation</code> class.  </li>
 <li>Create the <code>plots</code> variable with <code>PlotAllocation</code> class. Defines the boundary area shapefile path and the epsg.</li>
-<li>Create the plots with <code>random</code> distribuition, using "n_par" column on the atributte table  to define the number of plots, <code>plot area = 400 m²</code>, a minimum border distance of 20 meters and save the shapefile in <code>C:\Users\Desktop</code>.</li>
+<li>Create the plots with <code>random</code> distribuition, using "n_par" column on the atributte table to define the number of plots, <code>plot area = 400 m²</code>, a minimum border distance of 2 meters and save the shapefile in <code>C:\Users\Desktop</code>.</li>
 </ol>
+<figure style="position: relative; display: inline-block; text-align: center;">
+  <figcaption style="margin-bottom: 10px;">
+    As <code>show_plot=True</code>, a preview figure showing the plot allocation will be generated.
+  </figcaption>
+
+  <img src="../images/plot_allocation/ex_1_result.jpg" alt="example-1" 
+       style="width: 1015px; height: 752px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);" />
+
+  <div style="
+    position: absolute;
+    top: 200px;
+    left: 400px;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+  ">
+    Distribution: Random;<br>
+    Plot area: 400m²;<br>
+    Number of plots: column "n_par";<br>
+    Edge distance: 2 meters;
+  </div>
+</figure>
+
 <h5 id="systematic-custom-distribution">Systematic custom distribution</h5>
 <p class="annotate"><div class="language-py3 highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">plot_allocation_example_2.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
@@ -1150,17 +1212,44 @@ If you prefer a visual interface, consider using the <a href="../plot_allocation
 <span class="normal"><a href="#__codelineno-2-6">6</a></span>
 <span class="normal"><a href="#__codelineno-2-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.inventory_plots</span><span class="w"> </span><span class="kn">import</span> <span class="n">PlotAllocation</span><span class="c1">#(1)!</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">plots</span> <span class="o">=</span> <span class="n">PlotAllocation</span><span class="p">(</span><span class="s1">&#39;example/shapefile/path.shp&#39;</span><span class="p">,</span><span class="n">epsg</span><span class="o">=</span><span class="s1">&#39;32722&#39;</span><span class="p">)</span><span class="c1">#(2)!</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">plots</span> <span class="o">=</span> <span class="n">PlotAllocation</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;your/path/exemplo_shapefile.shp&quot;</span><span class="p">,</span> <span class="n">epsg</span><span class="o">=</span><span class="s1">&#39;32722&#39;</span><span class="p">)</span><span class="c1">#(2)!</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">plots</span><span class="o">.</span><span class="n">create_plots</span><span class="p">(</span><span class="n">distribution</span><span class="o">=</span><span class="s2">&quot;systematic custom&quot;</span><span class="p">,</span> <span class="n">x_y_angle</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">45</span><span class="p">),</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a>                    <span class="n">plot_area</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">min_border_distance</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">save_dir</span><span class="o">=</span><span class="s2">&quot;C:\Users\Desktop&quot;</span><span class="p">,</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a>                    <span class="n">plot_area</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">min_border_distance</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">save_dir</span><span class="o">=</span><span class="s2">&quot;C:\Users\Desktop&quot;</span><span class="p">,</span>
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a>                    <span class="n">show_plot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">save_buffer</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="c1">#(3)!</span>
 </span></code></pre></div></td></tr></table></div></p>
 <ol>
 <li>Import <code>PlotAllocation</code> class.  </li>
 <li>Create the <code>plots</code> variable with <code>PlotAllocation</code> class. Defines the boundary area shapefile path and the epsg.</li>
-<li>Create the plots with <code>systematic custom</code> distribuition, <code>plot area = 400 m²</code>, with <code>x distance = 100 meters</code>, <code>y distance = 50 meters</code> and 45º of grid rotation, with a minimum border distance of 20 meters and save the shapefile in <code>C:\Users\Desktop</code>.</li>
+<li>Create the plots with <code>systematic custom</code> distribuition, <code>plot area = 400 m²</code>, with <code>x distance = 100 meters</code>, <code>y distance = 50 meters</code> and 45° of grid rotation, with a minimum border distance of 2 meters and save the shapefile in <code>C:\Users\Desktop</code>.</li>
 </ol>
+<figure style="position: relative; display: inline-block; text-align: center;">
+  <figcaption style="margin-bottom: 10px;">
+    As <code>show_plot=True</code>, a preview figure showing the plot allocation will be generated.
+  </figcaption>
+
+  <img src="../images/plot_allocation/ex_2_result.jpg" alt="example-2" 
+       style="width: 1020px; height: 744px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);" />
+
+  <div style="
+    position: absolute;
+    top: 200px;
+    left: 420px;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+  ">
+    Distribution: Customized systematic;<br>
+    Plot area: 400m²;<br>
+    Distance in x: 100;<br>
+    Distance in y: 50;<br>
+    Rotation: 45°;<br>
+    Edge distance: 2 meters;
+  </div>
+</figure>
+
 <h5 id="rectangle-plot-format">Rectangle plot format</h5>
 <p class="annotate"><div class="language-py3 highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">plot_allocation_example_3.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
@@ -1168,19 +1257,45 @@ If you prefer a visual interface, consider using the <a href="../plot_allocation
 <span class="normal"><a href="#__codelineno-3-4">4</a></span>
 <span class="normal"><a href="#__codelineno-3-5">5</a></span>
 <span class="normal"><a href="#__codelineno-3-6">6</a></span>
-<span class="normal"><a href="#__codelineno-3-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.inventory_plots</span><span class="w"> </span><span class="kn">import</span> <span class="n">PlotAllocation</span><span class="c1">#(1)!</span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span>
+<span class="normal"><a href="#__codelineno-3-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.inventory_plots</span><span class="w"> </span><span class="kn">import</span> <span class="n">PlotAllocation</span> <span class="c1">#(1)!</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">plots</span> <span class="o">=</span> <span class="n">PlotAllocation</span><span class="p">(</span><span class="s1">&#39;example/shapefile/path.shp&#39;</span><span class="p">,</span><span class="n">epsg</span><span class="o">=</span><span class="s1">&#39;32722&#39;</span><span class="p">)</span><span class="c1">#(2)!</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">plots</span> <span class="o">=</span> <span class="n">PlotAllocation</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;your/path/exemplo_shapefile.shp&quot;</span><span class="p">,</span> <span class="n">epsg</span><span class="o">=</span><span class="s1">&#39;32722&#39;</span><span class="p">)</span><span class="c1">#(2)!</span>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">plots</span><span class="o">.</span><span class="n">create_plots</span><span class="p">(</span><span class="n">distribution</span><span class="o">=</span><span class="s2">&quot;best sampling&quot;</span><span class="p">,</span> <span class="n">rectangle_size</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">),</span> 
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a>                    <span class="n">min_border_distance</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">save_dir</span><span class="o">=</span><span class="s2">&quot;C:\Users\Desktop&quot;</span><span class="p">,</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>                    <span class="n">show_plot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">save_buffer</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="c1">#(3)!</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">plots</span><span class="o">.</span><span class="n">create_plots</span><span class="p">(</span><span class="n">distribution</span><span class="o">=</span><span class="s2">&quot;best sampling&quot;</span><span class="p">,</span> <span class="n">rectangle_size</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">),</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a>                    <span class="n">sample_number</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">by_hectare</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>                    <span class="n">min_border_distance</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">save_dir</span><span class="o">=</span><span class="s2">&quot;C:\Users\Desktop&quot;</span><span class="p">,</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a>                    <span class="n">show_plot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">save_buffer</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="c1">#(3)!</span>
 </span></code></pre></div></td></tr></table></div></p>
 <ol>
 <li>Import <code>PlotAllocation</code> class.  </li>
 <li>Create the <code>plots</code> variable with <code>PlotAllocation</code> class. Defines the boundary area shapefile path and the epsg.</li>
-<li>Create the plots with <code>best sampling</code> distribuition, a <code>rectangle width (x) = 20 meters</code> and <code>height (y) = 30 meters</code>, with a minimum border distance of 20 meters and save the shapefile in <code>C:\Users\Desktop</code>.</li>
+<li>Create the plots with <code>best sampling</code> distribuition, a <code>rectangle width (x) = 20 meters</code> and <code>height (y) = 30 meters</code>, a sampling of 2 plots per hectare, with a minimum border distance of 2 meters and save the shapefile in <code>C:\Users\Desktop</code>.</li>
 </ol>
+<figure style="position: relative; display: inline-block; text-align: center;">
+  <figcaption style="margin-bottom: 10px;">
+    As <code>show_plot=True</code>, a preview figure showing the plot allocation will be generated.
+  </figcaption>
+
+  <img src="../images/plot_allocation/ex_3_result.jpg" alt="example-2" 
+       style="width: 1026px; height: 739px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);" />
+
+  <div style="
+    position: absolute;
+    top: 200px;
+    left: 410px;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+  ">
+    Distribution: Best sampling;<br>
+    Plot area: 400m²;<br>
+    Number of plots: 2/hectare;<br>
+    Edge distance: 2 meters;
+  </div>
+</figure>
 
 
 
