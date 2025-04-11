@@ -537,6 +537,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Exemplo de Uso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#saidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Saídas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Saídas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabelas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabelas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graficos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gráficos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1033,6 +1072,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Exemplo de Uso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#saidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Saídas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Saídas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabelas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabelas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graficos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gráficos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1250,6 +1328,53 @@
 </tbody>
 </table>
 <h3 id="exemplo-de-uso">Exemplo de Uso</h3>
+<p>Utilizando os dados de Scolforo (2005), de um povoamento de <em>Pinus taeda</em> variando de 15 a 19 anos, com 5 parcelas de 420m² medidas, podemos ajustar modelos para prever as alturas faltantes.</p>
+<p><a href="../../downloads/hyp_rel/exemplo_scolforo.xlsx" download style="text-decoration: none; font-weight: bold;">
+  <i class="fa-solid fa-file-arrow-down" style="margin-right: 8px;"></i>Fazer download do arquivo.
+</a></p>
+<p>Primeiras 5 linhas do arquivo:</p>
+<table>
+<thead>
+<tr>
+<th>Parcela</th>
+<th>Dap (cm)</th>
+<th>H (m)</th>
+<th>Idade (anos)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p-1</td>
+<td>22.28</td>
+<td>0.0</td>
+<td>15</td>
+</tr>
+<tr>
+<td>p-1</td>
+<td>23.87</td>
+<td>22.2</td>
+<td>15</td>
+</tr>
+<tr>
+<td>p-1</td>
+<td>25.46</td>
+<td>0.0</td>
+<td>15</td>
+</tr>
+<tr>
+<td>p-1</td>
+<td>25.78</td>
+<td>24.5</td>
+<td>15</td>
+</tr>
+<tr>
+<td>p-1</td>
+<td>26.74</td>
+<td>22.2</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
 <p class="annotate"><div class="language-py3 highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">hyp_rel_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.hyp_rel</span><span class="w"> </span><span class="kn">import</span> <span class="n">HypRel</span><span class="c1">#(1)!</span>
@@ -1260,7 +1385,6 @@
 <li>Importa a classe <code>HypRel</code>.</li>
 <li>Importa o <code>pandas</code> para manipulação de dados.</li>
 </ol>
-<p>Create a variable for the HypRel Class</p>
 <p class="annotate"><div class="language-py3 highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">hyp_rel_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
 <span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
@@ -1273,48 +1397,404 @@
 <span class="normal"><a href="#__codelineno-2-12">12</a></span>
 <span class="normal"><a href="#__codelineno-2-13">13</a></span>
 <span class="normal"><a href="#__codelineno-2-14">14</a></span>
-<span class="normal"><a href="#__codelineno-2-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:/Your/path/csv_inventory_file.csv&#39;</span><span class="p">)</span><span class="c1">#(1)!</span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:/seu/diretório/exemplo_scolforo.xlsx&#39;</span><span class="p">)</span><span class="c1">#(1)!</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">reg</span> <span class="o">=</span> <span class="n">HypRel</span><span class="p">(</span><span class="s1">&#39;CAP&#39;</span><span class="p">,</span><span class="s2">&quot;HT&quot;</span><span class="p">,</span><span class="n">df</span><span class="p">)</span><span class="c1">#(2)!</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">reg</span> <span class="o">=</span> <span class="n">HypRel</span><span class="p">(</span><span class="s1">&#39;Dap (cm)&#39;</span><span class="p">,</span><span class="s2">&quot;H (m)&quot;</span><span class="p">,</span><span class="n">df</span><span class="p">)</span><span class="c1">#(2)!</span>
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="hll">
 </span></span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="n">results</span> <span class="o">=</span> <span class="n">reg</span><span class="o">.</span><span class="n">run</span><span class="p">()</span><span class="c1">#(3)!</span>
 </span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a>
 </span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="n">metrics</span> <span class="o">=</span> <span class="n">reg</span><span class="o">.</span><span class="n">view_metrics</span><span class="p">()</span><span class="c1">#(4)!</span>
 </span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="n">reg</span><span class="o">.</span><span class="n">plots</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:/Your/path/to_save&#39;</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="c1">#(5)!</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="n">reg</span><span class="o">.</span><span class="n">plots</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:/Your/path/to_save&#39;</span><span class="p">)</span><span class="c1">#(5)!</span>
 </span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a>
 </span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="n">df_coefficients</span> <span class="o">=</span>  <span class="n">reg</span><span class="o">.</span><span class="n">get_coef</span><span class="p">()</span><span class="c1">#(6)!</span>
 </span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a>
 </span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="n">final_results</span> <span class="o">=</span>  <span class="n">reg</span><span class="o">.</span><span class="n">predict</span><span class="p">()</span><span class="c1">#(7)!</span>
 </span></code></pre></div></td></tr></table></div></p>
 <ol>
-<li>Carrega seu arquivo CSV.  </li>
-<li>Cria a variável <code>reg</code> contendo a classe <code>HypRel</code>.  </li>
+<li>Carrega seu arquivo <code>.xlsx</code>.  </li>
+<li>Cria a variável <code>reg</code> contendo a classe <code>HypRel</code>. Como <code>model</code> não foi declarado, usará todos os modelos disponíveis.<br />
+   Caso queira usar um modelo específico defina <code>model=['curtis']</code> por exemplo, dessa forma usará somente o modelo de curtis.<br />
+   Caso queira ajustar os modelos para cada uma das parcelas utilize <code>iterator="Parcela"</code>.<br />
+   Ex: <code>reg = HypRel('Dap (cm)',"H (m)",df, iterator="Parcela")</code></li>
 <li>Executa os modelos e salva na variável <code>results</code>.  </li>
 <li>Avalia os modelos ajustados e salva as métricas na variável <code>metrics</code>.  </li>
 <li>Gera os gráficos para os modelos ajustados.  </li>
-<li>Recupera os coeficientes de cada modelo ajustado.  </li>
+<li>Obtém os coeficientes de cada modelo ajustado.  </li>
 <li>Obtém as alturas finais e os modelos utilizados para a estimativa.  </li>
 </ol>
+<p>Nesse caso, <code>iterator</code> e <code>model</code> não foram declarados, logo todas as equações foram ajustadas para o banco de dados inteiro.
+Nesse caso, esses foram os outputs:  </p>
+<h4 id="saidas">Saídas</h4>
+<h5 id="tabelas">Tabelas</h5>
+<p class="annotate"><code>results</code>(1)</p>
+<ol>
+<li>DataFrame contendo as alturas estimadas para cada um dos modelos e a altura medida no campo na coluna "Real Height".</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>curtis</th>
+<th>parabolic</th>
+<th>stofel</th>
+<th>henriksen</th>
+<th>prodan_i</th>
+<th>prodan_ii</th>
+<th>smd_fm</th>
+<th>ann</th>
+<th>Real Height</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>21.11</td>
+<td>22.19</td>
+<td>22.33</td>
+<td>21.78</td>
+<td>22.81</td>
+<td>22.77</td>
+<td>21.12</td>
+<td>22.82</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>22.21</td>
+<td>22.97</td>
+<td>23.07</td>
+<td>22.71</td>
+<td>23.39</td>
+<td>23.35</td>
+<td>22.26</td>
+<td>23.45</td>
+<td>22.20</td>
+</tr>
+<tr>
+<td>23.22</td>
+<td>23.73</td>
+<td>23.79</td>
+<td>23.58</td>
+<td>23.98</td>
+<td>23.95</td>
+<td>23.29</td>
+<td>24.08</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>23.42</td>
+<td>23.88</td>
+<td>23.93</td>
+<td>23.75</td>
+<td>24.10</td>
+<td>24.08</td>
+<td>23.49</td>
+<td>24.20</td>
+<td>24.50</td>
+</tr>
+<tr>
+<td>23.98</td>
+<td>24.33</td>
+<td>24.35</td>
+<td>24.24</td>
+<td>24.46</td>
+<td>24.44</td>
+<td>24.06</td>
+<td>24.58</td>
+<td>22.20</td>
+</tr>
+</tbody>
+</table>
+<p class="annotate"><code>metrics</code>(1)</p>
+<ol>
+<li>DataFrame contendo as métricas obtidas para cada modelo, atribuindo um <code>Score=10</code> para o melhor modelo.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Modelo</th>
+<th>MAE</th>
+<th>MAPE</th>
+<th>MSE</th>
+<th>RMSE</th>
+<th>R squared</th>
+<th>Explained Var</th>
+<th>Mean Error</th>
+<th>score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>henriksen</td>
+<td>2,2125</td>
+<td>7,6139</td>
+<td>6,9901</td>
+<td>2,6439</td>
+<td>0,4163</td>
+<td>0,4163</td>
+<td>5,08E-15</td>
+<td>10</td>
+</tr>
+<tr>
+<td>curtis</td>
+<td>2,1993</td>
+<td>7,5325</td>
+<td>7,0147</td>
+<td>2,6485</td>
+<td>0,4142</td>
+<td>0,4154</td>
+<td>0,1182</td>
+<td>9</td>
+</tr>
+<tr>
+<td>smd_fm</td>
+<td>2,2099</td>
+<td>7,6004</td>
+<td>7,0020</td>
+<td>2,6461</td>
+<td>0,4153</td>
+<td>0,4153</td>
+<td>-0,0015</td>
+<td>8</td>
+</tr>
+<tr>
+<td>stofel</td>
+<td>2,2060</td>
+<td>7,5649</td>
+<td>7,0210</td>
+<td>2,6497</td>
+<td>0,4137</td>
+<td>0,4148</td>
+<td>0,1177</td>
+<td>7</td>
+</tr>
+<tr>
+<td>parabolic</td>
+<td>2,2183</td>
+<td>7,6358</td>
+<td>7,0099</td>
+<td>2,6476</td>
+<td>0,4146</td>
+<td>0,4146</td>
+<td>5,47E-16</td>
+<td>6</td>
+</tr>
+<tr>
+<td>ann</td>
+<td>2,2194</td>
+<td>7,6453</td>
+<td>7,0312</td>
+<td>2,6516</td>
+<td>0,4128</td>
+<td>0,4128</td>
+<td>0,0002</td>
+<td>5</td>
+</tr>
+<tr>
+<td>prodan_ii</td>
+<td>2,2008</td>
+<td>7,5168</td>
+<td>7,0921</td>
+<td>2,6631</td>
+<td>0,4077</td>
+<td>0,4127</td>
+<td>0,2434</td>
+<td>4</td>
+</tr>
+<tr>
+<td>prodan_i</td>
+<td>2,2020</td>
+<td>7,5241</td>
+<td>7,0886</td>
+<td>2,6625</td>
+<td>0,4080</td>
+<td>0,4125</td>
+<td>0,2323</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p class="annotate"><code>df_coefficients</code>(1)</p>
+<ol>
+<li>DataFrame contendo os coeficientes de cada modelo e indicando qual deles foi o selecionado como melhor modelo.<br />
+    Como <code>iterator</code> não foi declarado, a coluna fica vazia.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>iterator</th>
+<th>model</th>
+<th>equation</th>
+<th>b0</th>
+<th>b1</th>
+<th>b2</th>
+<th>selected_model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>curtis</td>
+<td>ln(h) = b0 + b1·(1/x)</td>
+<td>3,8139</td>
+<td>-17,0254</td>
+<td></td>
+<td>False</td>
+</tr>
+<tr>
+<td></td>
+<td>parabolic</td>
+<td>h = b0 + b1·x + b2·x²</td>
+<td>8,9680</td>
+<td>0,6891</td>
+<td>-0,0043</td>
+<td>False</td>
+</tr>
+<tr>
+<td></td>
+<td>stofel</td>
+<td>ln(h) = b0 + b1·ln(x)</td>
+<td>1,6300</td>
+<td>0,4755</td>
+<td></td>
+<td>False</td>
+</tr>
+<tr>
+<td></td>
+<td>henriksen</td>
+<td>h = b0 + b1·ln(x)</td>
+<td>-20,1429</td>
+<td>13,5058</td>
+<td></td>
+<td>True</td>
+</tr>
+<tr>
+<td></td>
+<td>prodan_i</td>
+<td>h = x² / (b0 + b1·x + b2·x²)</td>
+<td>-7,7832</td>
+<td>1,0345</td>
+<td>0,0131</td>
+<td>False</td>
+</tr>
+<tr>
+<td></td>
+<td>prodan_ii</td>
+<td>h - 1.3 = x² / (b0 + b1·x + b2·x²)</td>
+<td>-7,9302</td>
+<td>1,1027</td>
+<td>0,0131</td>
+<td>False</td>
+</tr>
+<tr>
+<td></td>
+<td>smd_fm</td>
+<td>y = log(y) ~ x = 1/x + 1/x²</td>
+<td>3,8008</td>
+<td>-16,0925</td>
+<td></td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+<p class="annotate"><code>final_results</code>(1)</p>
+<ol>
+<li>DataFrame inical contendo duas novas colunas:<br />
+<code>best_predicted_height</code> com a altura estimada pelo melhor modelo. <br />
+<code>selected_model</code> indicando qual foi o melhor modelo.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Parcela</th>
+<th>Dap (cm)</th>
+<th>H (m)</th>
+<th>Idade (anos)</th>
+<th>best_predicted_height</th>
+<th>selected_model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p-1</td>
+<td>22,28</td>
+<td>0</td>
+<td>15</td>
+<td>21,77502772</td>
+<td>henriksen</td>
+</tr>
+<tr>
+<td>p-1</td>
+<td>23,87</td>
+<td>22,2</td>
+<td>15</td>
+<td>22,2</td>
+<td>henriksen</td>
+</tr>
+<tr>
+<td>p-1</td>
+<td>25,46</td>
+<td>0</td>
+<td>15</td>
+<td>23,57696518</td>
+<td>henriksen</td>
+</tr>
+<tr>
+<td>p-1</td>
+<td>25,78</td>
+<td>24,5</td>
+<td>15</td>
+<td>24,5</td>
+<td>henriksen</td>
+</tr>
+<tr>
+<td>p-1</td>
+<td>26,74</td>
+<td>22,2</td>
+<td>15</td>
+<td>22,2</td>
+<td>henriksen</td>
+</tr>
+</tbody>
+</table>
+<p>Se você desejar que cada modelo seja ajustado para cada uma das parcelas basta substituir a linha:<br />
+<code>reg = HypRel('Dap (cm)',"H (m)",df)</code><br />
+por:<br />
+<code>reg = HypRel('Dap (cm)',"H (m)",df, iterator="Fazenda")</code></p>
+<h5 id="graficos">Gráficos</h5>
+<p>Como a linha <code>reg.plots(r'C:/Your/path/to_save')</code> informou um diretório para serem salvos os gráficos gerados, serão criadas duas pastas nesse diretório:<br />
+Uma pasta chamada <code>heights</code> contendo os gráficos das curvas ajustadas.<br />
+Uma pasta chamada <code>residuals</code> contendo os gráficos de resíduos dos ajustes.</p>
+<figure style="display: inline-block; text-align: center;">
+  <figcaption>Exemplo de gráfico gerado com a curva ajustada para o modelo de henriksen</figcaption>
+  <img src="../../images/hyp_rel/henriksen.png" alt="curva ajustada" 
+       style="width: 640px; height: 480px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+</figure>
+
+<figure style="display: inline-block; text-align: center;">
+  <figcaption>Exemplo de gráfico de resíduos gerado para o  modelo de henriksen</figcaption>
+  <img src="../../images/hyp_rel/residual_henriksen.png" alt="resíduos" 
+       style="width: 640px; height: 480px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+</figure>
+
+<hr />
 <div class="mermaid">flowchart LR
     subgraph run
         runText1[Executa todos os modelos disponíveis]
     end
-    subgraph metrics
-        runText2[Avalia cada modelo ajustado]
+    subgraph view_metrics
+        runText2[Retorna um DataFrame com as métricas dos modelos ajustados]
     end
     subgraph plots
         runText3[Gera gráficos]
     end
     subgraph coefficients
-        runText4[Retorna os coeficientes]
+        runText4[Retorna um DataFrame com os coeficientes dos modelos ajustados]
     end
     subgraph predict
-        runText5[Retorna as alturas estimadas e as funções utilizadas]
+        runText5[Retorna o DataFrame original contendo uma nova coluna com as alturas estimadas]
     end
     %% Links para os subgráficos:
     HypRel-Module --&gt; run
-    HypRel-Module --&gt; metrics
+    HypRel-Module --&gt; view_metrics
     HypRel-Module --&gt; plots
     HypRel-Module --&gt; coefficients
     HypRel-Module --&gt; predict</div>

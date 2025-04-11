@@ -537,6 +537,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Example Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outputs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Outputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plots" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plots
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1034,6 +1073,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Example Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outputs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Outputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plots" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plots
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1250,9 +1328,58 @@
 </tbody>
 </table>
 <h3 id="example-usage">Example Usage</h3>
+<p>Using the data from Scolforo (2005), from a <em>Pinus taeda</em> stand ranging from 15 to 19 years old, with 5 plots of 420 m² measured, we can fit models to predict the missing heights.</p>
+<p><a href="../downloads/hyp_rel/exemplo_scolforo.xlsx" download style="text-decoration: none; font-weight: bold;">
+  <i class="fa-solid fa-file-arrow-down" style="margin-right: 8px;"></i>Download example file.
+</a></p>
+<p>First 5 rows of the file:  </p>
+<table>
+<thead>
+<tr>
+<th>Parcela</th>
+<th>Dap (cm)</th>
+<th>H (m)</th>
+<th>Idade (anos)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p-1</td>
+<td>22.28</td>
+<td>0.0</td>
+<td>15</td>
+</tr>
+<tr>
+<td>p-1</td>
+<td>23.87</td>
+<td>22.2</td>
+<td>15</td>
+</tr>
+<tr>
+<td>p-1</td>
+<td>25.46</td>
+<td>0.0</td>
+<td>15</td>
+</tr>
+<tr>
+<td>p-1</td>
+<td>25.78</td>
+<td>24.5</td>
+<td>15</td>
+</tr>
+<tr>
+<td>p-1</td>
+<td>26.74</td>
+<td>22.2</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
 <p class="annotate"><div class="language-py3 highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">hyp_rel_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.hyp_rel</span><span class="w"> </span><span class="kn">import</span> <span class="n">HypRel</span><span class="c1">#(1)!</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span><span class="c1">#(2)!</span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.hyp_rel</span><span class="w"> </span><span class="kn">import</span> <span class="n">HypRel</span><span class="c1">#(1)!</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span><span class="c1">#(2)!</span>
 </span></code></pre></div></td></tr></table></div></p>
 <ol>
 <li>Import <code>HypRel</code> class.</li>
@@ -1271,48 +1398,404 @@
 <span class="normal"><a href="#__codelineno-2-12">12</a></span>
 <span class="normal"><a href="#__codelineno-2-13">13</a></span>
 <span class="normal"><a href="#__codelineno-2-14">14</a></span>
-<span class="normal"><a href="#__codelineno-2-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:/Your/path/csv_inventory_file.csv&#39;</span><span class="p">)</span><span class="c1">#(1)!</span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:/your/directory/exemplo_scolforo.xlsx&#39;</span><span class="p">)</span><span class="c1">#(1)!</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">reg</span> <span class="o">=</span> <span class="n">HypRel</span><span class="p">(</span><span class="s1">&#39;CAP&#39;</span><span class="p">,</span><span class="s2">&quot;HT&quot;</span><span class="p">,</span><span class="n">df</span><span class="p">)</span><span class="c1">#(2)!</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">reg</span> <span class="o">=</span> <span class="n">HypRel</span><span class="p">(</span><span class="s1">&#39;Dap (cm)&#39;</span><span class="p">,</span><span class="s2">&quot;H (m)&quot;</span><span class="p">,</span><span class="n">df</span><span class="p">)</span><span class="c1">#(2)!</span>
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="hll">
 </span></span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="n">results</span> <span class="o">=</span> <span class="n">reg</span><span class="o">.</span><span class="n">run</span><span class="p">()</span><span class="c1">#(3)!</span>
 </span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a>
 </span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="n">metrics</span> <span class="o">=</span> <span class="n">reg</span><span class="o">.</span><span class="n">view_metrics</span><span class="p">()</span><span class="c1">#(4)!</span>
 </span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="n">reg</span><span class="o">.</span><span class="n">plots</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:/Your/path/to_save&#39;</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="c1">#(5)!</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="n">reg</span><span class="o">.</span><span class="n">plots</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:/Your/path/to_save&#39;</span><span class="p">)</span><span class="c1">#(5)!</span>
 </span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a>
 </span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="n">df_coefficients</span> <span class="o">=</span>  <span class="n">reg</span><span class="o">.</span><span class="n">get_coef</span><span class="p">()</span><span class="c1">#(6)!</span>
 </span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a>
 </span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="n">final_results</span> <span class="o">=</span>  <span class="n">reg</span><span class="o">.</span><span class="n">predict</span><span class="p">()</span><span class="c1">#(7)!</span>
 </span></code></pre></div></td></tr></table></div></p>
 <ol>
-<li>Load your csv file.</li>
-<li>Create the variable <code>reg</code> containing the HypRel class.</li>
-<li>Run the models and save in the <code>results</code> variable.</li>
-<li>Evaluate the fitted models and save the metrics in the <code>metrics</code> variable.</li>
-<li>Generate the plots for the fitted models.</li>
-<li>Retrieve the coefficients for each fitted model.</li>
-<li>Obtain the final heights and the models used for estimation.</li>
+<li>Load your <code>.xlsx</code> file.  </li>
+<li>Create the variable <code>reg</code> containing the <code>HypRel</code> class. Since <code>model</code> is not declared, it will use all available models.<br />
+   If you want to use a specific model, set <code>model=['curtis']</code> for example, and it will use only the Curtis model.<br />
+   If you want to fit the models for each plot individually, use <code>iterator="Parcela"</code>.<br />
+   Example: <code>reg = HypRel('Dap (cm)',"H (m)",df, iterator="Parcela")</code></li>
+<li>Run the models and save them to the <code>results</code> variable.  </li>
+<li>Evaluate the fitted models and save the metrics to the <code>metrics</code> variable.  </li>
+<li>Generate the plots for the fitted models.  </li>
+<li>Retrieve the coefficients of each fitted model.  </li>
+<li>Retrieve the final heights and the models used for the estimation.  </li>
 </ol>
+<p>In this case, <code>iterator</code> and <code>model</code> were not declared, so all equations were fitted to the entire dataset.<br />
+These were the outputs:  </p>
+<h4 id="outputs">Outputs</h4>
+<h5 id="tables">Tables</h5>
+<p class="annotate"><code>results</code>(1)</p>
+<ol>
+<li>DataFrame containing the estimated heights for each model and the field-measured height in the "Real Height" column.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>curtis</th>
+<th>parabolic</th>
+<th>stofel</th>
+<th>henriksen</th>
+<th>prodan_i</th>
+<th>prodan_ii</th>
+<th>smd_fm</th>
+<th>ann</th>
+<th>Real Height</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>21.11</td>
+<td>22.19</td>
+<td>22.33</td>
+<td>21.78</td>
+<td>22.81</td>
+<td>22.77</td>
+<td>21.12</td>
+<td>22.82</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>22.21</td>
+<td>22.97</td>
+<td>23.07</td>
+<td>22.71</td>
+<td>23.39</td>
+<td>23.35</td>
+<td>22.26</td>
+<td>23.45</td>
+<td>22.20</td>
+</tr>
+<tr>
+<td>23.22</td>
+<td>23.73</td>
+<td>23.79</td>
+<td>23.58</td>
+<td>23.98</td>
+<td>23.95</td>
+<td>23.29</td>
+<td>24.08</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>23.42</td>
+<td>23.88</td>
+<td>23.93</td>
+<td>23.75</td>
+<td>24.10</td>
+<td>24.08</td>
+<td>23.49</td>
+<td>24.20</td>
+<td>24.50</td>
+</tr>
+<tr>
+<td>23.98</td>
+<td>24.33</td>
+<td>24.35</td>
+<td>24.24</td>
+<td>24.46</td>
+<td>24.44</td>
+<td>24.06</td>
+<td>24.58</td>
+<td>22.20</td>
+</tr>
+</tbody>
+</table>
+<p class="annotate"><code>metrics</code>(1)</p>
+<ol>
+<li>DataFrame containing the metrics obtained for each model, assigning a <code>score=10</code> to the best model.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>MAE</th>
+<th>MAPE</th>
+<th>MSE</th>
+<th>RMSE</th>
+<th>R squared</th>
+<th>Explained Var</th>
+<th>Mean Error</th>
+<th>score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>henriksen</td>
+<td>2.2125</td>
+<td>7.6139</td>
+<td>6.9901</td>
+<td>2.6439</td>
+<td>0.4163</td>
+<td>0.4163</td>
+<td>5.08E-15</td>
+<td>10</td>
+</tr>
+<tr>
+<td>curtis</td>
+<td>2.1993</td>
+<td>7.5325</td>
+<td>7.0147</td>
+<td>2.6485</td>
+<td>0.4142</td>
+<td>0.4154</td>
+<td>0.1182</td>
+<td>9</td>
+</tr>
+<tr>
+<td>smd_fm</td>
+<td>2.2099</td>
+<td>7.6004</td>
+<td>7.0020</td>
+<td>2.6461</td>
+<td>0.4153</td>
+<td>0.4153</td>
+<td>-0.0015</td>
+<td>8</td>
+</tr>
+<tr>
+<td>stofel</td>
+<td>2.2060</td>
+<td>7.5649</td>
+<td>7.0210</td>
+<td>2.6497</td>
+<td>0.4137</td>
+<td>0.4148</td>
+<td>0.1177</td>
+<td>7</td>
+</tr>
+<tr>
+<td>parabolic</td>
+<td>2.2183</td>
+<td>7.6358</td>
+<td>7.0099</td>
+<td>2.6476</td>
+<td>0.4146</td>
+<td>0.4146</td>
+<td>5.47E-16</td>
+<td>6</td>
+</tr>
+<tr>
+<td>ann</td>
+<td>2.2194</td>
+<td>7.6453</td>
+<td>7.0312</td>
+<td>2.6516</td>
+<td>0.4128</td>
+<td>0.4128</td>
+<td>0.0002</td>
+<td>5</td>
+</tr>
+<tr>
+<td>prodan_ii</td>
+<td>2.2008</td>
+<td>7.5168</td>
+<td>7.0921</td>
+<td>2.6631</td>
+<td>0.4077</td>
+<td>0.4127</td>
+<td>0.2434</td>
+<td>4</td>
+</tr>
+<tr>
+<td>prodan_i</td>
+<td>2.2020</td>
+<td>7.5241</td>
+<td>7.0886</td>
+<td>2.6625</td>
+<td>0.4080</td>
+<td>0.4125</td>
+<td>0.2323</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p class="annotate"><code>df_coefficients</code>(1)</p>
+<ol>
+<li>DataFrame containing the coefficients of each model and indicating which one was selected as the best model.<br />
+   Since <code>iterator</code> was not declared, the column remains empty.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>iterator</th>
+<th>model</th>
+<th>equation</th>
+<th>b0</th>
+<th>b1</th>
+<th>b2</th>
+<th>selected_model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>curtis</td>
+<td>ln(h) = b0 + b1·(1/x)</td>
+<td>3.8139</td>
+<td>-17.0254</td>
+<td></td>
+<td>False</td>
+</tr>
+<tr>
+<td></td>
+<td>parabolic</td>
+<td>h = b0 + b1·x + b2·x²</td>
+<td>8.9680</td>
+<td>0.6891</td>
+<td>-0.0043</td>
+<td>False</td>
+</tr>
+<tr>
+<td></td>
+<td>stofel</td>
+<td>ln(h) = b0 + b1·ln(x)</td>
+<td>1.6300</td>
+<td>0.4755</td>
+<td></td>
+<td>False</td>
+</tr>
+<tr>
+<td></td>
+<td>henriksen</td>
+<td>h = b0 + b1·ln(x)</td>
+<td>-20.1429</td>
+<td>13.5058</td>
+<td></td>
+<td>True</td>
+</tr>
+<tr>
+<td></td>
+<td>prodan_i</td>
+<td>h = x² / (b0 + b1·x + b2·x²)</td>
+<td>-7.7832</td>
+<td>1.0345</td>
+<td>0.0131</td>
+<td>False</td>
+</tr>
+<tr>
+<td></td>
+<td>prodan_ii</td>
+<td>h - 1.3 = x² / (b0 + b1·x + b2·x²)</td>
+<td>-7.9302</td>
+<td>1.1027</td>
+<td>0.0131</td>
+<td>False</td>
+</tr>
+<tr>
+<td></td>
+<td>smd_fm</td>
+<td>y = log(y) ~ x = 1/x + 1/x²</td>
+<td>3.8008</td>
+<td>-16.0925</td>
+<td></td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+<p class="annotate"><code>final_results</code>(1)</p>
+<ol>
+<li>Initial DataFrame containing two new columns:<br />
+<code>best_predicted_height</code> with the height estimated by the best model.<br />
+<code>selected_model</code> indicating which was the best model.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Plot</th>
+<th>DBH (cm)</th>
+<th>H (m)</th>
+<th>Age (years)</th>
+<th>best_predicted_height</th>
+<th>selected_model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p-1</td>
+<td>22.28</td>
+<td>0</td>
+<td>15</td>
+<td>21.77502772</td>
+<td>henriksen</td>
+</tr>
+<tr>
+<td>p-1</td>
+<td>23.87</td>
+<td>22.2</td>
+<td>15</td>
+<td>22.2</td>
+<td>henriksen</td>
+</tr>
+<tr>
+<td>p-1</td>
+<td>25.46</td>
+<td>0</td>
+<td>15</td>
+<td>23.57696518</td>
+<td>henriksen</td>
+</tr>
+<tr>
+<td>p-1</td>
+<td>25.78</td>
+<td>24.5</td>
+<td>15</td>
+<td>24.5</td>
+<td>henriksen</td>
+</tr>
+<tr>
+<td>p-1</td>
+<td>26.74</td>
+<td>22.2</td>
+<td>15</td>
+<td>22.2</td>
+<td>henriksen</td>
+</tr>
+</tbody>
+</table>
+<p>If you want each model to be fitted to each individual plot, simply replace the line:<br />
+<code>reg = HypRel('Dap (cm)',"H (m)",df)</code><br />
+with:<br />
+<code>reg = HypRel('Dap (cm)',"H (m)",df, iterator="Fazenda")</code></p>
+<h5 id="plots">Plots</h5>
+<p>Since the line <code>reg.plots(r'C:/Your/path/to_save')</code> specified a directory for saving the generated plots, two folders will be created in this directory:<br />
+A folder named <code>heights</code> containing the plots of the fitted curves.<br />
+A folder named <code>residuals</code> containing the residual plots from the fittings.</p>
+<figure style="display: inline-block; text-align: center;">
+  <figcaption>Example of a plot generated with the fitted curve for the Henriksen model</figcaption>
+  <img src="../images/hyp_rel/henriksen.png" alt="fitted curve" 
+       style="width: 640px; height: 480px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+</figure>
+
+<figure style="display: inline-block; text-align: center;">
+  <figcaption>Example of a residual plot generated for the Henriksen model</figcaption>
+  <img src="../images/hyp_rel/residual_henriksen.png" alt="residuals" 
+       style="width: 640px; height: 480px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+</figure>
+
+<hr />
 <div class="mermaid">flowchart LR
     subgraph run
-        runText1[Run all the available models]
+        runText1[Runs all available models]
     end
-    subgraph metrics
-        runText2[Evaluate each fitted model]
+    subgraph view_metrics
+        runText2[Returns a DataFrame with the metrics of the fitted models]
     end
     subgraph plots
-        runText3[Generate plots]
+        runText3[Generates plots]
     end
     subgraph coefficients
-        runText4[Return coefficients]
+        runText4[Returns a DataFrame with the coefficients of the fitted models]
     end
     subgraph predict
-        runText5[Return the estimated heights and used functions]
+        runText5[Returns the original DataFrame with a new column containing the estimated heights]
     end
-    %% Links para os subgráficos:
+    %% Links to subgraphs:
     HypRel-Module --&gt; run
-    HypRel-Module --&gt; metrics
+    HypRel-Module --&gt; view_metrics
     HypRel-Module --&gt; plots
     HypRel-Module --&gt; coefficients
     HypRel-Module --&gt; predict
