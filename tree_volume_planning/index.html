@@ -559,6 +559,36 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Example Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outputs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Outputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -920,6 +950,36 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Example Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outputs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Outputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -978,7 +1038,7 @@
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  <span class="n">TreeVolumePlanning</span><span class="o">.</span><span class="n">p_resume</span><span class="p">(</span><span class="n">n_classes</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">dbh_classes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">height_classes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                          <span class="n">only_height_classes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">only_dbh_classes</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="c1">#(2)!</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  <span class="n">TreeVolumePlanning</span><span class="o">.</span><span class="n">get_values</span><span class="p">(</span><span class="n">n_measured_trees</span><span class="p">,</span> <span class="n">n_classes</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">dbh_classes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">height_classes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  <span class="n">TreeVolumePlanning</span><span class="o">.</span><span class="n">get_values</span><span class="p">(</span><span class="n">n_measured_trees</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">n_classes</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">dbh_classes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">height_classes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>                            <span class="n">only_height_classes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">only_dbh_classes</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="c1">#(3)!</span>
 </span></code></pre></div>
 <ol>
@@ -1008,7 +1068,7 @@
 <table>
 <thead>
 <tr>
-<th>Parameters</th>
+<th>Methods</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -1028,6 +1088,65 @@
 </tbody>
 </table>
 <h3 id="example-usage">Example Usage</h3>
+<p>Considering the data resulting from the hypsometric relationship established in the <a href="../hypsometric_relationship/">previous module</a>, we will carry out the tree volume planning.</p>
+<p><a href="../downloads/tree_volume_planning/final_results.xlsx" download style="text-decoration: none; font-weight: bold;">
+  <i class="fa-solid fa-file-arrow-down" style="margin-right: 8px;"></i>Download example file.
+</a></p>
+<p>First 5 rows of the file:</p>
+<table>
+<thead>
+<tr>
+<th>Parcela</th>
+<th>Dap (cm)</th>
+<th>H (m)</th>
+<th>Idade (anos)</th>
+<th>best_predicted_height</th>
+<th>selected_model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p-1</td>
+<td>22,28</td>
+<td>0</td>
+<td>15</td>
+<td>21,91910582</td>
+<td>y = y ~ x = 1/x^2</td>
+</tr>
+<tr>
+<td>p-1</td>
+<td>23,87</td>
+<td>22,2</td>
+<td>15</td>
+<td>22,2</td>
+<td>Real Height</td>
+</tr>
+<tr>
+<td>p-1</td>
+<td>25,46</td>
+<td>0</td>
+<td>15</td>
+<td>23,30513332</td>
+<td>y = y ~ x = 1/x^2</td>
+</tr>
+<tr>
+<td>p-1</td>
+<td>25,78</td>
+<td>24,5</td>
+<td>15</td>
+<td>24,5</td>
+<td>Real Height</td>
+</tr>
+<tr>
+<td>p-1</td>
+<td>26,74</td>
+<td>22,2</td>
+<td>15</td>
+<td>22,2</td>
+<td>Real Height</td>
+</tr>
+</tbody>
+</table>
 <p class="annotate"><div class="language-py3 highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">taper_functions_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.tree_volume_planning</span><span class="w"> </span><span class="kn">import</span> <span class="n">TreeVolumePlanning</span><span class="c1">#(1)!</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span><span class="c1">#(2)!</span>
@@ -1036,8 +1155,8 @@
 <li>Import <code>TreeVolumePlanning</code> class.</li>
 <li>Import <code>pandas</code> for data manipulation.</li>
 </ol>
-<p>Create a variable for the Volumetrics Class</p>
-<p class="annotate"><div class="language-py3 highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">taper_functions_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<p class="annotate">Create a variable for the Volumetrics Class
+<div class="language-py3 highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">taper_functions_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
 <span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
 <span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
@@ -1045,23 +1164,342 @@
 <span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-2-10">10</a></span>
-<span class="normal"><a href="#__codelineno-2-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Your\path\csv_inventory_file.csv&#39;</span><span class="p">)</span><span class="c1">#(1)!</span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Seu\diretorio\final_results.xlsx&#39;</span><span class="p">)</span><span class="c1">#(1)!</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">cub</span> <span class="o">=</span> <span class="n">TreeVolumePlanning</span><span class="p">(</span><span class="n">df</span> <span class="p">,</span><span class="s1">&#39;DAP&#39;</span><span class="p">,</span><span class="s1">&#39;HT&#39;</span><span class="p">)</span><span class="c1">#(2)!</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">cub</span> <span class="o">=</span> <span class="n">TreeVolumePlanning</span><span class="p">(</span><span class="n">df</span> <span class="p">,</span><span class="s1">&#39;Dap (cm)&#39;</span><span class="p">,</span><span class="s1">&#39;best_predicted_height&#39;</span><span class="p">)</span><span class="c1">#(2)!</span>
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="hll">
-</span></span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="n">resume</span> <span class="o">=</span> <span class="n">cub</span><span class="o">.</span><span class="n">resume</span><span class="p">()</span><span class="c1">#(3)!</span>
+</span></span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="n">resume</span> <span class="o">=</span> <span class="n">cub</span><span class="o">.</span><span class="n">resumen</span><span class="p">(</span><span class="n">n_classes</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span><span class="c1">#(3)!</span>
 </span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="n">percentual_resume</span> <span class="o">=</span> <span class="n">cub</span><span class="o">.</span><span class="n">p_resume</span><span class="p">()</span><span class="c1">#(4)!</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="n">percentual_resume</span> <span class="o">=</span> <span class="n">cub</span><span class="o">.</span><span class="n">p_resume</span><span class="p">(</span><span class="n">n_classes</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span><span class="c1">#(4)!</span>
 </span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="n">results</span> <span class="o">=</span> <span class="n">cub</span><span class="o">.</span><span class="n">get_values</span><span class="p">(</span><span class="n">n_measured_trees</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span><span class="c1">#(5)!</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="n">to_measure</span> <span class="o">=</span> <span class="n">cub</span><span class="o">.</span><span class="n">get_values</span><span class="p">(</span><span class="n">n_measured_trees</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">n_classes</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span><span class="c1">#(5)!</span>
 </span></code></pre></div></td></tr></table></div></p>
 <ol>
-<li>Load your csv file.</li>
-<li>Create the variable <code>cub</code> containing the <code>TreeVolumePlanning</code> class, using column <code>DAP</code> for the DBH values and the column <code>HT</code> for the heights values.</li>
-<li>Get a summary of how many trees from the provided dataframe are in each class and save on <code>resume</code> variable.</li>
-<li>Get a summary of the percentage of trees from the provided dataframe in each class and save on <code>percentual_resume</code> variable.</li>
-<li>Get a dataframe indicating how many trees should be sampled for volume measurement in each class, based on the percentage representation of each class in the total inventory and save on <code>results</code> variable.</li>
+<li>Load your <code>.xlsx</code> file.</li>
+<li>Create the variable <code>cub</code> containing the <code>TreeVolumePlanning</code> class, using the column <code>Dap (cm)</code> for DBH values and the column <code>best_predicted_height</code> for height values.</li>
+<li>Return a summary of how many trees from the provided dataframe are in each class (6 classes) and store it in the variable <code>resume</code>.</li>
+<li>Return a summary of the percentage of trees from the provided dataframe in each class (6 classes) and store it in the variable <code>percentual_resume</code>.</li>
+<li>Return a dataframe indicating how many trees should be sampled for volume measurement in each class, distributing the 50 trees (<code>n_measured_trees</code>) based on the percentage representation of each class in the total inventory, and store it in the variable <code>to_measure</code>.</li>
 </ol>
+<h4 id="outputs">Outputs</h4>
+<h5 id="tables">Tables</h5>
+<p class="annotate"><code>resume</code>(1)</p>
+<ol>
+<li>DataFrame showing how many trees are in each of the 6 generated height and DBH classes.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>DBH classes</th>
+<th>H(21.904, 24.516]</th>
+<th>H(24.516, 27.113]</th>
+<th>H(27.113, 29.71]</th>
+<th>H(29.71, 32.306]</th>
+<th>H(32.306, 34.903]</th>
+<th>H(34.903, 37.5]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(22.251, 27.108]</td>
+<td>9</td>
+<td>2</td>
+<td>0</td>
+<td>3</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>(27.108, 31.937]</td>
+<td>3</td>
+<td>13</td>
+<td>4</td>
+<td>4</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>(31.937, 36.765]</td>
+<td>0</td>
+<td>14</td>
+<td>8</td>
+<td>13</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>(36.765, 41.593]</td>
+<td>0</td>
+<td>5</td>
+<td>9</td>
+<td>21</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>(41.593, 46.422]</td>
+<td>0</td>
+<td>2</td>
+<td>2</td>
+<td>6</td>
+<td>3</td>
+<td>1</td>
+</tr>
+<tr>
+<td>(46.422, 51.25]</td>
+<td>0</td>
+<td>0</td>
+<td>3</td>
+<td>0</td>
+<td>2</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p class="annotate"><code>percentual_resume</code>(1)</p>
+<ol>
+<li>DataFrame showing the percentage of trees in each of the 6 generated height and DBH classes relative to the total number of trees.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>DBH classes</th>
+<th>H(21.904, 24.516]</th>
+<th>H(24.516, 27.113]</th>
+<th>H(27.113, 29.71]</th>
+<th>H(29.71, 32.306]</th>
+<th>H(32.306, 34.903]</th>
+<th>H(34.903, 37.5]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(22.251, 27.108]</td>
+<td>6,67</td>
+<td>1,48</td>
+<td>0,00</td>
+<td>2,22</td>
+<td>1,48</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>(27.108, 31.937]</td>
+<td>2,22</td>
+<td>9,63</td>
+<td>2,96</td>
+<td>2,96</td>
+<td>0,74</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>(31.937, 36.765]</td>
+<td>0,00</td>
+<td>10,37</td>
+<td>5,93</td>
+<td>9,63</td>
+<td>1,48</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>(36.765, 41.593]</td>
+<td>0,00</td>
+<td>3,70</td>
+<td>6,67</td>
+<td>15,56</td>
+<td>0,74</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>(41.593, 46.422]</td>
+<td>0,00</td>
+<td>1,48</td>
+<td>1,48</td>
+<td>4,44</td>
+<td>2,22</td>
+<td>0,74</td>
+</tr>
+<tr>
+<td>(46.422, 51.25]</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>2,22</td>
+<td>0,00</td>
+<td>1,48</td>
+<td>1,48</td>
+</tr>
+</tbody>
+</table>
+<p class="annotate"><code>to_measure</code>(1)</p>
+<ol>
+<li>DataFrame showing how many trees (out of the 50 specified in <code>n_measured_trees</code>) should be measured in each of the 6 height and DBH classes.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>DBH classes</th>
+<th>H(21.904, 24.516]</th>
+<th>H(24.516, 27.113]</th>
+<th>H(27.113, 29.71]</th>
+<th>H(29.71, 32.306]</th>
+<th>H(32.306, 34.903]</th>
+<th>H(34.903, 37.5]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(22.251, 27.108]</td>
+<td>3</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>(27.108, 31.937]</td>
+<td>1</td>
+<td>5</td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>(31.937, 36.765]</td>
+<td>0</td>
+<td>5</td>
+<td>3</td>
+<td>5</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>(36.765, 41.593]</td>
+<td>0</td>
+<td>2</td>
+<td>3</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>(41.593, 46.422]</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>(46.422, 51.25]</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Thus, the user obtains how many trees should be sampled for volume measurement in each DBH and height class.</p>
+<div class="admonition info">
+<p class="admonition-title">About class intervals</p>
+<p>The intervals use the following notation:<br />
+- <code>(</code> means the value is <strong>not included</strong><br />
+- <code>]</code> means the value <strong>is included</strong></p>
+<p>For example, the interval <code>(22.251, 27.108]</code> includes values <strong>greater than 22.251</strong> and <strong>less than or equal to 27.108</strong>.</p>
+</div>
+<hr />
+<p>It is not mandatory to create both height and DBH classes simultaneously — it is possible to create only height classes or only DBH classes, as shown in the example below:</p>
+<p class="annotate"><div class="language-py3 highlight"><span class="filename">taper_functions_example.py</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">to_measure</span> <span class="o">=</span> <span class="n">cub</span><span class="o">.</span><span class="n">get_values</span><span class="p">(</span><span class="n">n_measured_trees</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">dbh_classes</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>                            <span class="n">only_dbh_classes</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="c1">#(1)!</span>
+</span></code></pre></div></p>
+<ol>
+<li>Defines that 50 trees will be measured, divided into 6 DBH-only classes.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>DBH classes</th>
+<th>n_trees</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(22.25, 27.108]</td>
+<td>6</td>
+</tr>
+<tr>
+<td>(31.937, 36.765]</td>
+<td>14</td>
+</tr>
+<tr>
+<td>(46.422, 51.25]</td>
+<td>3</td>
+</tr>
+<tr>
+<td>(36.765, 41.593]</td>
+<td>13</td>
+</tr>
+<tr>
+<td>(27.108, 31.937]</td>
+<td>9</td>
+</tr>
+<tr>
+<td>(41.593, 46.422]</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<p>It is also possible to create a different number of classes for height and DBH, as shown in the example below:</p>
+<p class="annotate"><div class="language-py3 highlight"><span class="filename">taper_functions_example.py</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">to_measure</span> <span class="o">=</span> <span class="n">cub</span><span class="o">.</span><span class="n">get_values</span><span class="p">(</span><span class="n">n_measured_trees</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">dbh_classes</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>                            <span class="n">height_classes</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="c1">#(1)!</span>
+</span></code></pre></div></p>
+<ol>
+<li>Defines that 50 trees will be measured, divided into 6 DBH classes and 2 height classes.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>DBH classes</th>
+<th>H(21.904, 29.71]</th>
+<th>H(29.71, 37.5]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(22.251, 27.108]</td>
+<td>4</td>
+<td>2</td>
+</tr>
+<tr>
+<td>(27.108, 31.937]</td>
+<td>7</td>
+<td>2</td>
+</tr>
+<tr>
+<td>(31.937, 36.765]</td>
+<td>8</td>
+<td>6</td>
+</tr>
+<tr>
+<td>(36.765, 41.593]</td>
+<td>5</td>
+<td>8</td>
+</tr>
+<tr>
+<td>(41.593, 46.422]</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr>
+<td>(46.422, 51.25]</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
 
 
 
