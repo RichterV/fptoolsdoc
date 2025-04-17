@@ -581,6 +581,54 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Example Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Output">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      .json Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pkl-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      .pkl Files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -785,6 +833,21 @@
       Ranking function
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Ranking function">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notation_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1139,6 +1202,54 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Example Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Output">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      .json Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pkl-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      .pkl Files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1344,6 +1455,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Ranking function">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notation_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -1463,7 +1589,7 @@
 <table>
 <thead>
 <tr>
-<th>Parameters</th>
+<th>Methods</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -1491,17 +1617,88 @@
 </tbody>
 </table>
 <h3 id="example-usage">Example Usage</h3>
+<p>Consider a volume dataset composed of 50 <em>Eucalyptus</em> trees, in which diameters were measured at heights of 0.1 meter, 0.6 meter, 1.30 meters, and, from that point onward, at 2-meter intervals along the stem.</p>
+<p><a href="../downloads/volumetry/exemplo_volumetry.xlsx" download style="text-decoration: none; font-weight: bold;">
+  <i class="fa-solid fa-file-arrow-down" style="margin-right: 8px;"></i>Download example file.
+</a></p>
+<p>First 5 rows of the file:  </p>
+<table>
+<thead>
+<tr>
+<th>Fazenda</th>
+<th>arvore_n</th>
+<th>dap (cm)</th>
+<th>altura_total (m)</th>
+<th>seção (m)</th>
+<th>diametro_c_casca (cm)</th>
+<th>diametro_s_casca (cm)</th>
+<th>casca (cm)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fazenda 1</td>
+<td>1</td>
+<td>24,8</td>
+<td>28,0</td>
+<td>0,1</td>
+<td>30,05</td>
+<td>26,51</td>
+<td>1,74</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>1</td>
+<td>24,8</td>
+<td>28,0</td>
+<td>0,6</td>
+<td>26,55</td>
+<td>23,15</td>
+<td>1,96</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>1</td>
+<td>24,8</td>
+<td>28,0</td>
+<td>1,3</td>
+<td>24,75</td>
+<td>21,93</td>
+<td>1,94</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>1</td>
+<td>24,8</td>
+<td>28,0</td>
+<td>2,0</td>
+<td>23,85</td>
+<td>21,48</td>
+<td>1,90</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>1</td>
+<td>24,8</td>
+<td>28,0</td>
+<td>4,0</td>
+<td>21,40</td>
+<td>19,30</td>
+<td>1,11</td>
+</tr>
+</tbody>
+</table>
 <p class="annotate"><div class="language-py3 highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">taper_functions_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.volumetry</span><span class="w"> </span><span class="kn">import</span> <span class="n">Volumetry</span><span class="c1">#(1)!</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span><span class="c1">#(2)!</span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.volumetry</span><span class="w"> </span><span class="kn">import</span> <span class="n">Volumetrics</span><span class="c1">#(1)!</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span><span class="c1">#(2)!</span>
 </span></code></pre></div></td></tr></table></div></p>
 <ol>
-<li>Import <code>Volumetry</code> class.</li>
+<li>Import <code>Volumetrics</code> class.</li>
 <li>Import <code>pandas</code> for data manipulation.</li>
 </ol>
-<p>Create a variable for the Volumetry Class</p>
-<p class="annotate"><div class="language-py3 highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">taper_functions_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<p class="annotate"><div class="language-py3 highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">taper_functions_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
 <span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
 <span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
 <span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
@@ -1512,29 +1709,895 @@
 <span class="normal"><a href="#__codelineno-2-12">12</a></span>
 <span class="normal"><a href="#__codelineno-2-13">13</a></span>
 <span class="normal"><a href="#__codelineno-2-14">14</a></span>
-<span class="normal"><a href="#__codelineno-2-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Your\path\csv_tree_cubage_file.csv&#39;</span><span class="p">)</span><span class="c1">#(1)!</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">vol</span> <span class="o">=</span> <span class="n">Volumetry</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">tree_identifier</span><span class="o">=</span><span class="s1">&#39;arvore_id&#39;</span><span class="p">,</span> <span class="n">tree_height</span><span class="o">=</span><span class="s1">&#39;HT&#39;</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="o">=</span><span class="s1">&#39;DAP&#39;</span><span class="p">,</span> <span class="n">segment_height</span><span class="o">=</span><span class="s1">&#39;HT segmento&#39;</span><span class="p">,</span> <span class="n">segment_diameter</span><span class="o">=</span><span class="s1">&#39;Dsegmento&#39;</span><span class="p">,</span><span class="n">tree_bark</span><span class="o">=</span><span class="s1">&#39;Casca&#39;</span><span class="p">)</span><span class="c1">#(2)!</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="hll">
-</span></span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="n">calculated_volumes_df</span> <span class="o">=</span> <span class="n">vol</span><span class="o">.</span><span class="n">get_volumes</span><span class="p">()</span><span class="c1">#(3)!</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="n">metrics</span> <span class="o">=</span> <span class="n">vol</span><span class="o">.</span><span class="n">fit_taper_functions</span><span class="p">()</span><span class="c1">#(4)!</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="n">vol</span><span class="o">.</span><span class="n">get_individual_diameter</span><span class="p">(</span><span class="mf">1.3</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span><span class="c1">#(5)!</span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span>
+<span class="normal"><a href="#__codelineno-2-23">23</a></span>
+<span class="normal"><a href="#__codelineno-2-24">24</a></span>
+<span class="normal"><a href="#__codelineno-2-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">dados</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\seu\diretório\exemplo_volumetry.xlsx&#39;</span><span class="p">)</span><span class="c1">#(1)!</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="n">vol</span> <span class="o">=</span> <span class="n">Volumetrics</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">dados</span><span class="p">,</span> <span class="n">tree_identifier</span><span class="o">=</span><span class="s1">&#39;arvore_n&#39;</span><span class="p">,</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="hll">                  <span class="n">tree_height</span><span class="o">=</span><span class="s1">&#39;altura_total (m)&#39;</span><span class="p">,</span>
+</span></span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a>                  <span class="n">tree_dbh</span> <span class="o">=</span><span class="s1">&#39;dap (cm)&#39;</span><span class="p">,</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a>                  <span class="n">segment_height</span><span class="o">=</span><span class="s1">&#39;seção (m)&#39;</span><span class="p">,</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a>                  <span class="n">segment_diameter</span><span class="o">=</span> <span class="s1">&#39;diametro_c_casca (cm)&#39;</span><span class="p">,</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a>                  <span class="n">tree_bark</span><span class="o">=</span><span class="s1">&#39;casca (cm)&#39;</span><span class="p">)</span><span class="c1">#(2)!</span>
 </span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="n">vol</span><span class="o">.</span><span class="n">get_individual_taper_volume</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mf">22.8</span><span class="p">)</span><span class="c1">#(6)!</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="n">vol</span><span class="o">.</span><span class="n">get_individual_volume</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mf">22.8</span><span class="p">)</span><span class="c1">#(7)!</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="n">calculated_volumes_df</span> <span class="o">=</span> <span class="n">vol</span><span class="o">.</span><span class="n">get_volumes</span><span class="p">(</span><span class="n">iterator</span><span class="o">=</span><span class="s2">&quot;Fazenda&quot;</span><span class="p">)</span><span class="c1">#(3)!</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="n">calculated_volumes_df</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;exemplo_volumetry_with_vol.xlsx&quot;</span><span class="p">,</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15"></a>                               <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="c1">#(4)!</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16"></a>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="n">metrics_taper</span> <span class="o">=</span> <span class="n">vol</span><span class="o">.</span><span class="n">fit_taper_functions</span><span class="p">(</span><span class="n">save_dir</span><span class="o">=</span><span class="s2">&quot;seu/diretório/para/salvar&quot;</span><span class="p">,</span><span class="n">iterator</span><span class="o">=</span><span class="s2">&quot;Fazenda&quot;</span><span class="p">)</span><span class="c1">#(5)!</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18"></a>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="n">individual_diameter</span> <span class="o">=</span> <span class="n">vol</span><span class="o">.</span><span class="n">get_individual_diameter</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span><span class="c1">#(6)!</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20"></a>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="n">taper_volume</span> <span class="o">=</span> <span class="n">vol</span><span class="o">.</span><span class="n">get_individual_taper_volume</span><span class="p">(</span><span class="mi">35</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="n">stump</span><span class="o">=</span><span class="mf">0.15</span><span class="p">)</span><span class="c1">#(7)!</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22"></a>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="n">metrics_vol</span> <span class="o">=</span> <span class="n">vol</span><span class="o">.</span><span class="n">fit_volumetric_functions</span><span class="p">(</span><span class="n">save_dir</span><span class="o">=</span><span class="n">output_path</span><span class="p">,</span> <span class="n">iterator</span><span class="o">=</span><span class="s2">&quot;Fazenda&quot;</span><span class="p">)</span><span class="c1">#(8)!</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24"></a>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="n">individual_volume</span> <span class="o">=</span> <span class="n">vol</span><span class="o">.</span><span class="n">get_individual_volume</span><span class="p">(</span><span class="n">tree_height</span><span class="o">=</span><span class="mf">21.8</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="o">=</span><span class="mi">19</span><span class="p">)</span><span class="c1">#(9)!</span>
 </span></code></pre></div></td></tr></table></div></p>
 <ol>
-<li>Load your csv file.</li>
-<li>Create the variable <code>vol</code> containing the <code>Volumetry</code> class.</li>
-<li>Calculate volumes for each tree and segments em save the results on <code>calculated_volumes_df</code> variable.</li>
-<li>Fit the taper functions and save the performance metris in <code>metrics</code> variable. It will create a <code>.json</code> file with the models coefficients and a <code>.pkl</code> files for the fitted ann models.</li>
-<li>Get the diameter at 1.3 meters of a tree with a total height of 25 meters and a diameter at breast height (DBH) of 30 centimeters.</li>
-<li>Obtains the volumes calculated from the integration of taper functions for a tree with a height of 30 meters, a diameter at breast height of 22.8 centimeters, considering a stump height of 0.15 meters</li>
-<li>Obtains the volumes calculated from the fitted volumetric functions for a tree with a height of 30 meters and a diameter at breast height of 22.8 centimeters.</li>
+<li>Load your <code>.xlsx</code> file.  </li>
+<li>Create the variable <code>vol</code> containing the <code>Volumetrics</code> class.  </li>
+<li>Calculate the volumes for each tree and segment, grouped by <code>iterator</code>, and save the results in the variable <code>calculated_volumes_df</code>. The original DataFrame will be returned with the following additional columns: <code>segment_vol_with_bark</code>, <code>segment_vol_without_bark</code>, <code>tree_vol_with_bark</code>, <code>tree_vol_without_bark</code>, <code>bark_factor</code>, and <code>mean_bark_factor</code>.  </li>
+<li>Save the DataFrame with the calculated volumes as <code>exemplo_volumetry_with_vol.xlsx</code>.  </li>
+<li>Fit taper functions and artificial neural networks for each <code>iterator</code>, saving the performance metrics in the variable <code>metrics_taper</code>. This will create a <code>.json</code> file with the model coefficients and <code>.pkl</code> files for the trained ANN models, storing all generated files in <code>save_dir</code>.  </li>
+<li>Get the diameter at 10 meters for a tree with a total height of 31 meters and a diameter at breast height (DBH) of 30 centimeters using the fitted models, saving it in the variable <code>individual_diameter</code>.  </li>
+<li>Get the volumes calculated by integrating the taper functions for a tree with a height of 35 meters and DBH of 32 centimeters, considering a stump height of 0.15 meters, and save it in the variable <code>taper_volume</code>.  </li>
+<li>Fit all volumetric functions for each <code>iterator</code> and save the results in <code>save_dir</code>, storing the metrics in the variable <code>metrics_vol</code>. Since no <code>vol_column</code> was provided, it will use the volume obtained through the <code>get_volumes</code> method to fit the models.  </li>
+<li>Calculate the volume of a tree with a height of 21.8 meters and a DBH of 19 centimeters using all volumetric functions and save it in the variable <code>individual_volume</code>.  </li>
 </ol>
+<h4 id="output">Output</h4>
+<h5 id="tables">Tables</h5>
+<p class="annotate"><code>calculated_volumes_df</code>(1)</p>
+<ol>
+<li>Initial DataFrame with the following additional columns: <code>segment_vol_with_bark</code>, <code>segment_vol_without_bark</code>, <code>tree_vol_with_bark</code>, <code>tree_vol_without_bark</code>, <code>bark_factor</code>, <code>mean_bark_factor</code>  </li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Fazenda</th>
+<th>arvore_n</th>
+<th>dap (cm)</th>
+<th>altura_total (m)</th>
+<th>seção (m)</th>
+<th>diametro_c_casca (cm)</th>
+<th>diametro_s_casca (cm)</th>
+<th>casca (cm)</th>
+<th>segment_vol_with_bark</th>
+<th>segment_vol_without_bark</th>
+<th>tree_vol_with_bark</th>
+<th>tree_vol_without_bark</th>
+<th>bark_factor</th>
+<th>mean_bark_factor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fazenda 1</td>
+<td>1</td>
+<td>24,84076433</td>
+<td>28</td>
+<td>0,1</td>
+<td>30,05</td>
+<td>26,51</td>
+<td>1,74</td>
+<td>0,007092165</td>
+<td>0,005544635</td>
+<td>0,559879936</td>
+<td>0,387477996</td>
+<td>0,692073373</td>
+<td>0,682430303</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>1</td>
+<td>24,84076433</td>
+<td>28</td>
+<td>0,6</td>
+<td>26,55</td>
+<td>23,15</td>
+<td>1,96</td>
+<td>0,031450877</td>
+<td>0,023341421</td>
+<td>0,559879936</td>
+<td>0,387477996</td>
+<td>0,692073373</td>
+<td>0,682430303</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>1</td>
+<td>24,84076433</td>
+<td>28</td>
+<td>1,3</td>
+<td>24,75</td>
+<td>21,93</td>
+<td>1,94</td>
+<td>0,036171179</td>
+<td>0,026055822</td>
+<td>0,559879936</td>
+<td>0,387477996</td>
+<td>0,692073373</td>
+<td>0,682430303</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>1</td>
+<td>24,84076433</td>
+<td>28</td>
+<td>2,0</td>
+<td>23,85</td>
+<td>21,48</td>
+<td>1,90</td>
+<td>0,032463883</td>
+<td>0,02310445</td>
+<td>0,559879936</td>
+<td>0,387477996</td>
+<td>0,692073373</td>
+<td>0,682430303</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>1</td>
+<td>24,84076433</td>
+<td>28</td>
+<td>4,0</td>
+<td>21,40</td>
+<td>19,30</td>
+<td>1,11</td>
+<td>0,080407591</td>
+<td>0,065402308</td>
+<td>0,559879936</td>
+<td>0,387477996</td>
+<td>0,692073373</td>
+<td>0,682430303</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>1</td>
+<td>24,84076433</td>
+<td>28</td>
+<td>6,0</td>
+<td>20,50</td>
+<td>19,17</td>
+<td>1,81</td>
+<td>0,068942643</td>
+<td>0,047175553</td>
+<td>0,559879936</td>
+<td>0,387477996</td>
+<td>0,692073373</td>
+<td>0,682430303</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">About the generated columns</p>
+<ul>
+<li><code>segment_vol_with_bark</code>: Stem segment <strong>with bark</strong> volume, calculated between two consecutive measurement sections.  </li>
+<li><code>segment_vol_without_bark</code>: Stem segment <strong>without bark</strong> volume, calculated between two consecutive measurement sections.  </li>
+<li><code>tree_vol_with_bark</code>: Total tree <strong>with bark</strong> volume, obtained by summing all segment volumes with bark.  </li>
+<li><code>tree_vol_without_bark</code>: Total tree <strong>without bark</strong> volume, obtained by summing all segment volumes without bark.  </li>
+<li><code>bark_factor</code>: Bark factor of the segment, calculated as the ratio between the volume with bark and the volume without bark for that segment.  </li>
+<li><code>mean_bark_factor</code>: Average bark factor of the tree, calculated as the mean of the bark factors from all segments.  </li>
+</ul>
+</div>
+<p class="annotate"><code>metrics_taper</code>(1)</p>
+<ol>
+<li>DataFrame with evaluation metrics generated for each <code>iterator</code> and taper model and artificial neural network, including the score assigned to each model based on its performance.  </li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>iterator</th>
+<th>model</th>
+<th>MAE</th>
+<th>MAPE</th>
+<th>MSE</th>
+<th>RMSE</th>
+<th>R squared</th>
+<th>Explained Var</th>
+<th>Mean Error</th>
+<th>score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fazenda 1</td>
+<td>kozak</td>
+<td>0,580666</td>
+<td>5,718699</td>
+<td>0,572843</td>
+<td>0,756864</td>
+<td>0,994621</td>
+<td>0,994621</td>
+<td>-0,000167</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>bi</td>
+<td>0,635942</td>
+<td>5,972947</td>
+<td>0,643045</td>
+<td>0,801901</td>
+<td>0,993962</td>
+<td>0,994016</td>
+<td>-0,075560</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>ann</td>
+<td>0,576319</td>
+<td>5,651187</td>
+<td>0,560707</td>
+<td>0,748804</td>
+<td>0,994735</td>
+<td>0,994739</td>
+<td>0,020658</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>schoepfer</td>
+<td>0,769151</td>
+<td>7,532993</td>
+<td>1,033545</td>
+<td>1,016634</td>
+<td>0,990295</td>
+<td>0,990356</td>
+<td>-0,080168</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>johnson</td>
+<td>1,078775</td>
+<td>10,108434</td>
+<td>1,978243</td>
+<td>1,406500</td>
+<td>0,981425</td>
+<td>0,981571</td>
+<td>-0,124507</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>matte</td>
+<td>1,424262</td>
+<td>14,718423</td>
+<td>3,337336</td>
+<td>1,826838</td>
+<td>0,968664</td>
+<td>0,969344</td>
+<td>0,269282</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>ann</td>
+<td>1,342497</td>
+<td>7,238220</td>
+<td>3,318417</td>
+<td>1,821652</td>
+<td>0,988023</td>
+<td>0,988023</td>
+<td>0,001891</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>kozak</td>
+<td>1,350729</td>
+<td>7,357823</td>
+<td>3,468079</td>
+<td>1,862278</td>
+<td>0,987483</td>
+<td>0,987483</td>
+<td>-0,002186</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>bi</td>
+<td>1,374535</td>
+<td>7,880664</td>
+<td>3,483492</td>
+<td>1,866412</td>
+<td>0,987427</td>
+<td>0,987435</td>
+<td>-0,045863</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>schoepfer</td>
+<td>1,678529</td>
+<td>8,785657</td>
+<td>4,895865</td>
+<td>2,212660</td>
+<td>0,982329</td>
+<td>0,982373</td>
+<td>0,110280</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>matte</td>
+<td>2,180025</td>
+<td>13,928099</td>
+<td>7,414827</td>
+<td>2,723018</td>
+<td>0,973238</td>
+<td>0,974475</td>
+<td>0,585444</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>johnson</td>
+<td>2,216439</td>
+<td>12,099970</td>
+<td>9,165003</td>
+<td>3,027376</td>
+<td>0,966921</td>
+<td>0,966956</td>
+<td>0,097858</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<p class="annotate"><code>individual_diameter</code>(1)</p>
+<ol>
+<li>DataFrame with the individual diameters estimated by the taper functions and artificial neural networks for each <code>iterator</code> and taper model, for a tree with a height of 31 meters, a DBH of 30 centimeters, at a height of 10 meters.  </li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>iterator</th>
+<th>model</th>
+<th>Predicted_diameter (cm)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fazenda 1</td>
+<td>schoepfer</td>
+<td>22,75296935</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>bi</td>
+<td>22,35954058</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>kozak</td>
+<td>22,45146956</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>johnson</td>
+<td>23,41945889</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>matte</td>
+<td>22,83651908</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>ann</td>
+<td>23,33443805</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>schoepfer</td>
+<td>21,48912862</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>bi</td>
+<td>23,08526645</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>kozak</td>
+<td>22,40805692</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>johnson</td>
+<td>22,46401882</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>matte</td>
+<td>21,43830806</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>ann</td>
+<td>23,71472482</td>
+</tr>
+</tbody>
+</table>
+<p class="annotate"><code>taper_volume</code>(1)</p>
+<ol>
+<li>DataFrame with the volumes estimated by integrating the taper functions and artificial neural networks for each <code>iterator</code> and taper model, for a tree with a height of 35 meters and a DBH of 32 centimeters.  </li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>iterator</th>
+<th>model</th>
+<th>Predicted_volume (m³)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fazenda 1</td>
+<td>schoepfer</td>
+<td>1,166056704</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>bi</td>
+<td>1,143061281</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>kozak</td>
+<td>1,165284829</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>johnson</td>
+<td>1,201758409</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>matte</td>
+<td>1,150231088</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>ann</td>
+<td>1,326654958</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>schoepfer</td>
+<td>1,055148596</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>bi</td>
+<td>1,179288353</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>kozak</td>
+<td>1,147756782</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>johnson</td>
+<td>1,108690858</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>matte</td>
+<td>1,066598472</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>ann</td>
+<td>1,178903371</td>
+</tr>
+</tbody>
+</table>
+<p class="annotate"><code>metrics_vol</code>(1)</p>
+<ol>
+<li>DataFrame with evaluation metrics generated for each <code>iterator</code>, volumetric model, and artificial neural network, including the score assigned to each model based on its performance.  </li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>iterator</th>
+<th>model</th>
+<th>MAE</th>
+<th>MAPE</th>
+<th>MSE</th>
+<th>RMSE</th>
+<th>R squared</th>
+<th>Explained Var</th>
+<th>Mean Error</th>
+<th>score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fazenda 1</td>
+<td>honner</td>
+<td>0,028987</td>
+<td>6,510184</td>
+<td>0,001409</td>
+<td>0,037535</td>
+<td>0,998022</td>
+<td>0,998143</td>
+<td>-0,009291</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>ann</td>
+<td>0,020789</td>
+<td>5,362507</td>
+<td>0,000713</td>
+<td>0,026703</td>
+<td>0,998999</td>
+<td>0,998999</td>
+<td>-0,000569</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>takata</td>
+<td>0,027501</td>
+<td>5,250705</td>
+<td>0,001291</td>
+<td>0,035934</td>
+<td>0,998187</td>
+<td>0,998214</td>
+<td>-0,004318</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>spurr_log</td>
+<td>0,026612</td>
+<td>4,438766</td>
+<td>0,001235</td>
+<td>0,035137</td>
+<td>0,998267</td>
+<td>0,998277</td>
+<td>-0,002731</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>schumacher_hall</td>
+<td>0,027584</td>
+<td>4,649301</td>
+<td>0,001203</td>
+<td>0,034683</td>
+<td>0,998311</td>
+<td>0,998321</td>
+<td>-0,002636</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>meyer</td>
+<td>0,025136</td>
+<td>6,229777</td>
+<td>0,001112</td>
+<td>0,033346</td>
+<td>0,998439</td>
+<td>0,998439</td>
+<td>0,000000</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>stoate</td>
+<td>0,026301</td>
+<td>6,530368</td>
+<td>0,001158</td>
+<td>0,034029</td>
+<td>0,998374</td>
+<td>0,998374</td>
+<td>0,000000</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>spurr</td>
+<td>0,026008</td>
+<td>9,348743</td>
+<td>0,001177</td>
+<td>0,034306</td>
+<td>0,998348</td>
+<td>0,998348</td>
+<td>0,000000</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>naslund</td>
+<td>0,024859</td>
+<td>11,898225</td>
+<td>0,001020</td>
+<td>0,031930</td>
+<td>0,998569</td>
+<td>0,998571</td>
+<td>0,001263</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>ogaya</td>
+<td>0,410646</td>
+<td>151,1923</td>
+<td>0,213968</td>
+<td>0,462567</td>
+<td>0,699650</td>
+<td>0,719168</td>
+<td>-0,117918</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>naslund</td>
+<td>0,153069</td>
+<td>6,603060</td>
+<td>0,048230</td>
+<td>0,219612</td>
+<td>0,974528</td>
+<td>0,974529</td>
+<td>-0,001349</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>schumacher_hall</td>
+<td>0,160824</td>
+<td>9,781453</td>
+<td>0,048410</td>
+<td>0,220023</td>
+<td>0,974433</td>
+<td>0,974447</td>
+<td>-0,005183</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>spurr_log</td>
+<td>0,160540</td>
+<td>9,932109</td>
+<td>0,048446</td>
+<td>0,220105</td>
+<td>0,974414</td>
+<td>0,974428</td>
+<td>-0,005270</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>takata</td>
+<td>0,159037</td>
+<td>6,922203</td>
+<td>0,049057</td>
+<td>0,221488</td>
+<td>0,974091</td>
+<td>0,974091</td>
+<td>-0,000386</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>ann</td>
+<td>0,150892</td>
+<td>5,508166</td>
+<td>0,043498</td>
+<td>0,208562</td>
+<td>0,977027</td>
+<td>0,977053</td>
+<td>0,007015</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>meyer</td>
+<td>0,155147</td>
+<td>8,411204</td>
+<td>0,047824</td>
+<td>0,218687</td>
+<td>0,974742</td>
+<td>0,974742</td>
+<td>0,000000</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>stoate</td>
+<td>0,161432</td>
+<td>14,918844</td>
+<td>0,048986</td>
+<td>0,221328</td>
+<td>0,974129</td>
+<td>0,974129</td>
+<td>0,000000</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>spurr</td>
+<td>0,181962</td>
+<td>28,583026</td>
+<td>0,055897</td>
+<td>0,236425</td>
+<td>0,970479</td>
+<td>0,970479</td>
+<td>0,000000</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>honner</td>
+<td>0,189541</td>
+<td>6,829942</td>
+<td>0,062964</td>
+<td>0,250927</td>
+<td>0,966746</td>
+<td>0,967397</td>
+<td>0,035110</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>ogaya</td>
+<td>0,430466</td>
+<td>40,223791</td>
+<td>0,284181</td>
+<td>0,533086</td>
+<td>0,849913</td>
+<td>0,850523</td>
+<td>0,034001</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p class="annotate"><code>individual_volume</code>(1)</p>
+<ol>
+<li>DataFrame with the volumes estimated by the volumetric functions and artificial neural networks for each <code>iterator</code>, for a tree with a height of 21.8 meters and a DBH of 19 centimeters.  </li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>iterator</th>
+<th>model</th>
+<th>Predicted_volume (m³)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fazenda 1</td>
+<td>spurr</td>
+<td>0,241827831</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>schumacher_hall</td>
+<td>0,248607044</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>honner</td>
+<td>0,262977386</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>ogaya</td>
+<td>0,860375777</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>naslund</td>
+<td>0,245824632</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>takata</td>
+<td>0,255820523</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>spurr_log</td>
+<td>0,251481659</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>meyer</td>
+<td>0,228396501</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>stoate</td>
+<td>0,241410100</td>
+</tr>
+<tr>
+<td>Fazenda 1</td>
+<td>ann</td>
+<td>0,271805848</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>spurr</td>
+<td>0,421606899</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>schumacher_hall</td>
+<td>0,332105882</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>honner</td>
+<td>0,232727813</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>ogaya</td>
+<td>0,939382897</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>naslund</td>
+<td>0,324612548</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>takata</td>
+<td>0,287273333</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>spurr_log</td>
+<td>0,336234242</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>meyer</td>
+<td>0,200621992</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>stoate</td>
+<td>0,242861095</td>
+</tr>
+<tr>
+<td>Fazenda 2</td>
+<td>ann</td>
+<td>0,284503571</td>
+</tr>
+</tbody>
+</table>
+<h5 id="json-files"><code>.json</code> Files</h5>
+<p>For each taper and volumetric function, <code>.json</code> files are generated containing the estimated coefficients of each model. An individual <code>.json</code> file is created for each iterator, named according to its respective identifier.</p>
+<ul>
+<li><a href="../downloads/volumetry/taper_functions_coefficients_Fazenda%201.json">taper_functions_coefficients_Fazenda 1.json</a></li>
+<li><a href="../downloads/volumetry/taper_functions_coefficients_Fazenda%202.json">taper_functions_coefficients_Fazenda 2.json</a></li>
+<li><a href="../downloads/volumetry/volumetrics_functions_coefficients_Fazenda%201.json">volumetrics_functions_coefficients_Fazenda 1.json</a></li>
+<li><a href="../downloads/volumetry/volumetrics_functions_coefficients_Fazenda%202.json">volumetrics_functions_coefficients_Fazenda 2.json</a></li>
+</ul>
+<h5 id="pkl-files"><code>.pkl</code> Files</h5>
+<p>Similarly, for each artificial neural network trained for tapering or volume prediction, a <code>.pkl</code> file is generated containing the trained model, named according to the respective iterator.</p>
+<ul>
+<li>taper_model_ann_Fazenda 1.pkl  </li>
+<li>taper_model_ann_Fazenda 2.pkl  </li>
+<li>volumetric_ann_Fazenda 1.pkl  </li>
+<li>volumetric_ann_Fazenda 2.pkl  </li>
+</ul>
+<p>Although this type of file cannot be viewed directly, it stores the neural network parameters and internal configurations, which will be used later in the generation of <a href="../assortments/">assortments</a>.</p>
 <h3 id="available-taper-models">Available taper models</h3>
 <div class="annotate">
 <h4 id="schoepfer"><li>schoepfer</li></h4>
@@ -1658,6 +2721,7 @@ classDiagram
 </div>
 <h4 id="notation_1">Notation</h4>
 <ul>
+<li><span class="arithmatex">\( b_n \)</span>: Fitted parameters</li>
 <li><span class="arithmatex">\( V \)</span>: Estimated volume (m³)</li>
 <li><span class="arithmatex">\( \text{dbh} \)</span>: Diameter at breast height (cm)</li>
 <li><span class="arithmatex">\( H \)</span>: Total height (m)</li>
@@ -1702,6 +2766,13 @@ classDiagram
 </tr>
 </tbody>
 </table>
+<h5 id="notation_2">Notation</h5>
+<ul>
+<li><span class="arithmatex">\( y_i \)</span>: Observed value for the <em>i</em>-th observation  </li>
+<li><span class="arithmatex">\( \hat{y}_i \)</span>: Estimated (predicted) value for the <em>i</em>-th observation  </li>
+<li><span class="arithmatex">\( n \)</span>: Total number of observations  </li>
+<li><span class="arithmatex">\( \bar{y} \)</span>: Mean of the observed values</li>
+</ul>
 <p>After obtaining the metrics for each tested model, the best model receives a score of 10, while the others receive scores of 9, 8, and so on.</p>
 <h2 id="references">References</h2>
 <section id="references">
