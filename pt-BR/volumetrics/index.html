@@ -1,16 +1,16 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="pt" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Process forest inventory data and adjust volumetric equations and taper functions for later use.">
+        <meta name="description" content="Realiza o processamento de dados de cubagem florestal, ajusta equações volumétricas e funções de afilamento, e prepara os resultados para aplicações futuras, como estimativas de volume e geração de sortimentos.">
       
       
       
-        <link rel="canonical" href="https://richterv.github.io/fptoolsdoc/volumetry/">
+        <link rel="canonical" href="https://richterv.github.io/fptoolsdoc/pt-BR/volumetrics/">
       
       
         <link rel="prev" href="../tree_volume_planning/">
@@ -19,19 +19,19 @@
         <link rel="next" href="../sampling_stats/">
       
       
-      <link rel="icon" href="../images/favicon_2.png">
+      <link rel="icon" href="../../images/favicon_2.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
     
     
       
-        <title>Volumetry - ForestPyTools</title>
+        <title>Volumetria - ForestPyTools</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,11 +50,11 @@
       
     
     
-      <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+      <link rel="stylesheet" href="../../assets/css/swiper-bundle.min.css">
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -63,11 +63,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Volumetry - ForestPyTools" >
+        <meta  property="og:title"  content="Volumetria - ForestPyTools" >
       
-        <meta  property="og:description"  content="Process forest inventory data and adjust volumetric equations and taper functions for later use." >
+        <meta  property="og:description"  content="Realiza o processamento de dados de cubagem florestal, ajusta equações volumétricas e funções de afilamento, e prepara os resultados para aplicações futuras, como estimativas de volume e geração de sortimentos." >
       
-        <meta  property="og:image"  content="https://richterv.github.io/fptoolsdoc/assets/images/social/volumetry.png" >
+        <meta  property="og:image"  content="https://richterv.github.io/fptoolsdoc/assets/images/social/pt-BR/volumetrics.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -75,15 +75,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://richterv.github.io/fptoolsdoc/volumetry/" >
+        <meta  property="og:url"  content="https://richterv.github.io/fptoolsdoc/pt-BR/volumetrics/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Volumetry - ForestPyTools" >
+        <meta  name="twitter:title"  content="Volumetria - ForestPyTools" >
       
-        <meta  name="twitter:description"  content="Process forest inventory data and adjust volumetric equations and taper functions for later use." >
+        <meta  name="twitter:description"  content="Realiza o processamento de dados de cubagem florestal, ajusta equações volumétricas e funções de afilamento, e prepara os resultados para aplicações futuras, como estimativas de volume e geração de sortimentos." >
       
-        <meta  name="twitter:image"  content="https://richterv.github.io/fptoolsdoc/assets/images/social/volumetry.png" >
+        <meta  name="twitter:image"  content="https://richterv.github.io/fptoolsdoc/assets/images/social/pt-BR/volumetrics.png" >
       
     
     
@@ -106,8 +106,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#volumetry" class="md-skip">
-          Skip to content
+        <a href="#volumetria" class="md-skip">
+          Pular para conteúdo
         </a>
       
     </div>
@@ -121,10 +121,10 @@
   
 
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="ForestPyTools" class="md-header__button md-logo" aria-label="ForestPyTools" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../" title="ForestPyTools" class="md-header__button md-logo" aria-label="ForestPyTools" data-md-component="logo">
       
-  <img src="../images/logo1_no_background.png" alt="logo">
+  <img src="../../images/logo1_no_background.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -141,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Volumetry
+              Volumetria
             
           </span>
         </div>
@@ -181,20 +181,20 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="Select language">
+    <button class="md-header__button md-icon" aria-label="Selecione o idioma">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="./" hreflang="en" class="md-select__link">
+            <a href="../../volumetrics/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../pt-BR/volumetry/" hreflang="pt-BR" class="md-select__link">
+            <a href="./" hreflang="pt-BR" class="md-select__link">
               Português
             </a>
           </li>
@@ -213,16 +213,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Pesquisar">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -235,7 +235,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            Inicializando busca
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -268,11 +268,11 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="ForestPyTools" class="md-nav__button md-logo" aria-label="ForestPyTools" data-md-component="logo">
+    <a href="../" title="ForestPyTools" class="md-nav__button md-logo" aria-label="ForestPyTools" data-md-component="logo">
       
-  <img src="../images/logo1_no_background.png" alt="logo">
+  <img src="../../images/logo1_no_background.png" alt="logo">
 
     </a>
     ForestPyTools
@@ -287,11 +287,11 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Home
+    Página inicial
     
   </span>
   
@@ -327,7 +327,7 @@
             
   
   <span class="md-ellipsis">
-    Introduction
+    Introdução
     
   </span>
   
@@ -338,7 +338,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Introduction
+            Introdução
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -353,7 +353,7 @@
         
   
   <span class="md-ellipsis">
-    Getting Started
+    Primeiros passos
     
   </span>
   
@@ -399,7 +399,7 @@
             
   
   <span class="md-ellipsis">
-    Módules
+    Módulos
     
   </span>
   
@@ -410,7 +410,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Módules
+            Módulos
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -425,7 +425,7 @@
         
   
   <span class="md-ellipsis">
-    Inventory Planning QGIS
+    Planejamento de inventário QGIS
     
   </span>
   
@@ -447,7 +447,7 @@
         
   
   <span class="md-ellipsis">
-    Inventory Planning
+    Planejamento de inventário
     
   </span>
   
@@ -469,7 +469,7 @@
         
   
   <span class="md-ellipsis">
-    Hypsometric Relationship
+    Relação Hipsométrica
     
   </span>
   
@@ -491,7 +491,7 @@
         
   
   <span class="md-ellipsis">
-    Tree Volume Planninng
+    Planejamento de Cubagem
     
   </span>
   
@@ -522,7 +522,7 @@
           
   
   <span class="md-ellipsis">
-    Volumetry
+    Volumetria
     
   </span>
   
@@ -534,7 +534,7 @@
         
   
   <span class="md-ellipsis">
-    Volumetry
+    Volumetria
     
   </span>
   
@@ -543,7 +543,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
   
   
   
@@ -552,70 +552,70 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Índice
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#class-parameters" class="md-nav__link">
+  <a href="#parametros-da-classe" class="md-nav__link">
     <span class="md-ellipsis">
-      Class Parameters
+      Parâmetros da Classe
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#class-functions" class="md-nav__link">
+  <a href="#metodos-da-classe" class="md-nav__link">
     <span class="md-ellipsis">
-      Class Functions
+      Métodos da Classe
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-usage" class="md-nav__link">
+  <a href="#exemplo-de-uso" class="md-nav__link">
     <span class="md-ellipsis">
-      Example Usage
+      Exemplo de Uso
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Example Usage">
+    <nav class="md-nav" aria-label="Exemplo de Uso">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
+  <a href="#saidas" class="md-nav__link">
     <span class="md-ellipsis">
-      Output
+      Saídas
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Output">
+    <nav class="md-nav" aria-label="Saídas">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tables" class="md-nav__link">
+  <a href="#tabelas" class="md-nav__link">
     <span class="md-ellipsis">
-      Tables
+      Tabelas
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#json-files" class="md-nav__link">
+  <a href="#arquivos-json" class="md-nav__link">
     <span class="md-ellipsis">
-      .json Files
+      Arquivos .json
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pkl-files" class="md-nav__link">
+  <a href="#arquivos-pkl" class="md-nav__link">
     <span class="md-ellipsis">
-      .pkl Files
+      Arquivos .pkl
     </span>
   </a>
   
@@ -632,13 +632,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#available-taper-models" class="md-nav__link">
+  <a href="#funcoes-de-afilamento-disponiveis" class="md-nav__link">
     <span class="md-ellipsis">
-      Available taper models
+      Funções de afilamento disponíveis
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Available taper models">
+    <nav class="md-nav" aria-label="Funções de afilamento disponíveis">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -696,18 +696,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#notation" class="md-nav__link">
+  <a href="#notacao" class="md-nav__link">
     <span class="md-ellipsis">
-      Notation
+      Notação
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#artificial-neural-network" class="md-nav__link">
+  <a href="#rede-neural-artificial" class="md-nav__link">
     <span class="md-ellipsis">
-      Artificial Neural Network
+      Rede Neural Artificial
     </span>
   </a>
   
@@ -719,13 +719,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#available-volumetric-models" class="md-nav__link">
+  <a href="#modelos-volumetricos-disponiveis" class="md-nav__link">
     <span class="md-ellipsis">
-      Available volumetric models
+      Modelos volumétricos disponíveis
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Available volumetric models">
+    <nav class="md-nav" aria-label="Modelos volumétricos disponíveis">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -810,37 +810,37 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ann_1" class="md-nav__link">
+  <a href="#rna" class="md-nav__link">
     <span class="md-ellipsis">
-      ann
+      RNA
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#notation_1" class="md-nav__link">
+  <a href="#notacao_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Notation
+      Notação
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ranking-function" class="md-nav__link">
+  <a href="#funcao-de-classificacao" class="md-nav__link">
     <span class="md-ellipsis">
-      Ranking function
+      Função de Classificação
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Ranking function">
+    <nav class="md-nav" aria-label="Função de Classificação">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#notation_2" class="md-nav__link">
+  <a href="#notacao_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Notation
+      Notação
     </span>
   </a>
   
@@ -857,9 +857,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
+  <a href="#referencias" class="md-nav__link">
     <span class="md-ellipsis">
-      References
+      Referências
     </span>
   </a>
   
@@ -885,7 +885,7 @@
         
   
   <span class="md-ellipsis">
-    Sampling Stats
+    Estatística amostral
     
   </span>
   
@@ -907,7 +907,7 @@
         
   
   <span class="md-ellipsis">
-    Assortments
+    Sortimentos
     
   </span>
   
@@ -929,7 +929,7 @@
         
   
   <span class="md-ellipsis">
-    Forest Report
+    Relatório Florestal
     
   </span>
   
@@ -963,7 +963,7 @@
             
   
   <span class="md-ellipsis">
-    Production Forecast
+    Prognose
     
   </span>
   
@@ -974,7 +974,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_9">
             <span class="md-nav__icon md-icon"></span>
-            Production Forecast
+            Prognose
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -989,7 +989,7 @@
         
   
   <span class="md-ellipsis">
-    Clutter Forecast
+    Modelo de Clutter
     
   </span>
   
@@ -1011,7 +1011,7 @@
         
   
   <span class="md-ellipsis">
-    Ann Forecast
+    Redes Neurais artificiais
     
   </span>
   
@@ -1030,8 +1030,15 @@
 
               
             
-              
-                
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
   
   
   
@@ -1041,20 +1048,12 @@
         
   
   <span class="md-ellipsis">
-    Stratifier
+    Estratificador
     
   </span>
   
 
       </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -1078,10 +1077,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1093,8 +1092,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Extras
           </label>
@@ -1111,7 +1110,7 @@
         
   
   <span class="md-ellipsis">
-    Bug Report
+    Reportar falhas
     
   </span>
   
@@ -1133,7 +1132,7 @@
         
   
   <span class="md-ellipsis">
-    About the author
+    Sobre o autor
     
   </span>
   
@@ -1164,7 +1163,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
   
   
   
@@ -1173,70 +1172,70 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Índice
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#class-parameters" class="md-nav__link">
+  <a href="#parametros-da-classe" class="md-nav__link">
     <span class="md-ellipsis">
-      Class Parameters
+      Parâmetros da Classe
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#class-functions" class="md-nav__link">
+  <a href="#metodos-da-classe" class="md-nav__link">
     <span class="md-ellipsis">
-      Class Functions
+      Métodos da Classe
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-usage" class="md-nav__link">
+  <a href="#exemplo-de-uso" class="md-nav__link">
     <span class="md-ellipsis">
-      Example Usage
+      Exemplo de Uso
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Example Usage">
+    <nav class="md-nav" aria-label="Exemplo de Uso">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
+  <a href="#saidas" class="md-nav__link">
     <span class="md-ellipsis">
-      Output
+      Saídas
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Output">
+    <nav class="md-nav" aria-label="Saídas">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tables" class="md-nav__link">
+  <a href="#tabelas" class="md-nav__link">
     <span class="md-ellipsis">
-      Tables
+      Tabelas
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#json-files" class="md-nav__link">
+  <a href="#arquivos-json" class="md-nav__link">
     <span class="md-ellipsis">
-      .json Files
+      Arquivos .json
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pkl-files" class="md-nav__link">
+  <a href="#arquivos-pkl" class="md-nav__link">
     <span class="md-ellipsis">
-      .pkl Files
+      Arquivos .pkl
     </span>
   </a>
   
@@ -1253,13 +1252,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#available-taper-models" class="md-nav__link">
+  <a href="#funcoes-de-afilamento-disponiveis" class="md-nav__link">
     <span class="md-ellipsis">
-      Available taper models
+      Funções de afilamento disponíveis
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Available taper models">
+    <nav class="md-nav" aria-label="Funções de afilamento disponíveis">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1317,18 +1316,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#notation" class="md-nav__link">
+  <a href="#notacao" class="md-nav__link">
     <span class="md-ellipsis">
-      Notation
+      Notação
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#artificial-neural-network" class="md-nav__link">
+  <a href="#rede-neural-artificial" class="md-nav__link">
     <span class="md-ellipsis">
-      Artificial Neural Network
+      Rede Neural Artificial
     </span>
   </a>
   
@@ -1340,13 +1339,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#available-volumetric-models" class="md-nav__link">
+  <a href="#modelos-volumetricos-disponiveis" class="md-nav__link">
     <span class="md-ellipsis">
-      Available volumetric models
+      Modelos volumétricos disponíveis
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Available volumetric models">
+    <nav class="md-nav" aria-label="Modelos volumétricos disponíveis">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1431,37 +1430,37 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ann_1" class="md-nav__link">
+  <a href="#rna" class="md-nav__link">
     <span class="md-ellipsis">
-      ann
+      RNA
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#notation_1" class="md-nav__link">
+  <a href="#notacao_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Notation
+      Notação
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ranking-function" class="md-nav__link">
+  <a href="#funcao-de-classificacao" class="md-nav__link">
     <span class="md-ellipsis">
-      Ranking function
+      Função de Classificação
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Ranking function">
+    <nav class="md-nav" aria-label="Função de Classificação">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#notation_2" class="md-nav__link">
+  <a href="#notacao_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Notation
+      Notação
     </span>
   </a>
   
@@ -1478,9 +1477,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
+  <a href="#referencias" class="md-nav__link">
     <span class="md-ellipsis">
-      References
+      Referências
     </span>
   </a>
   
@@ -1502,126 +1501,137 @@
 
 
 
-<h1 id="volumetry">Volumetry</h1>
+<h1 id="volumetria">Volumetria</h1>
 <hr />
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This library is under development, none of the presented solutions are available for download.</p>
+<p>Esta biblioteca está em desenvolvimento, nenhuma das soluções apresentadas está disponível para download.</p>
 </div>
-<p>Process forest inventory data. Adjust volumetric equations and taper functions for later use.</p>
+<p>Processe dados de inventário florestal e ajuste equações volumétricas e funções de afilamento para uso posterior.</p>
 <hr />
-<h3 id="class-parameters">Class Parameters</h3>
-<div class="language-text highlight"><pre><span></span><code>Volumetry(df, tree_identifier, tree_height, tree_dbh, tree_bark,
-            segment_height, segment_diameter, tree_bark)
+<h3 id="parametros-da-classe">Parâmetros da Classe</h3>
+<div class="language-text highlight"><pre><span></span><code>Volumetrics(df, tree_identifier, tree_height, tree_dbh, tree_bark,
+          segment_height, segment_diameter, tree_bark)
 </code></pre></div>
 <table>
 <thead>
 <tr>
-<th>Parameters</th>
-<th>Description</th>
+<th>Parâmetros</th>
+<th>Descrição</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>df</strong></td>
-<td>The dataframe containing the cubage data.</td>
+<td>O dataframe contendo os dados de cubagem.</td>
 </tr>
 <tr>
 <td><strong>tree_identifier</strong></td>
-<td>The name of the column that contains the unique identifiers of the trees.</td>
+<td>Nome da coluna que contém os identificadores únicos das árvores.</td>
 </tr>
 <tr>
 <td><strong>tree_height</strong></td>
-<td>The name of the column that contains the total heights of the trees (meters).</td>
+<td>Nome da coluna que contém as alturas totais das árvores (metros).</td>
 </tr>
 <tr>
 <td><strong>tree_dbh</strong></td>
-<td>The name of the column containing the diameter at breast height (DBH) values of the trees (centimeters).</td>
+<td>Nome da coluna contendo os valores do diâmetro à altura do peito (DAP) das árvores (centímetros).</td>
 </tr>
 <tr>
 <td><strong>tree_bark</strong></td>
-<td>(Optional) The name of the column containing the bark thickness values of the trees (centimeters). If  <code>tree_bark == None</code>  return only volumes with bark on 'get_volumes()' method.</td>
+<td>(Opcional) Nome da coluna contendo os valores da espessura da casca das árvores (centímetros). Se <code>tree_bark == None</code>, retorna apenas volumes com casca no método <code>get_volumes()</code>.</td>
 </tr>
 <tr>
 <td><strong>segment_height</strong></td>
-<td>(Optional<em>) The name of the column containing the heights of the cubed segments of the trees (meters). </em>Required for <code>fit_taper_functions()</code> method.</td>
+<td>(Opcional<em>) Nome da coluna contendo as alturas dos segmentos cubados das árvores (metros). </em>Obrigatório para o método <code>fit_taper_functions()</code>.</td>
 </tr>
 <tr>
 <td><strong>segment_diameter</strong></td>
-<td>(Optional<em>) The name of the column containing the diameters of the cubed segments of the trees (centimeters). </em>Required for <code>fit_taper_functions()</code> method.</td>
+<td>(Opcional<em>) Nome da coluna contendo os diâmetros dos segmentos cubados das árvores (centímetros). </em>Obrigatório para o método <code>fit_taper_functions()</code>.</td>
 </tr>
 <tr>
 <td><strong>tree_bark</strong></td>
-<td>(Optional) The name of the column containing tree bark (centimeters).</td>
+<td>(Opcional) Nome da coluna contendo a casca das árvores (centímetros).</td>
 </tr>
 </tbody>
 </table>
-<h3 id="class-functions">Class Functions</h3>
-<p class="annotate"><div class="language-py3 highlight"><span class="filename">functions and parameters</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  <span class="n">Volumetry</span><span class="o">.</span><span class="n">get_volumes</span><span class="p">()</span>  
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="n">Volumetry</span><span class="o">.</span><span class="n">fit_taper_functions</span><span class="p">(</span><span class="n">models</span><span class="p">,</span> <span class="n">iterator</span><span class="p">,</span> <span class="n">save_dir</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span><span class="c1">#(1)!</span>
+<h3 id="metodos-da-classe">Métodos da Classe</h3>
+<p class="annotate"><div class="language-py3 highlight"><span class="filename">funções e parâmetros</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  <span class="n">Volumetrics</span><span class="o">.</span><span class="n">get_volumes</span><span class="p">()</span>  
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="n">Volumetrics</span><span class="o">.</span><span class="n">fit_taper_functions</span><span class="p">(</span><span class="n">models</span><span class="p">,</span> <span class="n">iterator</span><span class="p">,</span> <span class="n">save_dir</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span><span class="c1">#(1)!</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  <span class="n">Volumetry</span><span class="o">.</span><span class="n">fit_volumetric_functions</span><span class="p">(</span><span class="n">models</span><span class="p">,</span> <span class="n">iterator</span><span class="p">,</span> <span class="n">vol_column</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  <span class="n">Volumetrics</span><span class="o">.</span><span class="n">fit_volumetric_functions</span><span class="p">(</span><span class="n">models</span><span class="p">,</span> <span class="n">iterator</span><span class="p">,</span> <span class="n">vol_column</span><span class="p">,</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                                       <span class="n">save_dir</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span><span class="c1">#(2)!</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  <span class="n">Volumetry</span><span class="o">.</span><span class="n">get_individual_diameter</span><span class="p">(</span><span class="n">hi</span><span class="p">,</span> <span class="n">tree_height</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="p">)</span><span class="c1">#(3)!</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  <span class="n">Volumetrics</span><span class="o">.</span><span class="n">get_individual_diameter</span><span class="p">(</span><span class="n">hi</span><span class="p">,</span> <span class="n">tree_height</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="p">)</span><span class="c1">#(3)!</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  <span class="n">Volumetry</span><span class="o">.</span><span class="n">get_individual_taper_volume</span><span class="p">(</span><span class="n">tree_height</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="p">,</span> <span class="n">stump</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span><span class="c1">#(4)!</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  <span class="n">Volumetrics</span><span class="o">.</span><span class="n">get_individual_taper_volume</span><span class="p">(</span><span class="n">tree_height</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="p">,</span> <span class="n">stump</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span><span class="c1">#(4)!</span>
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  <span class="n">Volumetry</span><span class="o">.</span><span class="n">get_individual_volume</span><span class="p">(</span><span class="n">tree_height</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="p">)</span><span class="c1">#(5)!</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  <span class="n">Volumetrics</span><span class="o">.</span><span class="n">get_individual_volume</span><span class="p">(</span><span class="n">tree_height</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="p">)</span><span class="c1">#(5)!</span>
 </span></code></pre></div></p>
 <ol>
-<li><strong>models</strong> = (Optional) List of models to be fitted! If <code>models == None</code> uses all available models.                                     <br />
-<strong>iterator</strong> = (Optional) A column name string. Defines wich column will be used as a iterator. Could be a farm name, plot name, code or any unique identification tag.<br />
-<strong>save_dir</strong> = (Optional) A directory to save the fitted function parameters and ann model.</li>
-<li><strong>models</strong> = (Optional) List of models to be fitted! If <code>models == None</code> uses all available models.                                     <br />
-<strong>iterator</strong> = (Optional) A column name string. Defines wich column will be used as a iterator. Could be a farm name, plot name, code or any unique identification tag.   <br />
-<strong>vol_column</strong> = (Optional) A column name to the volume values. If <code>vol_column == None</code>, it uses de volumes obtained by the <code>get_volumes()</code> method to fit the volumetric functions.<br />
-<strong>save_dir</strong> = (Optional) A directory to save the fitted function parameters and ann model.</li>
-<li><strong>hi</strong> = Fraction of height from which you want to obtain the diameter (meters).                                     <br />
-<strong>tree_height</strong> =  Total height of the tree (meters).<br />
-<strong>tree_dbh</strong> = Diameter at breast height (DBH) value of the tree (centimeters).</li>
-<li><strong>tree_height</strong> = Total height of the tree (meters).                                     <br />
-<strong>tree_dbh</strong> = Diameter at breast height (DBH) of the tree (centimeters).<br />
-<strong>stump</strong> = Stump height (meters). By default, uses <code>stump = 0.1</code>.  </li>
-<li><strong>tree_height</strong> = Total height of the tree (meters).                                     <br />
-<strong>tree_dbh</strong> = Diameter at breast height (DBH) of the tree (centimeters).  </li>
+<li>
+<p><strong>models</strong> = (Opcional) Lista de modelos a serem ajustados! Se <code>models == None</code>, utiliza todos os modelos disponíveis.<br />
+    Modelos disponíveis: <code>['schoepfer', 'bi', 'kozak','johnson', 'matte', 'ann']</code>                                     <br />
+<strong>iterator</strong> = (Opcional) Nome de uma coluna a ser usada como iterador. Pode ser o nome da fazenda, nome da parcela, código ou qualquer identificador único.<br />
+<strong>save_dir</strong> = (Opcional) Diretório para salvar os parâmetros da função ajustada e o modelo ANN.  </p>
+</li>
+<li>
+<p><strong>models</strong> = (Opcional) Lista de modelos a serem ajustados! Se <code>models == None</code>, utiliza todos os modelos disponíveis.                                     <br />
+<strong>iterator</strong> = (Opcional) Nome de uma coluna a ser usada como iterador. Pode ser o nome da fazenda, nome da parcela, código ou qualquer identificador único.<br />
+<strong>vol_column</strong> = (Opcional) Nome da coluna com os valores de volume. Se <code>vol_column == None</code>, utiliza os volumes obtidos pelo método <code>get_volumes()</code> para ajustar as funções volumétricas.<br />
+<strong>save_dir</strong> = (Opcional) Diretório para salvar os parâmetros da função ajustada e o modelo ANN.  </p>
+</li>
+<li>
+<p><strong>hi</strong> = Fração da altura da árvore para a qual se deseja obter o diâmetro (metros).<br />
+<strong>tree_height</strong> = Altura total da árvore (metros).<br />
+<strong>tree_dbh</strong> = Diâmetro à altura do peito (DAP) da árvore (centímetros).  </p>
+</li>
+<li>
+<p><strong>tree_height</strong> = Altura total da árvore (metros).<br />
+<strong>tree_dbh</strong> = Diâmetro à altura do peito (DAP) da árvore (centímetros).<br />
+<strong>stump</strong> = Altura do toco (metros). Por padrão, usa <code>stump = 0.1</code>.  </p>
+</li>
+<li>
+<p><strong>tree_height</strong> = Altura total da árvore (metros).<br />
+<strong>tree_dbh</strong> = Diâmetro à altura do peito (DAP) da árvore (centímetros).  </p>
+</li>
 </ol>
 <table>
 <thead>
 <tr>
-<th>Methods</th>
-<th>Description</th>
+<th>Métodos</th>
+<th>Descrição</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>.get_volumes()</strong></td>
-<td>Returns the volume of each cubed segment and the total volume of each tree separated by <code>tree_identifier</code>. If <code>tree_bark == None</code>, it returns only the volume with bark; otherwise, it returns the volume with and without bark.</td>
+<td>Retorna o volume de cada segmento cubado e o volume total de cada árvore, separado por <code>tree_identifier</code>. Se <code>tree_bark == None</code>, retorna apenas o volume com casca; caso contrário, retorna o volume com e sem casca.</td>
 </tr>
 <tr>
 <td><strong>.fit_taper_functions()</strong></td>
-<td>Fits the available taper function models. Saves a <code>.json</code> file with the coefficients for each fitted model and a <code>.pkl</code> file for the fitted ANN's.</td>
+<td>Ajusta os modelos disponíveis de funções de afilamento. Salva um arquivo <code>.json</code> com os coeficientes para cada modelo ajustado e um arquivo <code>.pkl</code> para os modelos de ANN ajustados.</td>
 </tr>
 <tr>
 <td><strong>.get_individual_diameter()</strong></td>
-<td>Returns a pandas dataframe with diameter at a given <code>hi</code> height of the tree for each fitted taper model.</td>
+<td>Retorna um dataframe pandas com o diâmetro em uma altura <code>hi</code> da árvore para cada modelo de afilamento ajustado.</td>
 </tr>
 <tr>
 <td><strong>.get_individual_taper_volume()</strong></td>
-<td>Returns a pandas DataFrame with the estimated volume for the provided height and diameter at breast height for each fitted taper function. It uses the integration of taper functions to obtain the result.</td>
+<td>Retorna um DataFrame pandas com o volume estimado para a altura e diâmetro à altura do peito fornecidos para cada função de afilamento ajustada. Utiliza a integração das funções de afilamento para obter o resultado.</td>
 </tr>
 <tr>
 <td><strong>.get_individual_volume()</strong></td>
-<td>Returns a pandas DataFrame with the estimated volume for the provided height and diameter at breast height for each fitted volumetric function.</td>
+<td>Retorna um DataFrame pandas com o volume estimado para a altura e diâmetro à altura do peito fornecidos para cada função volumétrica ajustada.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="example-usage">Example Usage</h3>
-<p>Consider a volume dataset composed of 50 <em>Eucalyptus</em> trees, in which diameters were measured at heights of 0.1 meter, 0.6 meter, 1.30 meters, and, from that point onward, at 2-meter intervals along the stem.</p>
-<p><a href="../downloads/volumetry/exemplo_volumetry.xlsx" download style="text-decoration: none; font-weight: bold;">
-  <i class="fa-solid fa-file-arrow-down" style="margin-right: 8px;"></i>Download example file.
+<h3 id="exemplo-de-uso">Exemplo de Uso</h3>
+<p>Considere uma base de dados de cubagem composta por 50 árvores do gênero <em>Eucalyptus</em>, nas quais os diâmetros foram mensurados nas alturas de 0,1 metro, 0,6 metro, 1,30 metro e, a partir desse ponto, em intervalos de 2 metros ao longo do fuste.</p>
+<p><a href="../../downloads/Volumetrics/exemplo_volumetrics.xlsx" download style="text-decoration: none; font-weight: bold;">
+  <i class="fa-solid fa-file-arrow-down" style="margin-right: 8px;"></i>Fazer download do arquivo.
 </a></p>
-<p>First 5 rows of the file:  </p>
+<p>Primeiras 5 linhas do arquivo:</p>
 <table>
 <thead>
 <tr>
@@ -1690,13 +1700,13 @@
 </table>
 <p class="annotate"><div class="language-py3 highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">taper_functions_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.volumetry</span><span class="w"> </span><span class="kn">import</span> <span class="n">Volumetrics</span><span class="c1">#(1)!</span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.Volumetrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">Volumetrics</span><span class="c1">#(1)!</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span><span class="c1">#(2)!</span>
 </span></code></pre></div></td></tr></table></div></p>
 <ol>
-<li>Import <code>Volumetrics</code> class.</li>
-<li>Import <code>pandas</code> for data manipulation.</li>
+<li>Importa a classe <code>Volumetrics</code>.  </li>
+<li>Importa o <code>pandas</code> para manipulação de dados.</li>
 </ol>
 <p class="annotate"><div class="language-py3 highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">taper_functions_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
 <span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
@@ -1719,7 +1729,7 @@
 <span class="normal"><a href="#__codelineno-2-22">22</a></span>
 <span class="normal"><a href="#__codelineno-2-23">23</a></span>
 <span class="normal"><a href="#__codelineno-2-24">24</a></span>
-<span class="normal"><a href="#__codelineno-2-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">dados</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\seu\diretório\exemplo_volumetry.xlsx&#39;</span><span class="p">)</span><span class="c1">#(1)!</span>
+<span class="normal"><a href="#__codelineno-2-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">dados</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\seu\diretório\exemplo_volumetrics.xlsx&#39;</span><span class="p">)</span><span class="c1">#(1)!</span>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="n">vol</span> <span class="o">=</span> <span class="n">Volumetrics</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">dados</span><span class="p">,</span> <span class="n">tree_identifier</span><span class="o">=</span><span class="s1">&#39;arvore_n&#39;</span><span class="p">,</span>
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="hll">                  <span class="n">tree_height</span><span class="o">=</span><span class="s1">&#39;altura_total (m)&#39;</span><span class="p">,</span>
@@ -1729,7 +1739,7 @@
 </span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a>                  <span class="n">tree_bark</span><span class="o">=</span><span class="s1">&#39;casca (cm)&#39;</span><span class="p">)</span><span class="c1">#(2)!</span>
 </span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a>
 </span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="n">calculated_volumes_df</span> <span class="o">=</span> <span class="n">vol</span><span class="o">.</span><span class="n">get_volumes</span><span class="p">(</span><span class="n">iterator</span><span class="o">=</span><span class="s2">&quot;Fazenda&quot;</span><span class="p">)</span><span class="c1">#(3)!</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="n">calculated_volumes_df</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;exemplo_volumetry_with_vol.xlsx&quot;</span><span class="p">,</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="n">calculated_volumes_df</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;exemplo_volumetrics_with_vol.xlsx&quot;</span><span class="p">,</span>
 </span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15"></a>                               <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="c1">#(4)!</span>
 </span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16"></a>
 </span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="n">metrics_taper</span> <span class="o">=</span> <span class="n">vol</span><span class="o">.</span><span class="n">fit_taper_functions</span><span class="p">(</span><span class="n">save_dir</span><span class="o">=</span><span class="s2">&quot;seu/diretório/para/salvar&quot;</span><span class="p">,</span><span class="n">iterator</span><span class="o">=</span><span class="s2">&quot;Fazenda&quot;</span><span class="p">)</span><span class="c1">#(5)!</span>
@@ -1743,21 +1753,22 @@
 </span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="n">individual_volume</span> <span class="o">=</span> <span class="n">vol</span><span class="o">.</span><span class="n">get_individual_volume</span><span class="p">(</span><span class="n">tree_height</span><span class="o">=</span><span class="mf">21.8</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="o">=</span><span class="mi">19</span><span class="p">)</span><span class="c1">#(9)!</span>
 </span></code></pre></div></td></tr></table></div></p>
 <ol>
-<li>Load your <code>.xlsx</code> file.  </li>
-<li>Create the variable <code>vol</code> containing the <code>Volumetrics</code> class.  </li>
-<li>Calculate the volumes for each tree and segment, grouped by <code>iterator</code>, and save the results in the variable <code>calculated_volumes_df</code>. The original DataFrame will be returned with the following additional columns: <code>segment_vol_with_bark</code>, <code>segment_vol_without_bark</code>, <code>tree_vol_with_bark</code>, <code>tree_vol_without_bark</code>, <code>bark_factor</code>, and <code>mean_bark_factor</code>.  </li>
-<li>Save the DataFrame with the calculated volumes as <code>exemplo_volumetry_with_vol.xlsx</code>.  </li>
-<li>Fit taper functions and artificial neural networks for each <code>iterator</code>, saving the performance metrics in the variable <code>metrics_taper</code>. This will create a <code>.json</code> file with the model coefficients and <code>.pkl</code> files for the trained ANN models, storing all generated files in <code>save_dir</code>.  </li>
-<li>Get the diameter at 10 meters for a tree with a total height of 31 meters and a diameter at breast height (DBH) of 30 centimeters using the fitted models, saving it in the variable <code>individual_diameter</code>.  </li>
-<li>Get the volumes calculated by integrating the taper functions for a tree with a height of 35 meters and DBH of 32 centimeters, considering a stump height of 0.15 meters, and save it in the variable <code>taper_volume</code>.  </li>
-<li>Fit all volumetric functions for each <code>iterator</code> and save the results in <code>save_dir</code>, storing the metrics in the variable <code>metrics_vol</code>. Since no <code>vol_column</code> was provided, it will use the volume obtained through the <code>get_volumes</code> method to fit the models.  </li>
-<li>Calculate the volume of a tree with a height of 21.8 meters and a DBH of 19 centimeters using all volumetric functions and save it in the variable <code>individual_volume</code>.  </li>
+<li>Carrega seu arquivo <code>.xlsx</code>.</li>
+<li>Cria a variável <code>vol</code> contendo a classe <code>Volumetrics</code>.</li>
+<li>Calcula os volumes para cada árvore e segmento, separando por <code>iterator</code> e salva os resultados na variável <code>calculated_volumes_df</code>.<br />
+   Será retornado o DataFrame incial com as seguintes colunas adicionais: <code>segment_vol_with_bark</code>,<code>segment_vol_without_bark</code>,<code>tree_vol_with_bark</code>,<code>tree_vol_without_bark</code>,<code>bark_factor</code> e <code>mean_bark_factor</code>.       </li>
+<li>Salva o DataFrame com os volumes calculados em <code>exemplo_volumetrics_with_vol.xlsx</code>.   </li>
+<li>Ajusta as funções de afilamento e rede neural artificial para cada <code>iterator</code> e salva as métricas de desempenho na variável <code>metrics_taper</code>. Isso criará um arquivo <code>.json</code> com os coeficientes dos modelos e arquivos <code>.pkl</code> para os modelos ajustados de RNA e salvará os arquivos gerados em <code>save_dir</code>.</li>
+<li>Obtém o diâmetro a 10 metros de uma árvore com altura total de 31 metros e diâmetro à altura do peito (DAP) de 30 centímetros usando os ajustes realizados e salva na variável <code>individual_diameter</code>.</li>
+<li>Obtém os volumes calculados pela integração das funções de afilamento para uma árvore com altura de 35 metros, diâmetro à altura do peito de 32 centímetros, considerando uma altura de toco de 0,15 metros e salve na variável <code>taper_volume</code>.</li>
+<li>Ajusta todas funções volumétricas para cada <code>iterator</code> e salva em <code>save_dir</code>, salvando as métricas na variável <code>metrics_vol</code>. Como nenhuma coluna de volumes <code>vol_column</code> foi fornecida, usará o volume obtido pelo método <code>get_volumes</code> para ajuste dos volumes.</li>
+<li>Calcula o volume de uma árvore de 21,8 metros de altura e 19 centímetros de dap usando todas as funções volumétricas e salva na variável <code>individual_volume</code>.</li>
 </ol>
-<h4 id="output">Output</h4>
-<h5 id="tables">Tables</h5>
+<h4 id="saidas">Saídas</h4>
+<h5 id="tabelas">Tabelas</h5>
 <p class="annotate"><code>calculated_volumes_df</code>(1)</p>
 <ol>
-<li>Initial DataFrame with the following additional columns: <code>segment_vol_with_bark</code>, <code>segment_vol_without_bark</code>, <code>tree_vol_with_bark</code>, <code>tree_vol_without_bark</code>, <code>bark_factor</code>, <code>mean_bark_factor</code>  </li>
+<li>DataFrame incial com as seguintes colunas adicionais: <code>segment_vol_with_bark</code>,<code>segment_vol_without_bark</code>,<code>tree_vol_with_bark</code>,<code>tree_vol_without_bark</code>,<code>bark_factor</code> e <code>mean_bark_factor</code>.       </li>
 </ol>
 <table>
 <thead>
@@ -1878,19 +1889,19 @@
 </tbody>
 </table>
 <div class="admonition info">
-<p class="admonition-title">About the generated columns</p>
+<p class="admonition-title">Sobre as colunas geradas</p>
 <ul>
-<li><code>segment_vol_with_bark</code>: Stem segment <strong>with bark</strong> volume, calculated between two consecutive measurement sections.  </li>
-<li><code>segment_vol_without_bark</code>: Stem segment <strong>without bark</strong> volume, calculated between two consecutive measurement sections.  </li>
-<li><code>tree_vol_with_bark</code>: Total tree <strong>with bark</strong> volume, obtained by summing all segment volumes with bark.  </li>
-<li><code>tree_vol_without_bark</code>: Total tree <strong>without bark</strong> volume, obtained by summing all segment volumes without bark.  </li>
-<li><code>bark_factor</code>: Bark factor of the segment, calculated as the ratio between the volume with bark and the volume without bark for that segment.  </li>
-<li><code>mean_bark_factor</code>: Average bark factor of the tree, calculated as the mean of the bark factors from all segments.  </li>
+<li><code>segment_vol_with_bark</code>: Volume do segmento do fuste <strong>com casca</strong>, calculado entre duas seções consecutivas de medição.</li>
+<li><code>segment_vol_without_bark</code>: Volume do segmento do fuste <strong>sem casca</strong>, calculado entre duas seções consecutivas de medição.</li>
+<li><code>tree_vol_with_bark</code>: Volume total da árvore <strong>com casca</strong>, obtido pela soma dos volumes de todos os segmentos com casca.</li>
+<li><code>tree_vol_without_bark</code>: Volume total da árvore <strong>sem casca</strong>, obtido pela soma dos volumes de todos os segmentos sem casca.</li>
+<li><code>bark_factor</code>: Fator de casca do segmento, calculado como a razão entre o volume com casca e o volume sem casca para aquele segmento.</li>
+<li><code>mean_bark_factor</code>: Fator de casca médio da árvore, calculado como a média dos fatores de casca de todos os segmentos.</li>
 </ul>
 </div>
 <p class="annotate"><code>metrics_taper</code>(1)</p>
 <ol>
-<li>DataFrame with evaluation metrics generated for each <code>iterator</code> and taper model and artificial neural network, including the score assigned to each model based on its performance.  </li>
+<li>DataFrame com as métricas de avaliação geradas para cada <code>iterator</code> e modelo de afilamento e rede neural artificial, incluindo a pontuação atribuída a cada modelo com base em seu desempenho.</li>
 </ol>
 <table>
 <thead>
@@ -2056,7 +2067,7 @@
 </table>
 <p class="annotate"><code>individual_diameter</code>(1)</p>
 <ol>
-<li>DataFrame with the individual diameters estimated by the taper functions and artificial neural networks for each <code>iterator</code> and taper model, for a tree with a height of 31 meters, a DBH of 30 centimeters, at a height of 10 meters.  </li>
+<li>DataFrame com os diâmetros individuais estimados pelas funções de afilamento e rede neural artificial para cada <code>iterator</code> e modelo de afilamento para uma árvore de 31 metros de altura, 30 centímetros de DAP, em uma altura de 10 metros.</li>
 </ol>
 <table>
 <thead>
@@ -2131,7 +2142,7 @@
 </table>
 <p class="annotate"><code>taper_volume</code>(1)</p>
 <ol>
-<li>DataFrame with the volumes estimated by integrating the taper functions and artificial neural networks for each <code>iterator</code> and taper model, for a tree with a height of 35 meters and a DBH of 32 centimeters.  </li>
+<li>DataFrame com os volumes estimados pela integração das funções de afilamento e rede neural artificial para cada <code>iterator</code> e modelo de afilamento para uma árvore de 35 metros de altura, 32 centímetros de DAP.</li>
 </ol>
 <table>
 <thead>
@@ -2206,7 +2217,7 @@
 </table>
 <p class="annotate"><code>metrics_vol</code>(1)</p>
 <ol>
-<li>DataFrame with evaluation metrics generated for each <code>iterator</code>, volumetric model, and artificial neural network, including the score assigned to each model based on its performance.  </li>
+<li>DataFrame com as métricas de avaliação geradas para cada <code>iterator</code>, modelo volumétrico e rede neural artificial, incluindo a pontuação atribuída a cada modelo com base em seu desempenho.</li>
 </ol>
 <table>
 <thead>
@@ -2468,7 +2479,7 @@
 </table>
 <p class="annotate"><code>individual_volume</code>(1)</p>
 <ol>
-<li>DataFrame with the volumes estimated by the volumetric functions and artificial neural networks for each <code>iterator</code>, for a tree with a height of 21.8 meters and a DBH of 19 centimeters.  </li>
+<li>DataFrame com os volumes estimados pelas funções volumétricas e rede neural artificial para cada <code>iterator</code> para uma árvore de 21,8 metros de altura, 19 centímetros de DAP.</li>
 </ol>
 <table>
 <thead>
@@ -2581,24 +2592,24 @@
 </tr>
 </tbody>
 </table>
-<h5 id="json-files"><code>.json</code> Files</h5>
-<p>For each taper and volumetric function, <code>.json</code> files are generated containing the estimated coefficients of each model. An individual <code>.json</code> file is created for each iterator, named according to its respective identifier.</p>
+<h5 id="arquivos-json">Arquivos <code>.json</code></h5>
+<p>Para cada função de afilamento e função volumétrica, são gerados arquivos .json contendo os coeficientes estimados de cada modelo. Um arquivo <code>.json</code> individual é criado para cada iterator, nomeado de acordo com o respectivo identificador.</p>
 <ul>
-<li><a href="../downloads/volumetry/taper_functions_coefficients_Fazenda%201.json">taper_functions_coefficients_Fazenda 1.json</a></li>
-<li><a href="../downloads/volumetry/taper_functions_coefficients_Fazenda%202.json">taper_functions_coefficients_Fazenda 2.json</a></li>
-<li><a href="../downloads/volumetry/volumetrics_functions_coefficients_Fazenda%201.json">volumetrics_functions_coefficients_Fazenda 1.json</a></li>
-<li><a href="../downloads/volumetry/volumetrics_functions_coefficients_Fazenda%202.json">volumetrics_functions_coefficients_Fazenda 2.json</a></li>
+<li><a href="../../downloads/Volumetrics/taper_functions_coefficients_Fazenda%201.json">taper_functions_coefficients_Fazenda 1.json</a></li>
+<li><a href="../../downloads/Volumetrics/taper_functions_coefficients_Fazenda%202.json">taper_functions_coefficients_Fazenda 2.json</a></li>
+<li><a href="../../downloads/Volumetrics/volumetrics_functions_coefficients_Fazenda%201.json">volumetrics_functions_coefficients_Fazenda 1.json</a></li>
+<li><a href="../../downloads/Volumetrics/volumetrics_functions_coefficients_Fazenda%202.json">volumetrics_functions_coefficients_Fazenda 2.json</a></li>
 </ul>
-<h5 id="pkl-files"><code>.pkl</code> Files</h5>
-<p>Similarly, for each artificial neural network trained for tapering or volume prediction, a <code>.pkl</code> file is generated containing the trained model, named according to the respective iterator.</p>
+<h5 id="arquivos-pkl">Arquivos <code>.pkl</code></h5>
+<p>Da mesma forma, para cada rede neural artificial ajustada para afilamento ou predição de volume, é gerado um arquivo <code>.pkl</code> contendo o modelo treinado, nomeado de acordo com o respectivo iterator.  </p>
 <ul>
-<li>taper_model_ann_Fazenda 1.pkl  </li>
-<li>taper_model_ann_Fazenda 2.pkl  </li>
-<li>volumetric_ann_Fazenda 1.pkl  </li>
-<li>volumetric_ann_Fazenda 2.pkl  </li>
+<li>taper_model_ann_Fazenda 1.pkl</li>
+<li>taper_model_ann_Fazenda 2.pkl</li>
+<li>volumetric_ann_Fazenda 1.pkl</li>
+<li>volumetric_ann_Fazenda 2.pkl</li>
 </ul>
-<p>Although this type of file cannot be viewed directly, it stores the neural network parameters and internal configurations, which will be used later in the generation of <a href="../assortments/">assortments</a>.</p>
-<h3 id="available-taper-models">Available taper models</h3>
+<p>Embora não seja possível visualizar diretamente esse tipo de arquivo, ele armazena os parâmetros da rede neural e suas configurações internas, que serão utilizados posteriormente na geração dos <a href="../assortments/">sortimentos</a>.</p>
+<h3 id="funcoes-de-afilamento-disponiveis">Funções de afilamento disponíveis</h3>
 <div class="annotate">
 <h4 id="schoepfer"><li>schoepfer</li></h4>
 <div class="arithmatex">\[
@@ -2624,157 +2635,156 @@
 \]</div>
 <h4 id="ann"><li>ann</li></h4>
 </div>
-<h4 id="notation">Notation</h4>
+<h4 id="notacao">Notação</h4>
 <ul>
-<li><span class="arithmatex">\( β_n \)</span>: Fitted parameters</li>
-<li><span class="arithmatex">\( d_i \)</span>: Diameter (cm)</li>
-<li><span class="arithmatex">\( \text{dbh} \)</span>: Diameter at breast height (cm)</li>
-<li><span class="arithmatex">\( H \)</span>: Total height (m)</li>
-<li><span class="arithmatex">\( h_i \)</span>: Segment height (m)</li>
+<li><span class="arithmatex">\( β_n \)</span>: Parâmetros ajustados</li>
+<li><span class="arithmatex">\( p \)</span>: Parâmetro geométrico/auxiliar (inicialmente 0.1)</li>
+<li><span class="arithmatex">\( d_i \)</span>: Diâmetro (cm)</li>
+<li><span class="arithmatex">\( \text{dap} \)</span>: Diâmetro à altura do peito (cm)</li>
+<li><span class="arithmatex">\( H \)</span>: Altura total (m)</li>
+<li><span class="arithmatex">\( h_i \)</span>: Altura do segmento (m)</li>
 </ul>
-<h4 id="artificial-neural-network">Artificial Neural Network</h4>
-<p>When selecting the 'ann' model, 6 different structures of artificial neural networks will be tested. Only the result from 1 model will be returned. The model returned will be selected by the ranking function.<br />
-For the 'ann' model, the module <a href="https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html">sklearn.neural_network.MLPRegressor</a> is used.
+<h4 id="rede-neural-artificial">Rede Neural Artificial</h4>
+<p>Ao selecionar o modelo 'RNA', 6 diferentes estruturas de redes neurais artificiais serão testadas. Apenas o resultado de 1 modelo será retornado. O modelo retornado será selecionado pela função de classificação.<br />
+Para o modelo 'RNA', utiliza-se o módulo <a href="https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html">sklearn.neural_network.MLPRegressor</a>.</p>
 <div class="mermaid">---
-title: ANN Parameters
+title: Parâmetros RNA
 ---
 classDiagram
     direction LR
 
     class MLPRegressor {
-      Epochs: 3000
-      Activation: logistic
-      Solver Mode: lbfgs
-      Batch size: dynamic
-      Learning rate init: 0.1
-      Learning rate mode: adaptive
+      Épocas: 3000
+      Função de ativação: logistic
+      Solver: lbfgs
+      Tamanho do lote: dinâmico
+      Taxa de aprendizado inicial: 0.1
+      Modo da taxa de aprendizado: adaptive
     }
 
-    class Model-0 {
-      Hidden layer sizes: (15, 25, 20, 30, 10)
+    class Modelo-0 {
+      Camadas ocultas: (15, 25, 20, 30, 10)
     }
-    class Model-1 {
-      Hidden layer sizes: (35, 10, 25, 35, 15)
-
+    class Modelo-1 {
+      Camadas ocultas: (35, 10, 25, 35, 15)
     }
-    class Model-2 {
-      Hidden layer sizes: (25, 15, 30, 20)
-
+    class Modelo-2 {
+      Camadas ocultas: (25, 15, 30, 20)
     }
-    class Model-3 {
-      Hidden layer sizes: (15, 35, 45)
+    class Modelo-3 {
+      Camadas ocultas: (15, 35, 45)
     }
-    class Model-4 {
-      Hidden layer sizes: (35, 10, 25, 35, 15)
+    class Modelo-4 {
+      Camadas ocultas: (35, 10, 25, 35, 15)
     }
-    class Model-5 {
-       Hidden layer sizes: (35, 10, 25, 35, 15, 20, 15, 30)
+    class Modelo-5 {
+      Camadas ocultas: (35, 10, 25, 35, 15, 20, 15, 30)
     }
 
-
-    MLPRegressor &lt;|-- Model-0
-    MLPRegressor &lt;|-- Model-1
-    MLPRegressor &lt;|-- Model-2
-    MLPRegressor &lt;|-- Model-3
-    MLPRegressor &lt;|-- Model-4
-    MLPRegressor &lt;|-- Model-5</div></p>
-<h3 id="available-volumetric-models">Available volumetric models</h3>
+    MLPRegressor &lt;|-- Modelo-0
+    MLPRegressor &lt;|-- Modelo-1
+    MLPRegressor &lt;|-- Modelo-2
+    MLPRegressor &lt;|-- Modelo-3
+    MLPRegressor &lt;|-- Modelo-4
+    MLPRegressor &lt;|-- Modelo-5
+</div>
+<h3 id="modelos-volumetricos-disponiveis">Modelos volumétricos disponíveis</h3>
 <div class="annotate">
 <h4 id="spurr"><li>spurr</li></h4>
 <div class="arithmatex">\[
-\operatorname{V} = b_0 + b_1 \cdot (\text{dbh}^2) \cdot H
+\operatorname{V} = b_0 + b_1 \cdot (\text{dap}^2) \cdot H
 \]</div>
 <h4 id="schumacher_hall"><li>schumacher_hall</li></h4>
 <div class="arithmatex">\[
-\operatorname{V} = b_0 \cdot (\text{dbh}^{b_1}) \cdot (H^{b_2})
+\operatorname{V} = b_0 \cdot (\text{dap}^{b_1}) \cdot (H^{b_2})
 \]</div>
 <h4 id="honner"><li>honner</li></h4>
 <div class="arithmatex">\[
-\operatorname{V} = \frac{\text{dbh}^2}{b_1 \cdot \left(\frac{1}{H}\right)}
+\operatorname{V} = \frac{\text{dap}^2}{b_1 \cdot \left(\frac{1}{H}\right)}
 \]</div>
 <h4 id="ogaya"><li>ogaya</li></h4>
 <div class="arithmatex">\[
-\operatorname{V} = \frac{\text{dbh}^2}{b_1 \cdot H}
+\operatorname{V} = \frac{\text{dap}^2}{b_1 \cdot H}
 \]</div>
 <h4 id="stoate"><li>stoate</li></h4>
 <div class="arithmatex">\[
-\operatorname{V} = b_0 + b_1 \cdot \text{dbh}^2 + b_2 \cdot \text{dbh}^2 \cdot H + b_3 \cdot H
+\operatorname{V} = b_0 + b_1 \cdot \text{dap}^2 + b_2 \cdot \text{dap}^2 \cdot H + b_3 \cdot H
 \]</div>
 <h4 id="naslund"><li>naslund</li></h4>
 <div class="arithmatex">\[
-\operatorname{V} = b_1 \cdot \text{dbh}^2 + b_2 \cdot \text{dbh}^2 \cdot H + b_3 \cdot \text{dbh} \cdot H^2 + b_4 \cdot H^2
+\operatorname{V} = b_1 \cdot \text{dap}^2 + b_2 \cdot \text{dap}^2 \cdot H + b_3 \cdot \text{dap} \cdot H^2 + b_4 \cdot H^2
 \]</div>
 <h4 id="takata"><li>takata</li></h4>
 <div class="arithmatex">\[
-\operatorname{V} = \frac{\text{dbh}^2 \cdot H}{b_0 + b_1 \cdot \text{dbh}}
+\operatorname{V} = \frac{\text{dap}^2 \cdot H}{b_0 + b_1 \cdot \text{dap}}
 \]</div>
 <h4 id="spurr_log"><li>spurr_log</li></h4>
 <div class="arithmatex">\[
-\operatorname{V} = \exp(b_0 + b_1 \cdot \log(\text{dbh}^2 \cdot H))
+\operatorname{V} = \exp(b_0 + b_1 \cdot \log(\text{dap}^2 \cdot H))
 \]</div>
 <h4 id="meyer"><li>meyer</li></h4>
 <div class="arithmatex">\[
-\operatorname{V} = b_0 + b_1 \cdot \text{dbh}^2 + b_2 \cdot \text{dbh} + b_3 \cdot \text{dbh} \cdot H + b_4 \cdot \text{dbh}^2 \cdot H
+\operatorname{V} = b_0 + b_1 \cdot \text{dap}^2 + b_2 \cdot \text{dap} + b_3 \cdot \text{dap} \cdot H + b_4 \cdot \text{dap}^2 \cdot H
 \]</div>
-<h4 id="ann_1"><li>ann</li></h4>
-<p>Use the same ann models used for taper function.</p>
+<h4 id="rna"><li>RNA</li></h4>
+<p>Utilize os mesmos modelos de RNA usados para a função de afilamento.</p>
 </div>
-<h4 id="notation_1">Notation</h4>
+<h4 id="notacao_1">Notação</h4>
 <ul>
-<li><span class="arithmatex">\( b_n \)</span>: Fitted parameters</li>
-<li><span class="arithmatex">\( V \)</span>: Estimated volume (m³)</li>
-<li><span class="arithmatex">\( \text{dbh} \)</span>: Diameter at breast height (cm)</li>
-<li><span class="arithmatex">\( H \)</span>: Total height (m)</li>
+<li><span class="arithmatex">\( b_n \)</span>: Parâmetros ajustados</li>
+<li><span class="arithmatex">\( V \)</span>: Volume estimado (m³)</li>
+<li><span class="arithmatex">\( \text{dap} \)</span>: Diâmetro à altura do peito (cm)</li>
+<li><span class="arithmatex">\( H \)</span>: Altura total (m)</li>
 </ul>
-<h4 id="ranking-function">Ranking function</h4>
-<p>To select the best-performing models and rank them accordingly, the following metrics are obtained:</p>
+<h4 id="funcao-de-classificacao">Função de Classificação</h4>
+<p>Para selecionar os modelos com melhor desempenho e classificá-los adequadamente, são obtidas as seguintes métricas:</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">Métric name</th>
-<th style="text-align: center;">Structure</th>
+<th style="text-align: center;">Nome da métrica</th>
+<th style="text-align: center;">Estrutura</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><strong>Mean Absolute Error (MAE)</strong></td>
+<td style="text-align: center;"><strong>Erro Médio Absoluto (MAE)</strong></td>
 <td style="text-align: center;"><span class="arithmatex">\( MAE = \frac{1}{n} \sum_{i=1}^{n} \|y_i - \hat{y}_i\| \)</span></td>
 </tr>
 <tr>
-<td style="text-align: center;"><strong>Mean Absolute Percentage Error (MAPE)</strong></td>
+<td style="text-align: center;"><strong>Erro Médio Percentual Absoluto (MAPE)</strong></td>
 <td style="text-align: center;"><span class="arithmatex">\( MAPE = \frac{100}{n} \sum_{i=1}^{n} \left\|\frac{y_i - \hat{y}_i}{y_i}\right\| \)</span></td>
 </tr>
 <tr>
-<td style="text-align: center;"><strong>Mean Squared Error (MSE)</strong></td>
+<td style="text-align: center;"><strong>Erro Médio Quadrático (MSE)</strong></td>
 <td style="text-align: center;"><span class="arithmatex">\( MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 \)</span></td>
 </tr>
 <tr>
-<td style="text-align: center;"><strong>Root Mean Squared Error (RMSE)</strong></td>
+<td style="text-align: center;"><strong>Raiz do Erro Médio Quadrático (RMSE)</strong></td>
 <td style="text-align: center;"><span class="arithmatex">\( RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2} \)</span></td>
 </tr>
 <tr>
-<td style="text-align: center;"><strong>R Squared (Coefficient of Determination)</strong></td>
+<td style="text-align: center;"><strong>R Quadrado (Coeficiente de Determinação)</strong></td>
 <td style="text-align: center;"><span class="arithmatex">\( R^2 = 1 - \frac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2} \)</span></td>
 </tr>
 <tr>
-<td style="text-align: center;"><strong>Explained Variance (EV)</strong></td>
+<td style="text-align: center;"><strong>Variância Explicada (EV)</strong></td>
 <td style="text-align: center;"><span class="arithmatex">\( EV = 1 - \frac{Var(y - \hat{y})}{Var(y)} \)</span></td>
 </tr>
 <tr>
-<td style="text-align: center;"><strong>Mean Error</strong></td>
-<td style="text-align: center;"><span class="arithmatex">\( Mean\ Error = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i) \)</span></td>
+<td style="text-align: center;"><strong>Erro Médio</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\( Erro\ Médio = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i) \)</span></td>
 </tr>
 </tbody>
 </table>
-<h5 id="notation_2">Notation</h5>
+<h5 id="notacao_2">Notação</h5>
 <ul>
-<li><span class="arithmatex">\( y_i \)</span>: Observed value for the <em>i</em>-th observation  </li>
-<li><span class="arithmatex">\( \hat{y}_i \)</span>: Estimated (predicted) value for the <em>i</em>-th observation  </li>
-<li><span class="arithmatex">\( n \)</span>: Total number of observations  </li>
-<li><span class="arithmatex">\( \bar{y} \)</span>: Mean of the observed values</li>
+<li><span class="arithmatex">\( y_i \)</span>: Valor observado para a i-ésima observação  </li>
+<li><span class="arithmatex">\( \hat{y}_i \)</span>: Valor estimado (predito) para a i-ésima observação  </li>
+<li><span class="arithmatex">\( n \)</span>: Número total de observações  </li>
+<li><span class="arithmatex">\( \bar{y} \)</span>: Média dos valores observados  </li>
 </ul>
-<p>After obtaining the metrics for each tested model, the best model receives a score of 10, while the others receive scores of 9, 8, and so on.</p>
-<h2 id="references">References</h2>
+<p>Após obter as métricas para cada modelo testado, o melhor modelo recebe a pontuação 10, enquanto os demais recebem pontuações decrescentes (9, 8 e assim por diante).</p>
+<h2 id="referencias">Referências</h2>
 <section id="references">
   <div>
     <p><strong>BI, H.</strong> (2000). <em>Trigonometric variable-form taper equations for Australian eucalypts</em>. Forest Science, 46(3), 397–409.</p>
@@ -2827,7 +2837,7 @@ classDiagram
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Back to top
+  Voltar para o topo
 </button>
         
       </main>
@@ -2836,33 +2846,33 @@ classDiagram
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
         
           
-          <a href="../tree_volume_planning/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Tree Volume Planninng">
+          <a href="../tree_volume_planning/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Planejamento de Cubagem">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
-                Previous
+                Anterior
               </span>
               <div class="md-ellipsis">
-                Tree Volume Planninng
+                Planejamento de Cubagem
               </div>
             </div>
           </a>
         
         
           
-          <a href="../sampling_stats/" class="md-footer__link md-footer__link--next" aria-label="Next: Sampling Stats">
+          <a href="../sampling_stats/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Estatística amostral">
             <div class="md-footer__title">
               <span class="md-footer__direction">
-                Next
+                Próximo
               </span>
               <div class="md-ellipsis">
-                Sampling Stats
+                Estatística amostral
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2929,16 +2939,16 @@ classDiagram
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["search.suggest", "search.highlight", "content.code.copy", "content.footnote.tooltips", "navigation.footer", "navigation.sections", "navigation.top", "content.code.annotate", "content.code.select"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "content.code.copy", "content.footnote.tooltips", "navigation.footer", "navigation.sections", "navigation.top", "content.code.annotate", "content.code.select"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
-        <script src="../assets/js/plotly-latest.min.js"></script>
+        <script src="../../assets/js/plotly-latest.min.js"></script>
       
-        <script src="../assets/js/swiper-bundle.min.js"></script>
+        <script src="../../assets/js/swiper-bundle.min.js"></script>
       
-        <script src="../assets/js/mermaid.min.js"></script>
+        <script src="../../assets/js/mermaid.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

@@ -99,11 +99,11 @@
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://richterv.github.io/fptoolsdoc/pt-BR/tree_volume_planning/"/>
     </url>
     <url>
-        <loc>https://richterv.github.io/fptoolsdoc/volumetry/</loc>
+        <loc>https://richterv.github.io/fptoolsdoc/volumetrics/</loc>
         <lastmod>2025-04-17</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://richterv.github.io/fptoolsdoc/volumetry/"/>
-        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://richterv.github.io/fptoolsdoc/pt-BR/volumetry/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://richterv.github.io/fptoolsdoc/volumetrics/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://richterv.github.io/fptoolsdoc/pt-BR/volumetrics/"/>
     </url>
     <url>
         <loc>https://richterv.github.io/fptoolsdoc/pt-BR/</loc>
@@ -204,10 +204,10 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://richterv.github.io/fptoolsdoc/tree_volume_planning/"/>
     </url>
     <url>
-        <loc>https://richterv.github.io/fptoolsdoc/pt-BR/volumetry/</loc>
+        <loc>https://richterv.github.io/fptoolsdoc/pt-BR/volumetrics/</loc>
         <lastmod>2025-04-17</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://richterv.github.io/fptoolsdoc/pt-BR/volumetry/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://richterv.github.io/fptoolsdoc/volumetry/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://richterv.github.io/fptoolsdoc/pt-BR/volumetrics/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://richterv.github.io/fptoolsdoc/volumetrics/"/>
     </url>
 </urlset>
