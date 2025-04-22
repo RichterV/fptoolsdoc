@@ -1553,35 +1553,35 @@
 </tbody>
 </table>
 <h3 id="class-functions">Class Functions</h3>
-<p class="annotate"><div class="language-py3 highlight"><span class="filename">functions and parameters</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  <span class="n">Volumetrics</span><span class="o">.</span><span class="n">get_volumes</span><span class="p">()</span>  
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="n">Volumetrics</span><span class="o">.</span><span class="n">fit_taper_functions</span><span class="p">(</span><span class="n">models</span><span class="p">,</span> <span class="n">iterator</span><span class="p">,</span> <span class="n">save_dir</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span><span class="c1">#(1)!</span>
+<p><div class="language-py3 highlight"><span class="filename">functions and parameters</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  <span class="n">Volumetrics</span><span class="o">.</span><span class="n">get_volumes</span><span class="p">(</span><span class="n">iterator</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span><span class="c1">#(1)!</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="n">Volumetrics</span><span class="o">.</span><span class="n">fit_taper_functions</span><span class="p">(</span><span class="n">models</span><span class="p">,</span> <span class="n">iterator</span><span class="p">,</span> <span class="n">save_dir</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span><span class="c1">#(2)!</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  <span class="n">Volumetrics</span><span class="o">.</span><span class="n">fit_volumetric_functions</span><span class="p">(</span><span class="n">models</span><span class="p">,</span> <span class="n">iterator</span><span class="p">,</span> <span class="n">vol_column</span><span class="p">,</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                                       <span class="n">save_dir</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span><span class="c1">#(2)!</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                                       <span class="n">save_dir</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span><span class="c1">#(3)!</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  <span class="n">Volumetrics</span><span class="o">.</span><span class="n">get_individual_diameter</span><span class="p">(</span><span class="n">hi</span><span class="p">,</span> <span class="n">tree_height</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="p">)</span><span class="c1">#(3)!</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  <span class="n">Volumetrics</span><span class="o">.</span><span class="n">get_individual_diameter</span><span class="p">(</span><span class="n">hi</span><span class="p">,</span> <span class="n">tree_height</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="p">)</span><span class="c1">#(4)!</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  <span class="n">Volumetrics</span><span class="o">.</span><span class="n">get_individual_taper_volume</span><span class="p">(</span><span class="n">tree_height</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="p">,</span> <span class="n">stump</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span><span class="c1">#(4)!</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  <span class="n">Volumetrics</span><span class="o">.</span><span class="n">get_individual_taper_volume</span><span class="p">(</span><span class="n">tree_height</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="p">,</span> <span class="n">stump</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span><span class="c1">#(5)!</span>
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  <span class="n">Volumetrics</span><span class="o">.</span><span class="n">get_individual_volume</span><span class="p">(</span><span class="n">tree_height</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="p">)</span><span class="c1">#(5)!</span>
-</span></code></pre></div></p>
-<ol>
-<li><strong>models</strong> = (Optional) List of models to be fitted! If <code>models == None</code> uses all available models.                                     <br />
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  <span class="n">Volumetrics</span><span class="o">.</span><span class="n">get_individual_volume</span><span class="p">(</span><span class="n">tree_height</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="p">)</span><span class="c1">#(6)!</span>
+</span></code></pre></div>
+{ .annotate }
+1.  <strong>iterator</strong> = (Optional) A column name string. Defines wich column will be used as a iterator. Could be a farm name, plot name, code or any unique identification tag.
+2.  <strong>models</strong> = (Optional) List of models to be fitted! If <code>models == None</code> uses all available models.                                     <br />
 <strong>iterator</strong> = (Optional) A column name string. Defines wich column will be used as a iterator. Could be a farm name, plot name, code or any unique identification tag.<br />
-<strong>save_dir</strong> = (Optional) A directory to save the fitted function parameters and ann model.</li>
-<li><strong>models</strong> = (Optional) List of models to be fitted! If <code>models == None</code> uses all available models.                                     <br />
+<strong>save_dir</strong> = (Optional) A directory to save the fitted function parameters and ann model.
+3.  <strong>models</strong> = (Optional) List of models to be fitted! If <code>models == None</code> uses all available models.                                     <br />
 <strong>iterator</strong> = (Optional) A column name string. Defines wich column will be used as a iterator. Could be a farm name, plot name, code or any unique identification tag.   <br />
 <strong>vol_column</strong> = (Optional) A column name to the volume values. If <code>vol_column == None</code>, it uses de volumes obtained by the <code>get_volumes()</code> method to fit the volumetric functions.<br />
-<strong>save_dir</strong> = (Optional) A directory to save the fitted function parameters and ann model.</li>
-<li><strong>hi</strong> = Fraction of height from which you want to obtain the diameter (meters).                                     <br />
+<strong>save_dir</strong> = (Optional) A directory to save the fitted function parameters and ann model.
+4.  <strong>hi</strong> = Fraction of height from which you want to obtain the diameter (meters).                                     <br />
 <strong>tree_height</strong> =  Total height of the tree (meters).<br />
-<strong>tree_dbh</strong> = Diameter at breast height (DBH) value of the tree (centimeters).</li>
-<li><strong>tree_height</strong> = Total height of the tree (meters).                                     <br />
+<strong>tree_dbh</strong> = Diameter at breast height (DBH) value of the tree (centimeters).
+5.  <strong>tree_height</strong> = Total height of the tree (meters).                                     <br />
 <strong>tree_dbh</strong> = Diameter at breast height (DBH) of the tree (centimeters).<br />
-<strong>stump</strong> = Stump height (meters). By default, uses <code>stump = 0.1</code>.  </li>
-<li><strong>tree_height</strong> = Total height of the tree (meters).                                     <br />
-<strong>tree_dbh</strong> = Diameter at breast height (DBH) of the tree (centimeters).  </li>
-</ol>
+<strong>stump</strong> = Stump height (meters). By default, uses <code>stump = 0.1</code>.<br />
+6.  <strong>tree_height</strong> = Total height of the tree (meters).                                     <br />
+<strong>tree_dbh</strong> = Diameter at breast height (DBH) of the tree (centimeters).  </p>
 <table>
 <thead>
 <tr>
