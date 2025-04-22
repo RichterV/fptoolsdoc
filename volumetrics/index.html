@@ -1511,7 +1511,7 @@
 <p>Process forest inventory data. Adjust volumetric equations and taper functions for later use.</p>
 <hr />
 <h3 id="class-parameters">Class Parameters</h3>
-<div class="language-text highlight"><pre><span></span><code>Volumetrics(df, tree_identifier, tree_height, tree_dbh, tree_bark,
+<div class="language-text highlight"><pre><span></span><code>Volumetrics(df, tree_identifier, tree_height, tree_dbh,
             segment_height, segment_diameter, tree_bark)
 </code></pre></div>
 <table>
@@ -1539,10 +1539,6 @@
 <td>The name of the column containing the diameter at breast height (DBH) values of the trees (centimeters).</td>
 </tr>
 <tr>
-<td><strong>tree_bark</strong></td>
-<td>(Optional) The name of the column containing the bark thickness values of the trees (centimeters). If  <code>tree_bark == None</code>  return only volumes with bark on 'get_volumes()' method.</td>
-</tr>
-<tr>
 <td><strong>segment_height</strong></td>
 <td>(Optional<em>) The name of the column containing the heights of the cubed segments of the trees (meters). </em>Required for <code>fit_taper_functions()</code> method.</td>
 </tr>
@@ -1552,7 +1548,7 @@
 </tr>
 <tr>
 <td><strong>tree_bark</strong></td>
-<td>(Optional) The name of the column containing tree bark (centimeters).</td>
+<td>(Optional) The name of the column containing the bark thickness values of the trees (centimeters). If  <code>tree_bark == None</code>  return only volumes with bark on 'get_volumes()' method.</td>
 </tr>
 </tbody>
 </table>

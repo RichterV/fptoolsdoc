@@ -1510,7 +1510,7 @@
 <p>Processe dados de inventário florestal e ajuste equações volumétricas e funções de afilamento para uso posterior.</p>
 <hr />
 <h3 id="parametros-da-classe">Parâmetros da Classe</h3>
-<div class="language-text highlight"><pre><span></span><code>Volumetrics(df, tree_identifier, tree_height, tree_dbh, tree_bark,
+<div class="language-text highlight"><pre><span></span><code>Volumetrics(df, tree_identifier, tree_height, tree_dbh,
           segment_height, segment_diameter, tree_bark)
 </code></pre></div>
 <table>
@@ -1538,10 +1538,6 @@
 <td>Nome da coluna contendo os valores do diâmetro à altura do peito (DAP) das árvores (centímetros).</td>
 </tr>
 <tr>
-<td><strong>tree_bark</strong></td>
-<td>(Opcional) Nome da coluna contendo os valores da espessura da casca das árvores (centímetros). Se <code>tree_bark == None</code>, retorna apenas volumes com casca no método <code>get_volumes()</code>.</td>
-</tr>
-<tr>
 <td><strong>segment_height</strong></td>
 <td>(Opcional<em>) Nome da coluna contendo as alturas dos segmentos cubados das árvores (metros). </em>Obrigatório para o método <code>fit_taper_functions()</code>.</td>
 </tr>
@@ -1551,7 +1547,7 @@
 </tr>
 <tr>
 <td><strong>tree_bark</strong></td>
-<td>(Opcional) Nome da coluna contendo a casca das árvores (centímetros).</td>
+<td>(Opcional) Nome da coluna contendo os valores da espessura da casca das árvores (centímetros). Se <code>tree_bark == None</code>, retorna apenas volumes com casca no método <code>get_volumes()</code>.</td>
 </tr>
 </tbody>
 </table>
