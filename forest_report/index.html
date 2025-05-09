@@ -632,9 +632,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#class-functions" class="md-nav__link">
+  <a href="#class-methods" class="md-nav__link">
     <span class="md-ellipsis">
-      Class Functions
+      Class Methods
     </span>
   </a>
   
@@ -659,9 +659,51 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-usage" class="md-nav__link">
+  <a href="#usage-example" class="md-nav__link">
     <span class="md-ellipsis">
-      Example Usage
+      Usage Example
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correct-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Correct Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incorrect-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Incorrect Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommendation" class="md-nav__link">
+    <span class="md-ellipsis">
+      💡 Recommendation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
     </span>
   </a>
   
@@ -923,9 +965,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#class-functions" class="md-nav__link">
+  <a href="#class-methods" class="md-nav__link">
     <span class="md-ellipsis">
-      Class Functions
+      Class Methods
     </span>
   </a>
   
@@ -950,9 +992,51 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-usage" class="md-nav__link">
+  <a href="#usage-example" class="md-nav__link">
     <span class="md-ellipsis">
-      Example Usage
+      Usage Example
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correct-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Correct Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incorrect-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Incorrect Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommendation" class="md-nav__link">
+    <span class="md-ellipsis">
+      💡 Recommendation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
     </span>
   </a>
   
@@ -1037,8 +1121,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="class-functions">Class Functions</h3>
-<p class="annotate"><div class="language-py3 highlight"><span class="filename">functions and parameters</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  <span class="n">ForestReport</span><span class="o">.</span><span class="n">update_tree_types</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="c1">#(1)!</span>
+<h3 id="class-methods">Class Methods</h3>
+<p class="annotate"><div class="language-py3 highlight"><span class="filename">methods and parameters</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  <span class="n">ForestReport</span><span class="o">.</span><span class="n">update_tree_types</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="c1">#(1)!</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="n">ForestReport</span><span class="o">.</span><span class="n">view_tree_types</span><span class="p">()</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  <span class="n">ForestReport</span><span class="o">.</span><span class="n">get_report</span><span class="p">(</span><span class="nb">dir</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;xlsx&quot;</span><span class="p">)</span><span class="c1">#(2)!</span>
 </span></code></pre></div></p>
@@ -1050,7 +1134,7 @@
 <table>
 <thead>
 <tr>
-<th>Parameters</th>
+<th>Methods</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -1073,10 +1157,11 @@
 <table>
 <thead>
 <tr>
-<th>ID</th>
-<th>Name</th>
-<th>Description</th>
-<th>Commercial Volume</th>
+<th>id</th>
+<th>name</th>
+<th>description</th>
+<th>commercial_volume</th>
+<th>missing_stems</th>
 </tr>
 </thead>
 <tbody>
@@ -1085,59 +1170,305 @@
 <td>normal</td>
 <td>Tree without significant distortions or defects</td>
 <td>1</td>
+<td>0</td>
 </tr>
 <tr>
 <td>1</td>
 <td>dead</td>
 <td>Dead tree</td>
 <td>0</td>
+<td>0</td>
 </tr>
 <tr>
 <td>2</td>
-<td>bifurcated adbh</td>
-<td>Bifurcated above the DBH</td>
+<td>bifurcated above DBH</td>
+<td>Tree bifurcated above diameter at breast height (DBH)</td>
 <td>1</td>
+<td>0</td>
 </tr>
 <tr>
 <td>3</td>
-<td>bifurcated bdbh</td>
-<td>Bifurcated below the DBH</td>
+<td>bifurcated below DBH</td>
+<td>Tree bifurcated below diameter at breast height (DBH)</td>
 <td>1</td>
+<td>0</td>
 </tr>
 <tr>
 <td>4</td>
 <td>burned</td>
 <td>Burned tree</td>
 <td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>5</td>
+<td>missing</td>
+<td>Missing tree (planting line failure)</td>
+<td>0</td>
+<td>1</td>
 </tr>
 </tbody>
 </table>
-<p>*<em>The column order must be followed.</em></p>
+<p><strong>The column order must be followed.</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Attention</p>
+<ul>
+<li>
+<p>The <code>commercial_volume</code> column is a <strong>binary flag</strong> that indicates whether the tree type represented by the <code>id</code> should be included in the commercial volume calculation. A value of <code>1</code> means the tree contributes to commercial volume; <code>0</code> means it is excluded from the calculation.</p>
+</li>
+<li>
+<p>The <code>missing_stems</code> column is also a <strong>binary flag</strong>, used to identify the <strong>absence of trees</strong> in the expected planting location. Unlike dead trees, these cases represent <strong>gaps in spacing</strong>, which may result from mortality followed by tree fall, thinning operations, or planting omissions.</p>
+</li>
+</ul>
+</div>
 <h3 id="column-descriptions">Column Descriptions</h3>
 <ul>
 <li>
-<p><strong><code>id</code></strong>: Represents a unique identifier for each type of tree in the classification. It is used to differentiate records and can serve as a key for reference in other datasets.</p>
+<p><strong><code>id</code></strong>: Represents a unique identifier for each tree type in the classification. It is used to distinguish records and can serve as a reference key in other datasets.</p>
 </li>
 <li>
-<p><strong><code>name</code></strong>: Indicates the name of the tree based on its condition or specific characteristics. This name acts as a short description for easy identification.</p>
+<p><strong><code>name</code></strong>: Indicates the name of the tree based on its condition or specific characteristics. This name acts as a short label for quick identification.</p>
 </li>
 <li>
-<p><strong><code>description</code></strong>: Provides a detailed explanation of the tree's condition, including information about its structure, health status, or possible defects that may affect its commercial quality.</p>
+<p><strong><code>description</code></strong>: Provides a detailed explanation of the tree's condition, including information about structure, health status, or defects that may impact its commercial value.</p>
 </li>
 <li>
-<p><strong><code>commercial_volume</code></strong>: Defines whether the volume of this tree will be considered commercially usable. A value of <code>1</code> indicates that the tree has commercial volume and will be used, while <code>0</code> means its volume will not be utilized.</p>
+<p><strong><code>commercial_volume</code></strong>: Indicates whether the tree's volume is considered commercially usable. A value of <code>1</code> means the tree has commercial volume and will be used; a value of <code>0</code> means it will not be used.</p>
+</li>
+<li>
+<p><strong><code>missing_stems</code></strong>: Used to identify <strong>missing trees</strong> in the expected planting line. Unlike dead trees, these are <strong>gaps in spacing</strong>, which may result from fallen dead trees, thinning, or unplanted spots.</p>
 </li>
 </ul>
-<h3 id="example-usage">Example Usage</h3>
+<h3 id="usage-example">Usage Example</h3>
+<p>To illustrate how the forest report module works, we use inventory data adapted from Arce and Dobner Jr. (2024).<br />
+The inventory was carried out across 19 different farms, with <em>Eucalyptus dunnii</em> plantations ranging from 8 to 9 years of age.<br />
+In total, 1,954 trees were measured.<br />
+The volume was calculated using a form factor of 0.45 and a bark factor of 0.91.</p>
+<p><a href="../downloads/forest_report/exemplo_forest_report.xlsx" download style="text-decoration: none; font-weight: bold;">
+  <i class="fa-solid fa-file-arrow-down" style="margin-right: 8px;"></i>Download the file.
+</a></p>
+<p>First 5 rows of the file:</p>
+<table>
+<thead>
+<tr>
+<th>ID parcela</th>
+<th>area_parcela</th>
+<th>Idade</th>
+<th>ID_Regiao</th>
+<th>ID Fazenda</th>
+<th>ID talhao</th>
+<th>Espécie</th>
+<th>Coluna</th>
+<th>Árvore</th>
+<th>Fuste</th>
+<th>Tipo arvore</th>
+<th>dap (cm)</th>
+<th>ht</th>
+<th>ht_calculada (m)</th>
+<th>Vol (m³)</th>
+<th>Vol SC (m³)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>14-401-109002-1</td>
+<td>300</td>
+<td>8</td>
+<td>14</td>
+<td>14-401</td>
+<td>14-401-109002</td>
+<td>Eucalyptus dunnii</td>
+<td>4</td>
+<td>26</td>
+<td>1</td>
+<td>2</td>
+<td>23,5</td>
+<td>18,1</td>
+<td>17,57</td>
+<td>0,342933476</td>
+<td>0,329216137</td>
+</tr>
+<tr>
+<td>14-401-109002-1</td>
+<td>300</td>
+<td>8</td>
+<td>14</td>
+<td>14-401</td>
+<td>14-401-109002</td>
+<td>Eucalyptus dunnii</td>
+<td>3</td>
+<td>21</td>
+<td>1</td>
+<td>1</td>
+<td>20,6</td>
+<td>17,4</td>
+<td>17,25</td>
+<td>0,258717577</td>
+<td>0,248368874</td>
+</tr>
+<tr>
+<td>14-401-109002-1</td>
+<td>300</td>
+<td>8</td>
+<td>14</td>
+<td>14-401</td>
+<td>14-401-109002</td>
+<td>Eucalyptus dunnii</td>
+<td>1</td>
+<td>5</td>
+<td>1</td>
+<td>1</td>
+<td>20,3</td>
+<td></td>
+<td>17,21</td>
+<td>0,250654405</td>
+<td>0,240628229</td>
+</tr>
+<tr>
+<td>14-401-109002-1</td>
+<td>300</td>
+<td>8</td>
+<td>14</td>
+<td>14-401</td>
+<td>14-401-109002</td>
+<td>Eucalyptus dunnii</td>
+<td>2</td>
+<td>12</td>
+<td>1</td>
+<td>1</td>
+<td>20,3</td>
+<td>17,6</td>
+<td>17,21</td>
+<td>0,250654405</td>
+<td>0,240628229</td>
+</tr>
+<tr>
+<td>14-401-109002-1</td>
+<td>300</td>
+<td>8</td>
+<td>14</td>
+<td>14-401</td>
+<td>14-401-109002</td>
+<td>Eucalyptus dunnii</td>
+<td>2</td>
+<td>15</td>
+<td>1</td>
+<td>1</td>
+<td>20</td>
+<td>17</td>
+<td>17,17</td>
+<td>0,242735156</td>
+<td>0,23302575</td>
+</tr>
+</tbody>
+</table>
+<p>The library provides a default example of a tree types DataFrame to be used.<br />
+However, each forestry engineer or company may have their own methodology and coding for tree types.<br />
+In this case, we use the tree type classification defined by Arce and Dobner Jr. (2024).</p>
+<p><a href="../downloads/forest_report/tree_types.xlsx" download style="text-decoration: none; font-weight: bold;">
+  <i class="fa-solid fa-file-arrow-down" style="margin-right: 8px;"></i>Download the file.
+</a></p>
+<p>Below is the <em>DataFrame</em> that we will use.</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>name</th>
+<th>description</th>
+<th>commercial_volume</th>
+<th>missing_stems</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Normal</td>
+<td>Healthy tree, without significant distortions or visible defects.</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Dominante</td>
+<td>Tree that stands out in height and vigor compared to neighboring trees.</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Seco</td>
+<td>Dead tree, without leaves and with no signs of physiological activity.</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Quebrado</td>
+<td>Tree with damaged or broken parts of the trunk or crown.</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Rebrotado</td>
+<td>Tree originated from sprouts after cutting or damage to the main stem.</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Falta</td>
+<td>Absence of a tree in the expected planting line position.</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Bifurcado</td>
+<td>Tree with the main stem divided into two or more main branches.</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Inclinado</td>
+<td>Tree growing significantly tilted in relation to the vertical axis.</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Apice Seco</td>
+<td>Tree with the upper part (apex) dry or dead.</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Fuste Curvo</td>
+<td>Tree with a curved trunk, lacking straight alignment.</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Suprimido</td>
+<td>Tree suppressed by shading or competition from neighboring trees.</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
 <p class="annotate"><div class="language-py3 highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">forest_report_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.forest_report</span><span class="w"> </span><span class="kn">import</span> <span class="n">ForestReport</span><span class="c1">#(1)!</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span><span class="c1">#(2)!</span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.forest_report</span><span class="w"> </span><span class="kn">import</span> <span class="n">ForestReport</span><span class="c1">#(1)!</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span><span class="c1">#(2)!</span>
 </span></code></pre></div></td></tr></table></div></p>
 <ol>
-<li>Import <code>ForestReport</code> class.</li>
-<li>Import <code>pandas</code> for data manipulation.</li>
+<li>Import the <code>ForestReport</code> class.  </li>
+<li>Import the <code>pandas</code> library for data manipulation.</li>
 </ol>
-<p>Create a variable for the ForestReport Class</p>
 <p class="annotate"><div class="language-py3 highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">forest_report_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
 <span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
@@ -1152,39 +1483,114 @@
 <span class="normal"><a href="#__codelineno-2-14">14</a></span>
 <span class="normal"><a href="#__codelineno-2-15">15</a></span>
 <span class="normal"><a href="#__codelineno-2-16">16</a></span>
-<span class="normal"><a href="#__codelineno-2-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">inventory_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Your\path\processed_inventory.csv&#39;</span><span class="p">)</span><span class="c1">#(1)!</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">tree_df_types</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Your\path\tree_df_types.csv&#39;</span><span class="p">)</span><span class="c1">#(2)!</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="hll">
-</span></span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="n">Report</span> <span class="o">=</span> <span class="n">ForestReport</span><span class="p">(</span><span class="n">inventory_data</span><span class="p">,</span><span class="n">plot_id</span> <span class="o">=</span> <span class="s2">&quot;plot_identifier&quot;</span><span class="p">,</span><span class="n">plot_size</span> <span class="o">=</span> <span class="s1">&#39;plot_size_column&#39;</span><span class="p">,</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a>                      <span class="n">tree_type</span><span class="o">=</span><span class="s1">&#39;tree_type_tag&#39;</span><span class="p">,</span> <span class="n">group_levels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Farm&#39;</span><span class="p">,</span> <span class="s1">&#39;Stand&#39;</span><span class="p">],</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a>                      <span class="n">tree_height</span><span class="o">=</span><span class="s2">&quot;best_predicted_height (m)&quot;</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="o">=</span><span class="s2">&quot;DBH (cm)&quot;</span><span class="p">,</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a>                      <span class="n">tree_vol_with_bark</span><span class="o">=</span><span class="s2">&quot;Tree_volume&quot;</span><span class="p">,</span><span class="n">tree_vol_without_bark</span><span class="o">=</span> <span class="s2">&quot;Tree_volume_no_bark&quot;</span><span class="p">,</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a>                      <span class="n">iterator</span><span class="o">=</span><span class="s2">&quot;forest stratum&quot;</span><span class="p">)</span><span class="c1">#(3)</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="n">Report</span><span class="o">.</span><span class="n">view_tree_types</span><span class="p">()</span><span class="c1">#(4)</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="n">Report</span><span class="o">.</span><span class="n">update_tree_types</span><span class="p">(</span><span class="n">tree_df_types</span><span class="p">)</span><span class="c1">#(5)</span>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16"></a>
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="n">Report</span><span class="o">.</span><span class="n">get_report</span><span class="p">(</span><span class="nb">dir</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Desktop&quot;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;json&quot;</span><span class="p">)</span><span class="c1">#(6)</span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">inventory_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>                              <span class="sa">r</span><span class="s1">&#39;C:\seu\caminho\exemplo_forest_report.xlsx&#39;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="hll">                              <span class="p">)</span><span class="c1">#(1)!</span>
+</span></span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="n">tree_df_types</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\seu\caminho\tree_types.xlsx&#39;</span><span class="p">)</span><span class="c1">#(2)!</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="n">report</span> <span class="o">=</span> <span class="n">ForestReport</span><span class="p">(</span><span class="n">inventory_data</span><span class="p">,</span> <span class="n">plot_id</span><span class="o">=</span><span class="s2">&quot;ID parcela&quot;</span><span class="p">,</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a>                      <span class="n">plot_size</span><span class="o">=</span><span class="s1">&#39;area_parcela&#39;</span><span class="p">,</span><span class="n">tree_type</span><span class="o">=</span><span class="s1">&#39;Tipo arvore&#39;</span><span class="p">,</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a>                      <span class="n">group_levels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;ID_Regiao&#39;</span><span class="p">,</span><span class="s1">&#39;ID Fazenda&#39;</span><span class="p">,</span><span class="s1">&#39;ID talhao&#39;</span><span class="p">],</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a>                      <span class="n">tree_height</span><span class="o">=</span><span class="s2">&quot;ht_calculada (m)&quot;</span><span class="p">,</span> <span class="n">tree_dbh</span><span class="o">=</span><span class="s2">&quot;dap (cm)&quot;</span><span class="p">,</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a>                      <span class="n">tree_vol_with_bark</span><span class="o">=</span><span class="s2">&quot;Vol (m³)&quot;</span><span class="p">,</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a>                      <span class="n">tree_vol_without_bark</span><span class="o">=</span><span class="s2">&quot;Vol SC (m³)&quot;</span><span class="p">)</span><span class="c1">#(3)!</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15"></a>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="n">report</span><span class="o">.</span><span class="n">view_tree_types</span><span class="p">()</span><span class="c1">#(4)!</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17"></a>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="n">report</span><span class="o">.</span><span class="n">update_tree_types</span><span class="p">(</span><span class="n">tree_df_types</span><span class="p">)</span><span class="c1">#(5)!</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19"></a>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="n">report</span><span class="o">.</span><span class="n">get_report</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\seu\caminho\para\salvar&#39;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;xlsx&quot;</span><span class="p">)</span><span class="c1">#(6)!</span>
 </span></code></pre></div></td></tr></table></div></p>
 <ol>
-<li>Load your procesed inventory data df from a csv file.</li>
-<li>Load your tree types df from a csv file.</li>
-<li>Create the variable <code>Report</code> containing the <code>ForestReport</code> class and using the <code>inventory_data</code> dataframe.<br />
-Define the column <code>plot_identifier</code> as responsible for identifying each plot.<br />
-Define the column <code>plot_size_column</code> as responsible for providing the plot size in square meters.<br />
-Define the column <code>tree_type_tag</code> as responsible for identifying the ID of each tree present in <code>tree_types_df</code>.<br />
-Define the columns <code>Farm</code> and <code>Stand</code> as sub-groups for which reports will be generated.<br />
-Define the column <code>best_predicted_height (m)</code> as the column containing the tree heights in meters.<br />
-Define the column <code>DBH (cm)</code> as the column containing the tree diameters at breast height in centimeters.<br />
-Define the column <code>Tree_volume</code> as the column containing the total tree volume with bark.<br />
-Define the column <code>Tree_volume_no_bark</code> as the column containing the total tree volume without bark.<br />
-Define the column <code>forest stratum</code> as the main iterator in which the report will be generated.</li>
-<li>Show the <code>tree_types_df</code> in use.  </li>
-<li>Update the <code>tree_types_df</code> using the <code>tree_df_types</code> dataframe.  </li>
-<li>Save the report in <code>C:\Users\Desktop</code> as a <code>json</code> file.  </li>
+<li>Load the <code>inventory_data</code> DataFrame from an <code>xlsx</code> file.  </li>
+<li>Load the <code>tree_types_df</code> DataFrame from an <code>xlsx</code> file.  </li>
+<li>Create the <code>report</code> variable containing the <code>ForestReport</code> class using the <code>inventory_data</code> DataFrame.<br />
+   Set the <code>ID parcela</code> column to identify each plot.<br />
+   Set the <code>area_parcela</code> column to provide the plot size in square meters.<br />
+   Set the <code>Tipo arvore</code> column to identify the ID of each tree present in <code>tree_types_df</code>.<br />
+   Set the columns <code>ID_Regiao</code>, <code>ID Fazenda</code>, and <code>ID talhao</code> as subgroup levels for which reports will be generated.<br />
+   Set the <code>ht_calculada (m)</code> column as the one containing tree heights in meters.<br />
+   Set the <code>dap (cm)</code> column as the one containing tree diameters at breast height in centimeters.<br />
+   Set the <code>Vol (m³)</code> column as the one containing total tree volume with bark.<br />
+   Set the <code>Vol SC (m³)</code> column as the one containing total tree volume without bark.  </li>
+<li>Display the current <code>tree_types_df</code> DataFrame (the default DataFrame that should be customized).  </li>
+<li>Update the <code>tree_types_df</code> using the <code>tree_df_types</code> DataFrame.  </li>
+<li>Save the report in <code>xlsx</code> format.</li>
 </ol>
+<div class="admonition warning">
+<p class="admonition-title">Attention: Unique Identifiers in Groupings</p>
+<p>When using the <code>group_levels</code> parameter, it is essential that the defined groups contain <strong>unique combinations of values</strong> across the specified columns. This avoids ambiguity in the summaries generated by grouping.</p>
+<p>For example, when grouping by <code>ID_Regiao</code> and <code>ID Fazenda</code>, <strong>do not use generic identifiers</strong> like "A", "B", or "C" if they are reused across different regions. See the examples below:</p>
+<h4 id="correct-example">✅ <strong>Correct</strong> Example:</h4>
+<table>
+<thead>
+<tr>
+<th>ID_Regiao</th>
+<th>ID Fazenda</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>14</td>
+<td>14-A</td>
+</tr>
+<tr>
+<td>14</td>
+<td>14-B</td>
+</tr>
+<tr>
+<td>15</td>
+<td>15-A</td>
+</tr>
+<tr>
+<td>15</td>
+<td>15-B</td>
+</tr>
+</tbody>
+</table>
+<p>Each combination of <code>ID_Regiao</code> and <code>ID Fazenda</code> is unique, ensuring consistent groupings with no overlap.</p>
+<h4 id="incorrect-example">❌ <strong>Incorrect</strong> Example:</h4>
+<table>
+<thead>
+<tr>
+<th>ID_Regiao</th>
+<th>ID Fazenda</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>14</td>
+<td>A</td>
+</tr>
+<tr>
+<td>14</td>
+<td>B</td>
+</tr>
+<tr>
+<td>15</td>
+<td>A</td>
+</tr>
+<tr>
+<td>15</td>
+<td>B</td>
+</tr>
+</tbody>
+</table>
+<p>In this incorrect example, the identifier "A" appears in two different regions. If grouping is done only by <code>ID Fazenda</code>, the summaries for "A" will include data from both regions, leading to <strong>interpretation errors</strong>.</p>
+<h4 id="recommendation">💡 Recommendation</h4>
+<p>Use composite identifiers that include full context, such as <code>"14-A"</code>, <code>"15-B"</code>, etc., ensuring that each group is <strong>unique</strong>.</p>
+</div>
+<h2 id="references">References</h2>
+<section id="references">
+  <div>
+    <p><strong>ARCE, JULIO EDUARDO; DOBNER JR., MARIO.</strong> (2024).  
+    <em>Manejo e planejamento de florestas plantadas: com ênfase nos gêneros Pinus e Eucalyptus</em>. Curitiba, PR: Ed. dos Autores, 419p.</p>
+  </div>
+</section>
 
 
 
