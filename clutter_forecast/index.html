@@ -713,9 +713,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#class-functions" class="md-nav__link">
+  <a href="#class-methods" class="md-nav__link">
     <span class="md-ellipsis">
-      Class Functions
+      Class Methods
     </span>
   </a>
   
@@ -794,9 +794,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#class-functions_1" class="md-nav__link">
+  <a href="#class-methods_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Class Functions
+      Class Methods
     </span>
   </a>
   
@@ -809,14 +809,44 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Example Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outputs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Outputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tables
+    </span>
+  </a>
+  
 </li>
         
           <li class="md-nav__item">
-  <a href="#example-of-output-prediction-plot" class="md-nav__link">
+  <a href="#example-of-output-forecast-chart" class="md-nav__link">
     <span class="md-ellipsis">
-      Example of output prediction plot
+      Example of Output Forecast Chart
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1049,9 +1079,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#class-functions" class="md-nav__link">
+  <a href="#class-methods" class="md-nav__link">
     <span class="md-ellipsis">
-      Class Functions
+      Class Methods
     </span>
   </a>
   
@@ -1130,9 +1160,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#class-functions_1" class="md-nav__link">
+  <a href="#class-methods_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Class Functions
+      Class Methods
     </span>
   </a>
   
@@ -1145,14 +1175,44 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Example Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outputs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Outputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tables
+    </span>
+  </a>
+  
 </li>
         
           <li class="md-nav__item">
-  <a href="#example-of-output-prediction-plot" class="md-nav__link">
+  <a href="#example-of-output-forecast-chart" class="md-nav__link">
     <span class="md-ellipsis">
-      Example of output prediction plot
+      Example of Output Forecast Chart
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1337,7 +1397,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="class-functions">Class Functions</h3>
+<h3 id="class-methods">Class Methods</h3>
 <p class="annotate"><div class="language-py3 highlight"><span class="filename">functions and parameters</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  <span class="n">ClutterTrainer</span><span class="o">.</span><span class="n">fit_model</span><span class="p">(</span><span class="n">save_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span><span class="c1">#(1)!</span>
 </span></code></pre></div></p>
 <ol>
@@ -1346,7 +1406,7 @@
 <table>
 <thead>
 <tr>
-<th>Parameters</th>
+<th>Methods</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -1414,7 +1474,29 @@
 </tr>
 </tbody>
 </table>
-<h5 id="class-functions_1">Class Functions</h5>
+<h5 id="class-methods_1">Class Methods</h5>
+<table>
+<thead>
+<tr>
+<th>Methods</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.predict()</td>
+<td>Predicts future basal area and volume using the coefficients fitted in <code>ClutterTrainer</code> for a specific age.</td>
+</tr>
+<tr>
+<td>.get_coefs()</td>
+<td>Displays the coefficients loaded from the <code>coefs_file</code>.</td>
+</tr>
+<tr>
+<td>.predict_range()</td>
+<td>Predicts future basal area and volume using the coefficients fitted in <code>ClutterTrainer</code> for a predefined age range.</td>
+</tr>
+</tbody>
+</table>
 <p class="annotate"><div class="language-py3 highlight"><span class="filename">functions and parameters</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>  <span class="n">ClutterTrainer</span><span class="o">.</span><span class="n">get_coefs</span><span class="p">()</span><span class="c1">#(1)!</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="n">ClutterTrainer</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">age2</span><span class="p">)</span><span class="c1">#(2)!</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  <span class="n">ClutterTrainer</span><span class="o">.</span><span class="n">predict_range</span><span class="p">(</span><span class="n">age_range</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span><span class="n">show_plots</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="c1">#(3)!</span>
@@ -1426,6 +1508,77 @@
    If <code>show_plots=True</code>, displays the plots of the performed predictions.  </li>
 </ol>
 <h3 id="example-usage">Example Usage</h3>
+<p>As an example, we will use an adapted dataset from Arce and Dobner Jr. (2024) for <em>Eucalyptus dunnii</em>. The dataset consists of 81 permanent plots, with ages ranging from 3 to 9 years, measured continuously over time.</p>
+<p><a href="../downloads/forecast/dados_clutter.xlsx" download style="text-decoration: none; font-weight: bold;">
+  <i class="fa-solid fa-file-arrow-down" style="margin-right: 8px;"></i>Download file.
+</a></p>
+<p>First 5 rows of the file:</p>
+<table>
+<thead>
+<tr>
+<th>Estrato</th>
+<th>Parcela</th>
+<th>I1</th>
+<th>I2</th>
+<th>G1</th>
+<th>G2</th>
+<th>IS</th>
+<th>V2_observ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Estrato-2</td>
+<td>1220117_P7005</td>
+<td>3</td>
+<td>4</td>
+<td>8.88</td>
+<td>11.98</td>
+<td>14.42</td>
+<td>36.05</td>
+</tr>
+<tr>
+<td>Estrato-2</td>
+<td>1220117_P7005</td>
+<td>4</td>
+<td>5</td>
+<td>11.98</td>
+<td>13.53</td>
+<td>14.42</td>
+<td>51.90</td>
+</tr>
+<tr>
+<td>Estrato-2</td>
+<td>1220117_P7005</td>
+<td>5</td>
+<td>6</td>
+<td>13.53</td>
+<td>17.24</td>
+<td>14.42</td>
+<td>81.22</td>
+</tr>
+<tr>
+<td>Estrato-2</td>
+<td>1220117_P7005</td>
+<td>6</td>
+<td>7</td>
+<td>17.24</td>
+<td>22.47</td>
+<td>14.42</td>
+<td>144.45</td>
+</tr>
+<tr>
+<td>Estrato-2</td>
+<td>1220117_P7005</td>
+<td>7</td>
+<td>8</td>
+<td>22.47</td>
+<td>22.20</td>
+<td>14.42</td>
+<td>150.15</td>
+</tr>
+</tbody>
+</table>
 <p class="annotate"><div class="language-py3 highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">clutter_forecast_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">fptools</span><span class="o">.</span><span class="n">forecast</span> <span class="kn">import</span><span class="w"> </span><span class="nn">ClutterTrainer</span><span class="o">,</span><span class="w"> </span><span class="nn">ClutterPredictor</span><span class="c1">#(1)!</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span><span class="c1">#(2)!</span>
@@ -1447,35 +1600,330 @@
 <span class="normal"><a href="#__codelineno-3-13">13</a></span>
 <span class="normal"><a href="#__codelineno-3-14">14</a></span>
 <span class="normal"><a href="#__codelineno-3-15">15</a></span>
-<span class="normal"><a href="#__codelineno-3-16">16</a></span>
-<span class="normal"><a href="#__codelineno-3-17">17</a></span>
-<span class="normal"><a href="#__codelineno-3-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Your\path\clutter_data.csv&#39;</span><span class="p">)</span><span class="c1">#(1)!</span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Your\Directory\dados_clutter.xlsx&#39;</span><span class="p">)</span><span class="c1">#(1)!</span>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">c_train</span> <span class="o">=</span> <span class="n">ClutterTrainer</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="s2">&quot;age-column1&quot;</span><span class="p">,</span><span class="s2">&quot;age-column2&quot;</span><span class="p">,</span> <span class="s2">&quot;basal-area1&quot;</span><span class="p">,</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="hll">                         <span class="s2">&quot;basal-area1&quot;</span><span class="p">,</span><span class="s2">&quot;site-column&quot;</span><span class="p">,</span><span class="s2">&quot;volume-target&quot;</span><span class="p">,</span>
-</span></span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>                         <span class="n">iterator</span><span class="o">=</span><span class="s2">&quot;Genetic Material&quot;</span><span class="p">)</span><span class="c1">#(2)!</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">clutter</span> <span class="o">=</span> <span class="n">ClutterTrainer</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span> <span class="s2">&quot;I1&quot;</span><span class="p">,</span><span class="s2">&quot;I2&quot;</span><span class="p">,</span> <span class="s2">&quot;G1&quot;</span><span class="p">,</span><span class="s2">&quot;G2&quot;</span><span class="p">,</span><span class="s1">&#39;IS&#39;</span><span class="p">,</span><span class="s2">&quot;V2_observ&quot;</span><span class="p">)</span><span class="c1">#(2)!</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="hll">
+</span></span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="n">metrics</span> <span class="o">=</span> <span class="n">clutter</span><span class="o">.</span><span class="n">fit_model</span><span class="p">(</span><span class="n">save_dir</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:\Your\Directory\to\save&quot;</span><span class="p">)</span><span class="c1">#(3)!</span>
 </span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="n">c_train_metrics</span> <span class="o">=</span> <span class="n">c_train</span><span class="o">.</span><span class="n">fit_model</span><span class="p">(</span><span class="n">save_dir</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:\Your\path\output&quot;</span><span class="p">)</span><span class="c1">#(3)!</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="n">c_predictor</span> <span class="o">=</span> <span class="n">ClutterPredictor</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Your\path\output\all_coefficients.json&quot;</span><span class="p">,</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a>                             <span class="mf">2.35</span><span class="p">,</span><span class="mf">9.27</span><span class="p">,</span><span class="mf">9.13</span><span class="p">,</span> <span class="n">iterator</span><span class="o">=</span><span class="s2">&quot;type-x&quot;</span><span class="p">)</span><span class="c1">#(4)!</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="n">predictor</span> <span class="o">=</span> <span class="n">ClutterPredictor</span><span class="p">(</span><span class="s2">&quot;C:\Your\Directory</span><span class="se">\t</span><span class="s2">o\save</span><span class="se">\a</span><span class="s2">ll_coefficients.json&quot;</span><span class="p">,</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a>                             <span class="mi">7</span><span class="p">,</span><span class="mf">14.41</span><span class="p">,</span><span class="mf">17.23</span><span class="p">)</span><span class="c1">#(4)!</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="n">ba_vol_predicted</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="c1">#(5)!</span>
 </span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="n">ba_vol_predicted</span> <span class="o">=</span> <span class="n">c_predictor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="c1">#(5)!</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="n">coef</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">get_coefs</span><span class="p">()</span><span class="c1">#(6)!</span>
 </span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15"></a>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="n">coef</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">get_coefs</span><span class="p">()</span><span class="c1">#(6)!</span>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17"></a>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="n">ba_vol_range_predicted</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">predict_range</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">12</span><span class="p">),</span> <span class="n">show_plots</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="c1">#(7)!</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="n">ba_vol_range_predicted</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">predict_range</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">12</span><span class="p">),</span> <span class="n">show_plots</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="c1">#(7)!</span>
 </span></code></pre></div></td></tr></table></div></p>
 <ol>
-<li>Load your CSV file.  </li>
-<li>Create the variable <code>c_train</code> containing the <code>ClutterTrainer</code> class.  </li>
-<li>Adjust the Clutter model, saving the coefficients and parameters in the folder <code>C:\Your\path\output</code>, and save the training metrics in the variable <code>c_train_metrics</code>.  </li>
-<li>Create a variable containing the predictor. This predictor will use the saved model <code>C:\Your\path\output\all_coefficients.json</code> to apply an inventory with an age of <code>2.35</code>, a site index of <code>9.27</code>, and a basal area of <code>9.13</code> to predict future volume production and basal area.  </li>
-<li>Make the prediction for this plantation when it reaches <code>4</code> years old and save the results in <code>ba_vol_predicted</code>.  </li>
-<li>Obtain the model coefficients and save them in the variable <code>coef</code>.  </li>
-<li>Make the prediction for this plantation from <code>2</code> to <code>12</code> years, generating a graph showing the evolution of basal area and volume over this period, along with the confidence level.  </li>
+<li>Load your continuous forest inventory data file in <code>xlsx</code> format.  </li>
+<li>Create the <code>clutter</code> variable containing the <code>ClutterTrainer</code> class, defining the corresponding columns.  </li>
+<li>Fit the Clutter model, saving the coefficients and parameters to the folder <code>C:\Your\Directory\to\save\the\metrics</code>, and the training metrics to the variable <code>metrics</code>.  </li>
+<li>Create a variable containing the predictor. This predictor will use the saved model <code>C:\Your\Directory\to\save\all_coefficients.json</code> to apply an inventory with age <code>7</code> years, a site index of <code>14.41</code>, and a basal area of <code>17.23</code>, in order to predict future volume and basal area production.  </li>
+<li>Make the prediction for this stand at age <code>10</code> and save the results in <code>ba_vol_predicted</code>.  </li>
+<li>Retrieve the model coefficients and store them in the variable <code>coef</code>.  </li>
+<li>Make a prediction for this stand from age <code>2</code> to <code>12</code>, generating a plot that shows the evolution of basal area and volume over this period, along with the confidence level.  </li>
 </ol>
-<h3 id="example-of-output-prediction-plot">Example of output prediction plot</h3>
+<h4 id="outputs">Outputs</h4>
+<h5 id="tables">Tables</h5>
+<p class="annotate"><code>metrics</code>(1)</p>
+<ol>
+<li>Metric values from the model fitting for each model used by iterator (when applicable).</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Iterator</th>
+<th>Model</th>
+<th>MSE</th>
+<th>RMSE</th>
+<th>MAE</th>
+<th>MAPE</th>
+<th>R²</th>
+<th>Explained Variance</th>
+<th>Max Error</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Not used</td>
+<td>ln_ba2_est</td>
+<td>2.70</td>
+<td>1.64</td>
+<td>1.32</td>
+<td>2.35</td>
+<td>0.92</td>
+<td>0.94</td>
+<td>4.41</td>
+</tr>
+<tr>
+<td>Not used</td>
+<td>ln_vol2_est</td>
+<td>280.92</td>
+<td>16.76</td>
+<td>12.34</td>
+<td>2.06</td>
+<td>0.94</td>
+<td>0.94</td>
+<td>76.58</td>
+</tr>
+</tbody>
+</table>
+<p class="annotate"><code>ba_vol_predicted</code>(1)</p>
+<ol>
+<li>Estimated future basal area and volume values for age 10.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>BA2</th>
+<th>Volume</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>17.23</td>
+<td>159.03</td>
+</tr>
+</tbody>
+</table>
+<p class="annotate"><code>coef</code>(1)</p>
+<ol>
+<li>Dictionary with coefficients for each model and iterator (when used).</li>
+</ol>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">&quot;lnb2_model&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nt">&quot;b0&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.03818795042386813</span><span class="p">,</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nt">&quot;b1&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">3.465183897074305</span><span class="p">,</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="nt">&quot;b2&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.016174627316697623</span><span class="p">,</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="nt">&quot;num_rows&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">402</span><span class="p">,</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="nt">&quot;min_age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="nt">&quot;max_age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="nt">&quot;mape&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">2.3528810455777904</span><span class="p">,</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="nt">&quot;r2&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.923524025998693</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">  </span><span class="nt">&quot;lnv2_model&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="nt">&quot;b0&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1.3927682912732822</span><span class="p">,</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="nt">&quot;b1&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-4.364287014356091</span><span class="p">,</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">    </span><span class="nt">&quot;b2&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.04215217322729903</span><span class="p">,</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">    </span><span class="nt">&quot;b3&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1.1299750378626658</span><span class="p">,</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="nt">&quot;num_rows&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">402</span><span class="p">,</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="nt">&quot;min_age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">    </span><span class="nt">&quot;max_age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">    </span><span class="nt">&quot;mape&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">2.0563064467361003</span><span class="p">,</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">    </span><span class="nt">&quot;r2&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.9414308873440383</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="p">}</span>
+</span></code></pre></div>
+<p class="annotate"><code>ba_vol_range_predicted</code>(1)</p>
+<ol>
+<li>Data frame containing future basal area and volume estimates for a predefined age range.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Age</th>
+<th>BA2</th>
+<th>Volume</th>
+<th>BA2_max_error</th>
+<th>BA2_min_error</th>
+<th>Volume_max_error</th>
+<th>Volume_min_error</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.00</td>
+<td>2.05</td>
+<td>1.88</td>
+<td>2.10</td>
+<td>2.00</td>
+<td>1.91</td>
+<td>1.84</td>
+</tr>
+<tr>
+<td>2.50</td>
+<td>3.72</td>
+<td>5.69</td>
+<td>3.81</td>
+<td>3.63</td>
+<td>5.81</td>
+<td>5.57</td>
+</tr>
+<tr>
+<td>3.00</td>
+<td>5.54</td>
+<td>11.93</td>
+<td>5.67</td>
+<td>5.41</td>
+<td>12.17</td>
+<td>11.68</td>
+</tr>
+<tr>
+<td>3.50</td>
+<td>7.35</td>
+<td>20.24</td>
+<td>7.53</td>
+<td>7.18</td>
+<td>20.65</td>
+<td>19.82</td>
+</tr>
+<tr>
+<td>4.00</td>
+<td>9.10</td>
+<td>30.09</td>
+<td>9.31</td>
+<td>8.88</td>
+<td>30.70</td>
+<td>29.47</td>
+</tr>
+<tr>
+<td>4.50</td>
+<td>10.74</td>
+<td>40.95</td>
+<td>10.99</td>
+<td>10.48</td>
+<td>41.79</td>
+<td>40.11</td>
+</tr>
+<tr>
+<td>5.00</td>
+<td>12.26</td>
+<td>52.41</td>
+<td>12.54</td>
+<td>11.97</td>
+<td>53.49</td>
+<td>51.33</td>
+</tr>
+<tr>
+<td>5.50</td>
+<td>13.66</td>
+<td>64.13</td>
+<td>13.98</td>
+<td>13.34</td>
+<td>65.45</td>
+<td>62.81</td>
+</tr>
+<tr>
+<td>6.00</td>
+<td>14.95</td>
+<td>75.87</td>
+<td>15.30</td>
+<td>14.60</td>
+<td>77.43</td>
+<td>74.31</td>
+</tr>
+<tr>
+<td>6.50</td>
+<td>16.14</td>
+<td>87.48</td>
+<td>16.52</td>
+<td>15.76</td>
+<td>89.28</td>
+<td>85.68</td>
+</tr>
+<tr>
+<td>7.00</td>
+<td>17.23</td>
+<td>98.83</td>
+<td>17.64</td>
+<td>16.82</td>
+<td>100.86</td>
+<td>96.79</td>
+</tr>
+<tr>
+<td>7.50</td>
+<td>18.24</td>
+<td>109.85</td>
+<td>18.67</td>
+<td>17.81</td>
+<td>112.10</td>
+<td>107.59</td>
+</tr>
+<tr>
+<td>8.00</td>
+<td>19.17</td>
+<td>120.49</td>
+<td>19.62</td>
+<td>18.71</td>
+<td>122.97</td>
+<td>118.01</td>
+</tr>
+<tr>
+<td>8.50</td>
+<td>20.02</td>
+<td>130.74</td>
+<td>20.50</td>
+<td>19.55</td>
+<td>133.43</td>
+<td>128.05</td>
+</tr>
+<tr>
+<td>9.00</td>
+<td>20.82</td>
+<td>140.58</td>
+<td>21.31</td>
+<td>20.33</td>
+<td>143.47</td>
+<td>137.69</td>
+</tr>
+<tr>
+<td>9.50</td>
+<td>21.56</td>
+<td>150.00</td>
+<td>22.07</td>
+<td>21.05</td>
+<td>153.09</td>
+<td>146.92</td>
+</tr>
+<tr>
+<td>10.00</td>
+<td>22.25</td>
+<td>159.03</td>
+<td>22.77</td>
+<td>21.72</td>
+<td>162.30</td>
+<td>155.76</td>
+</tr>
+<tr>
+<td>10.50</td>
+<td>22.89</td>
+<td>167.66</td>
+<td>23.42</td>
+<td>22.35</td>
+<td>171.11</td>
+<td>164.21</td>
+</tr>
+<tr>
+<td>11.00</td>
+<td>23.48</td>
+<td>175.91</td>
+<td>24.04</td>
+<td>22.93</td>
+<td>179.53</td>
+<td>172.30</td>
+</tr>
+<tr>
+<td>11.50</td>
+<td>24.04</td>
+<td>183.80</td>
+<td>24.61</td>
+<td>23.48</td>
+<td>187.58</td>
+<td>180.03</td>
+</tr>
+<tr>
+<td>12.00</td>
+<td>24.57</td>
+<td>191.35</td>
+<td>25.15</td>
+<td>23.99</td>
+<td>195.28</td>
+<td>187.41</td>
+</tr>
+</tbody>
+</table>
+<h5 id="example-of-output-forecast-chart">Example of Output Forecast Chart</h5>
 <!-- Slider main container -->
 <div class="swiper">
   <!-- Additional required wrapper -->
@@ -1530,7 +1978,7 @@
 
     // Linhas verdes indicando a faixa amostrada
     var sampledRange = {
-        x: [1.76, 1.76, null, 6.13, 6.13], // Adiciona um "null" para que as linhas não se conectem
+        x: [3, 3, null, 9, 9], // Adiciona um "null" para que as linhas não se conectem
         y: [0, Math.max(...data.BA2) * 1.1, null, 0, Math.max(...data.BA2) * 1.1],
         mode: 'lines',
         name: 'Sampled train range',
@@ -1539,7 +1987,7 @@
 
     var layout = {
         title: {
-            text: "<b>Predicted Basal Area by Age (iterator: 'type-x')</b>",
+            text: "<b>Predicted Basal Area by Age</b>",
             font: { size: 18 }
         },
         annotations: [
@@ -1548,7 +1996,7 @@
                 yref: 'paper',
                 x: 0.6,
                 y: 1.1,
-                text: `R²: 0.8493, MAPE: 13.58% for a training with 232 plots with ages from 1.76 to 6.13 years.`,
+                text: `R²: 0.9235, MAPE: 2.35% for a training with 402 samples with ages from 3 to 9 years.`,
                 showarrow: false,
                 font: { size: 12, color: 'black' }
             }
@@ -1597,7 +2045,7 @@ function plotVolumeByAge(containerId, data) {
 
     // Linhas verdes indicando a faixa amostrada
     var sampledRange = {
-        x: [1.76, 1.76, null, 6.13, 6.13], // Adiciona um "null" para que as linhas não se conectem
+        x: [3, 3, null, 9, 9],  // Adiciona um "null" para que as linhas não se conectem
         y: [0, Math.max(...data.Volume) * 1.1, null, 0, Math.max(...data.Volume) * 1.1],
         mode: 'lines',
         name: 'Sampled train range',
@@ -1606,7 +2054,7 @@ function plotVolumeByAge(containerId, data) {
 
     var layout = {
         title: {
-            text: "<b>Predicted Volume by Age (iterator: 'type-x')</b>",
+            text: "<b>Predicted Volume by Age</b>",
             font: { size: 18 }
         },
         annotations: [
@@ -1615,7 +2063,7 @@ function plotVolumeByAge(containerId, data) {
                 yref: 'paper',
                 x: 0.6,
                 y: 1.1,
-                text: `R²: 0.8493, MAPE: 13.58% for a training with 232 plots with ages from 1.76 to 6.13 years.`,
+                text: `R²: 0.9414, MAPE: 2.06% for a training with 402 samples with ages from 3 to 9 years.`,
                 showarrow: false,
                 font: { size: 12, color: 'black' }
             }
@@ -1656,15 +2104,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function generatePlots() {
-        var data = {
-            Age: [2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
-            BA2: [10.45, 12.75, 14.54, 15.98, 17.16, 18.13, 18.94, 19.64, 20.24, 20.76, 21.21, 21.62, 21.98, 22.30, 22.59, 22.85, 23.09, 23.31, 23.51, 23.70, 23.87],
-            BA2_max_error: [11.24, 13.70, 15.64, 17.19, 18.45, 19.49, 20.37, 21.11, 21.76, 22.32, 22.81, 23.24, 23.63, 23.97, 24.29, 24.57, 24.83, 25.06, 25.28, 25.48, 25.66],
-            BA2_min_error: [9.67, 11.79, 13.45, 14.78, 15.87, 16.76, 17.52, 18.16, 18.71, 19.20, 19.62, 19.99, 20.33, 20.62, 20.89, 21.14, 21.36, 21.56, 21.75, 21.92, 22.07],
-            Volume: [31.01, 46.19, 60.24, 72.83, 83.97, 93.80, 102.49, 110.19, 117.05, 123.18, 128.70, 133.67, 138.19, 142.30, 146.05, 149.50, 152.66, 155.59, 158.30, 160.81, 163.15],
-            Volume_max_error: [35.22, 52.46, 68.43, 82.73, 95.38, 106.55, 116.41, 125.16, 132.95, 139.92, 146.18, 151.83, 156.96, 161.63, 165.89, 169.80, 173.40, 176.72, 179.80, 182.65, 185.31],
-            Volume_min_error: [26.79, 39.91, 52.06, 62.94, 72.57, 81.06, 88.56, 95.22, 101.15, 106.45, 111.21, 115.51, 119.42, 122.97, 126.21, 129.19, 131.92, 134.45, 136.79, 138.96, 140.98]
-        };
+      var data = {
+          Age: [2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 8.5, 9.0, 9.5, 10.0, 10.5, 11.0, 11.5, 12.0],
+          BA2: [2.05, 3.72, 5.54, 7.35, 9.10, 10.74, 12.26, 13.66, 14.95, 16.14, 17.23, 18.24, 19.17, 20.02, 20.82, 21.56, 22.25, 22.89, 23.48, 24.04, 24.57],
+          BA2_max_error: [2.10, 3.81, 5.67, 7.53, 9.31, 10.99, 12.54, 13.98, 15.30, 16.52, 17.64, 18.67, 19.62, 20.50, 21.31, 22.07, 22.77, 23.42, 24.04, 24.61, 25.15],
+          BA2_min_error: [2.00, 3.63, 5.41, 7.18, 8.88, 10.48, 11.97, 13.34, 14.60, 15.76, 16.82, 17.81, 18.71, 19.55, 20.33, 21.05, 21.72, 22.35, 22.93, 23.48, 23.99],
+          Volume: [1.88, 5.69, 11.93, 20.24, 30.09, 40.95, 52.41, 64.13, 75.87, 87.48, 98.83, 109.85, 120.49, 130.74, 140.58, 150.00, 159.03, 167.66, 175.91, 183.80, 191.35],
+          Volume_max_error: [1.91, 5.81, 12.17, 20.65, 30.70, 41.79, 53.49, 65.45, 77.43, 89.28, 100.86, 112.10, 122.97, 133.43, 143.47, 153.09, 162.30, 171.11, 179.53, 187.58, 195.28],
+          Volume_min_error: [1.84, 5.57, 11.68, 19.82, 29.47, 40.11, 51.33, 62.81, 74.31, 85.68, 96.79, 107.59, 118.01, 128.05, 137.69, 146.92, 155.76, 164.21, 172.30, 180.03, 187.41]
+      };
 
         document.getElementById('ba2-chart').innerHTML = '';
         document.getElementById('volume-chart').innerHTML = '';
