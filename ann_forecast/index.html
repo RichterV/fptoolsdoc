@@ -774,10 +774,58 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Example Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outputs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Outputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Files
+    </span>
+  </a>
+  
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
   
 </li>
       
@@ -1013,10 +1061,58 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Example Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outputs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Outputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Files
+    </span>
+  </a>
+  
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
   
 </li>
       
@@ -1083,7 +1179,7 @@
 <table>
 <thead>
 <tr>
-<th>Parameters</th>
+<th>Methods</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -1164,18 +1260,107 @@ classDiagram
 <li>Returns the prediction of <code>Y</code> for the <code>*args</code> columns. The <code>*args</code> columns must be the same as those used in <code>*train_columns</code> for training.  </li>
 </ol>
 <h3 id="example-usage">Example Usage</h3>
-<p class="annotate"><div class="language-py3 highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">ann_forecast_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.forecast</span><span class="w"> </span><span class="kn">import</span> <span class="n">AnnTrainer</span><span class="p">,</span> <span class="n">AnnPredictor</span><span class="c1">#(1)!</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span><span class="c1">#(2)!</span>
+<p>The main advantage of using artificial neural networks in the estimation of forest variables lies in the possibility of including a large number of variables in the prediction. However, currently, the neural networks in this module operate preferably with continuous variables. Therefore, when one wishes to use categorical variables, it is recommended to apply some kind of transformation, such as one-hot encoding, to convert them into a numerical format before inserting them into the network.</p>
+<p>As an example, we will use an adaptation of the data obtained by Arce and Dobner Jr. (2024) for <em>Eucalyptus dunnii</em>. The dataset consists of 81 permanent plots, with ages ranging from 3 to 9 years, measured continuously over time.</p>
+<p><a href="../downloads/forecast/dados_ann.xlsx" download style="text-decoration: none; font-weight: bold;">
+  <i class="fa-solid fa-file-arrow-down" style="margin-right: 8px;"></i>Download the file.
+</a></p>
+<p>First 5 rows of the file:</p>
+<table>
+<thead>
+<tr>
+<th>Chave_Parcela</th>
+<th>Area_m2</th>
+<th>Idade</th>
+<th>N_ha</th>
+<th>d médio</th>
+<th>h médio</th>
+<th>H dom</th>
+<th>G_m2_ha</th>
+<th>V_m3_ha</th>
+<th>S</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>14401109002_P1</td>
+<td>300</td>
+<td>3</td>
+<td>933</td>
+<td>7.47</td>
+<td>6.8</td>
+<td>7.4</td>
+<td>4.2</td>
+<td>6.0</td>
+<td>15.4</td>
+</tr>
+<tr>
+<td>14401109002_P1</td>
+<td>300</td>
+<td>4</td>
+<td>933</td>
+<td>10.3</td>
+<td>10.1</td>
+<td>10.8</td>
+<td>8.0</td>
+<td>24.5</td>
+<td>15.4</td>
+</tr>
+<tr>
+<td>14401109002_P1</td>
+<td>300</td>
+<td>5</td>
+<td>933</td>
+<td>14.0</td>
+<td>12.8</td>
+<td>13.7</td>
+<td>14.9</td>
+<td>67.1</td>
+<td>15.4</td>
+</tr>
+<tr>
+<td>14401109002_P1</td>
+<td>300</td>
+<td>6</td>
+<td>933</td>
+<td>14.1</td>
+<td>14.5</td>
+<td>15.4</td>
+<td>15.1</td>
+<td>77.2</td>
+<td>15.4</td>
+</tr>
+<tr>
+<td>14401109002_P1</td>
+<td>300</td>
+<td>7</td>
+<td>867</td>
+<td>16.6</td>
+<td>16.1</td>
+<td>16.5</td>
+<td>19.4</td>
+<td>112.8</td>
+<td>15.4</td>
+</tr>
+</tbody>
+</table>
+<p>In this case, we will use the columns "Idade", "N_ha", "d médio", "h médio", "H dom", "G_m2_ha", and "S" to predict the value of "V_m3_ha".</p>
+<p class="annotate"><div class="language-py3 highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">exemplo_previsao_rna.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.forecast</span><span class="w"> </span><span class="kn">import</span> <span class="n">AnnTrainer</span><span class="p">,</span> <span class="n">AnnPredictor</span><span class="c1">#(1)!</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span><span class="c1">#(2)!</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span><span class="c1">#(3)!</span>
 </span></code></pre></div></td></tr></table></div></p>
 <ol>
-<li>Import <code>AnnTrainer</code> and <code>AnnPredictor</code> class.</li>
-<li>Import <code>pandas</code> for data manipulation.</li>
+<li>Importa a classe <code>AnnTrainer</code> e <code>AnnPredictor</code> do módulo <code>forecast</code>.</li>
+<li>Importa <code>pandas</code> para manipulação de dados.</li>
+<li>Importa <code>train_test_split</code> para dividir dados em treino e validação.</li>
 </ol>
-<p class="annotate"><div class="language-py3 highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">ann_forecast_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<p class="annotate"><div class="language-py3 highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">exemplo_previsao_rna.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
 <span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
@@ -1192,41 +1377,167 @@ classDiagram
 <span class="normal"><a href="#__codelineno-3-20">20</a></span>
 <span class="normal"><a href="#__codelineno-3-21">21</a></span>
 <span class="normal"><a href="#__codelineno-3-22">22</a></span>
-<span class="normal"><a href="#__codelineno-3-23">23</a></span>
-<span class="normal"><a href="#__codelineno-3-24">24</a></span>
-<span class="normal"><a href="#__codelineno-3-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">df_train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Your\path\continuous_inventory_data.csv&#39;</span><span class="p">)</span><span class="c1">#(1)!</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">df_predictions</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Your\path\new_inventory_data.csv&#39;</span><span class="p">)</span><span class="c1">#(2)!</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="hll">
-</span></span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="n">columns_used_for_training</span> <span class="o">=</span> <span class="p">[</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a>                            <span class="s2">&quot;age&quot;</span><span class="p">,</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a>                            <span class="s2">&quot;shafts&quot;</span><span class="p">,</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a>                            <span class="s2">&quot;basal-area&quot;</span><span class="p">,</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a>                            <span class="s2">&quot;HMAX&quot;</span><span class="p">,</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a>                            <span class="s2">&quot;DMAX&quot;</span><span class="p">,</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a>                            <span class="s2">&quot;DG&quot;</span>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a>                            <span class="p">]</span><span class="c1">#(3)!</span>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15"></a>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="n">ann_train</span> <span class="o">=</span> <span class="n">AnnTrainer</span><span class="p">(</span><span class="n">df_train</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;commercial-volume&quot;</span><span class="p">,</span>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17"></a>                       <span class="o">*</span><span class="n">columns_used_for_training</span><span class="p">,</span>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18"></a>                        <span class="n">iterator</span><span class="o">=</span><span class="s2">&quot;Genetic Material&quot;</span><span class="p">)</span><span class="c1">#(4)!</span>
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19"></a>
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="n">ann_train_metrics</span> <span class="o">=</span> <span class="n">ann_train</span><span class="o">.</span><span class="n">fit_model</span><span class="p">(</span>
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21"></a>                                        <span class="n">save_dir</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:\Your\path\output&quot;</span><span class="p">)</span><span class="c1">#(5)!</span>
+<span class="normal"><a href="#__codelineno-3-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="n">path</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;Your/directory/to/dados_ann.xlsx&quot;</span><span class="c1">#(1)!</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="n">dados</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="c1">#(2)!</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="hll"><span class="n">dados_treino</span><span class="p">,</span> <span class="n">dados_validacao</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span>
+</span></span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a>                                                <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a>                                                <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span><span class="c1">#(3)!</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="n">train_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Idade&quot;</span><span class="p">,</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a>                 <span class="s2">&quot;N_ha&quot;</span><span class="p">,</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15"></a>                 <span class="s2">&quot;d médio&quot;</span><span class="p">,</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a>                 <span class="s2">&quot;h médio&quot;</span><span class="p">,</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17"></a>                 <span class="s2">&quot;H dom&quot;</span><span class="p">,</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18"></a>                 <span class="s2">&quot;G_m2_ha&quot;</span><span class="p">,</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19"></a>                 <span class="s2">&quot;S&quot;</span><span class="p">]</span><span class="c1">#(4)!</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20"></a>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="n">ann</span> <span class="o">=</span> <span class="n">AnnTrainer</span><span class="p">(</span><span class="n">dados_treino</span><span class="p">,</span> <span class="s2">&quot;V_m3_ha&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">train_columns</span><span class="p">)</span><span class="c1">#(5)!        </span>
 </span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22"></a>
-</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="n">ann_predictor</span> <span class="o">=</span> <span class="n">AnnPredictor</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Your\path\output\comercial-volume_ann_predictor_GM-A.pkl&quot;</span><span class="p">)</span><span class="c1">#(6)!</span>
-</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24"></a>
-</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="n">predicted_commercial_volume</span> <span class="o">=</span> <span class="n">ann_predictor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">df_predictions</span><span class="p">,</span> <span class="o">*</span><span class="n">columns_used_for_training</span><span class="p">)</span><span class="c1">#(7)!</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="n">metrics</span> <span class="o">=</span> <span class="n">ann</span><span class="o">.</span><span class="n">fit_model</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Your/directory/to/save&quot;</span><span class="p">)</span><span class="c1">#(6)!  </span>
 </span></code></pre></div></td></tr></table></div></p>
 <ol>
-<li>Load your CSV file for training de ann.</li>
-<li>Load your CSV file for predictions.</li>
-<li>Create a list containing the names of the columns that will be used to predict Y. </li>
-<li>Create the variable <code>ann_train</code> containing the <code>AnnTrainer</code> class using the column <code>comercial-volume</code> as the <code>y</code>, the <code>columns_used_for_training</code> as <code>x</code> and the column <code>Genetic Material</code> as iterator.  </li>
-<li>Adjust the ann models, saving the <code>.pkl</code> files in the folder <code>C:\Your\path\output</code>, and save the training metrics in the variable <code>ann_train_metrics</code>.  </li>
-<li>Load the adjusted model for <code>Genetic Material A</code> and save it in the variable <code>ann_predictor</code>.  </li>
-<li>Make predictions of <code>commercial-volume</code> using the columns <code>columns_used_for_training</code> from <code>df_predictions</code>.</li>
+<li>Define the directory where the data in xlsx format is located, saving it in the variable <code>path</code>.</li>
+<li>Load the data and save it in the variable <code>dados</code>.</li>
+<li>Save 80% of the data as training data in the variable <code>dados_treino</code> and 20% as validation data in the variable <code>dados_validacao</code>, using a random seed of 42.</li>
+<li>Create a variable called <code>train_columns</code> containing the list of column names to be used for training.</li>
+<li>Instantiate the class <code>AnnTrainer</code>, saving it in the variable <code>ann</code>, passing the training data, the column <code>V_m3_ha</code> as the target variable, and the list of training columns.</li>
+<li>Fit the neural network model, saving the metrics in the variable <code>metrics</code> and the generated <code>.pkl</code> file in the defined directory.</li>
 </ol>
+<p>After that, the trained model will be ready for use. We can test the performance of our model by using it to predict the validation data saved in <code>dados_validacao</code>.</p>
+<p class="annotate"><div class="language-py3 highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">exemplo_previsao_rna.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-24">24</a></span>
+<span class="normal"><a href="#__codelineno-4-25">25</a></span>
+<span class="normal"><a href="#__codelineno-4-26">26</a></span>
+<span class="normal"><a href="#__codelineno-4-27">27</a></span>
+<span class="normal"><a href="#__codelineno-4-28">28</a></span>
+<span class="normal"><a href="#__codelineno-4-29">29</a></span>
+<span class="normal"><a href="#__codelineno-4-30">30</a></span>
+<span class="normal"><a href="#__codelineno-4-31">31</a></span>
+<span class="normal"><a href="#__codelineno-4-32">32</a></span>
+<span class="normal"><a href="#__codelineno-4-33">33</a></span>
+<span class="normal"><a href="#__codelineno-4-34">34</a></span>
+<span class="normal"><a href="#__codelineno-4-35">35</a></span>
+<span class="normal"><a href="#__codelineno-4-36">36</a></span>
+<span class="normal"><a href="#__codelineno-4-37">37</a></span>
+<span class="normal"><a href="#__codelineno-4-38">38</a></span>
+<span class="normal"><a href="#__codelineno-4-39">39</a></span>
+<span class="normal"><a href="#__codelineno-4-40">40</a></span>
+<span class="normal"><a href="#__codelineno-4-41">41</a></span>
+<span class="normal"><a href="#__codelineno-4-42">42</a></span>
+<span class="normal"><a href="#__codelineno-4-43">43</a></span>
+<span class="normal"><a href="#__codelineno-4-44">44</a></span>
+<span class="normal"><a href="#__codelineno-4-45">45</a></span>
+<span class="normal"><a href="#__codelineno-4-46">46</a></span>
+<span class="normal"><a href="#__codelineno-4-47">47</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_metrics</span> <span class="c1">#(1)!</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25"></a>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="n">predictor</span> <span class="o">=</span> <span class="n">AnnPredictor</span><span class="p">(</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="hll">                        <span class="sa">r</span><span class="s2">&quot;Your/directory/to/save/V_m3_ha_ann_predictor.pkl&quot;</span>
+</span></span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28"></a>                        <span class="p">)</span><span class="c1">#(2)!</span>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29"></a>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30"></a><span class="n">dados_validacao</span><span class="p">[</span><span class="s1">&#39;V_m3_ha_predicted&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31"></a>                                                         <span class="n">dados_validacao</span><span class="p">,</span>
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32"></a>                                                        <span class="o">*</span><span class="n">train_columns</span>
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33"></a>                                                        <span class="p">)</span><span class="c1">#(3)!</span>
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34"></a>
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35"></a><span class="n">mae</span><span class="p">,</span> <span class="n">mape</span><span class="p">,</span> <span class="n">mse</span><span class="p">,</span> <span class="n">rmse</span><span class="p">,</span> <span class="n">r_squared</span><span class="p">,</span> <span class="n">exp_var</span><span class="p">,</span> <span class="n">m_error</span> <span class="o">=</span> <span class="n">get_metrics</span><span class="p">(</span>
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36"></a>                                                                <span class="n">dados_validacao</span><span class="p">[</span><span class="s1">&#39;V_m3_ha&#39;</span><span class="p">],</span>
+</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37"></a>                                                                <span class="n">dados_validacao</span><span class="p">[</span><span class="s1">&#39;V_m3_ha_predicted&#39;</span><span class="p">]</span>
+</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38"></a>                                                                <span class="p">)</span><span class="c1">#(4)!</span>
+</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39"></a><span class="n">metrics_val</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+</span><span id="__span-4-40"><a id="__codelineno-4-40" name="__codelineno-4-40"></a>    <span class="s1">&#39;MAE&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">mae</span><span class="p">],</span>
+</span><span id="__span-4-41"><a id="__codelineno-4-41" name="__codelineno-4-41"></a>    <span class="s1">&#39;MAPE&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">mape</span><span class="p">],</span>
+</span><span id="__span-4-42"><a id="__codelineno-4-42" name="__codelineno-4-42"></a>    <span class="s1">&#39;MSE&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">mse</span><span class="p">],</span>
+</span><span id="__span-4-43"><a id="__codelineno-4-43" name="__codelineno-4-43"></a>    <span class="s1">&#39;RMSE&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">rmse</span><span class="p">],</span>
+</span><span id="__span-4-44"><a id="__codelineno-4-44" name="__codelineno-4-44"></a>    <span class="s1">&#39;R squared&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">r_squared</span><span class="p">],</span>
+</span><span id="__span-4-45"><a id="__codelineno-4-45" name="__codelineno-4-45"></a>    <span class="s1">&#39;Explained Var&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">exp_var</span><span class="p">],</span>
+</span><span id="__span-4-46"><a id="__codelineno-4-46" name="__codelineno-4-46"></a>    <span class="s1">&#39;Mean Error&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">m_error</span><span class="p">]</span>
+</span><span id="__span-4-47"><a id="__codelineno-4-47" name="__codelineno-4-47"></a><span class="p">})</span><span class="c1">#(5)!</span>
+</span></code></pre></div></td></tr></table></div></p>
+<ol>
+<li>Import the function <code>get_metrics</code> from the <code>utils</code> module for later metric calculation.</li>
+<li>Instantiate the class <code>AnnPredictor</code>, saving it in the variable <code>predictor</code>, and passing the <code>.pkl</code> file generated during the neural network training.</li>
+<li>Create the column <code>V_m3_ha_predicted</code> in the <code>dados_validacao</code> DataFrame, containing the predictions made by the trained ANN for the training columns in the <code>dados_validacao</code> DataFrame.</li>
+<li>Use the <code>get_metrics</code> function to obtain the metrics between the actual values <code>V_m3_ha</code> and the predicted values <code>V_m3_ha_predicted</code> from the <code>dados_validacao</code> DataFrame. The returned metrics are: <strong>MAE (Mean Absolute Error)</strong>, <strong>MAPE (Mean Absolute Percentage Error)</strong>, <strong>MSE (Mean Squared Error)</strong>, <strong>RMSE (Root Mean Squared Error)</strong>, <strong>R² (Coefficient of Determination)</strong>, <strong>EXP_VAR (Explained Variance Score)</strong>, and <strong>ME (Mean Error)</strong>.</li>
+<li>Create a DataFrame with the validation metrics.</li>
+</ol>
+<h4 id="outputs">Outputs</h4>
+<h5 id="tables">Tables</h5>
+<p><code>metrics</code>(1)</p>
+<p>{ .annotate }</p>
+<ol>
+<li>Table with the performance metrics of the ANN during training.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Iterator</th>
+<th>Model</th>
+<th>MSE</th>
+<th>RMSE</th>
+<th>MAE</th>
+<th>MAPE</th>
+<th>R²</th>
+<th>Explained Variance</th>
+<th>Max Error</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Not used</td>
+<td>V_m3_ha_ann_predictor</td>
+<td>32.29</td>
+<td>5.68</td>
+<td>3.05</td>
+<td>4.23</td>
+<td>0.99</td>
+<td>0.99</td>
+<td>0.14</td>
+</tr>
+</tbody>
+</table>
+<p class="annotate"><code>metrics_val</code>(1)</p>
+<ol>
+<li>Table with the performance metrics of the ANN on validation.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>MAE</th>
+<th>MAPE</th>
+<th>MSE</th>
+<th>RMSE</th>
+<th>R²</th>
+<th>Explained Variance</th>
+<th>Mean Error</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.99</td>
+<td>3.28</td>
+<td>26.13</td>
+<td>5.11</td>
+<td>0.99</td>
+<td>0.99</td>
+<td>0.12</td>
+</tr>
+</tbody>
+</table>
+<h5 id="files">Files</h5>
+<p class="annotate"><code>V_m3_ha_ann_predictor.pkl</code>(1)</p>
+<ol>
+<li><code>.pkl</code> file containing the trained ANN parameters.</li>
+</ol>
+<p><a href="../downloads/forecast/V_m3_ha_ann_predictor.pkl" download style="text-decoration: none; font-weight: bold;">
+  <i class="fa-solid fa-file-arrow-down" style="margin-right: 8px;"></i>Download the file.
+</a></p>
+<h2 id="references">References</h2>
+<section id="references">
+  <div>
+    <p><strong>ARCE, JULIO EDUARDO; DOBNER JR., MARIO.</strong> (2024).  
+    <em>Manejo e planejamento de florestas plantadas: com ênfase nos gêneros Pinus e Eucalyptus</em>. Curitiba, PR: Ed. dos Autores, 419p.</p>
+  </div>
+</section>
 
 
 
