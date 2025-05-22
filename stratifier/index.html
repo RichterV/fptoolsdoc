@@ -735,11 +735,35 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#forest-stratification-with-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forest Stratification with Python
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Main Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#class-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       Class Parameters
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -773,6 +797,48 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outputs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Outputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#charts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Charts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
   
 </li>
       
@@ -911,11 +977,35 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#forest-stratification-with-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forest Stratification with Python
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Main Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#class-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       Class Parameters
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -952,6 +1042,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outputs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Outputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#charts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Charts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -974,7 +1106,42 @@
 <p class="admonition-title">Warning</p>
 <p>This library is under development, none of the presented solutions are available for download.</p>
 </div>
-<p>With this module, you will be able to obtain assistance in the stratification process of your plantations. Use forest inventory data to automatically stratify the plantations, selecting the forest variables you consider most relevant and either using a predefined number of strata or allowing the module to determine the optimal number of strata.</p>
+<p>With this module, you can receive assistance in the stratification process of your forest plantations. Use forest inventory data to automatically stratify the plantations by selecting the forest variables you consider most relevant and either setting a predefined number of strata or allowing the module to determine the optimal number of strata.</p>
+<h2 id="forest-stratification-with-python">Forest Stratification with Python</h2>
+<p>The <strong>forest stratification</strong> process requires knowledge of several factors:</p>
+<ul>
+<li>Geographic location  </li>
+<li>Tree species  </li>
+<li>Soil type  </li>
+<li>Stand age  </li>
+<li>Product purpose  </li>
+<li>Management history  </li>
+</ul>
+<p>In this context, the <strong>Python module</strong> developed for stratification emerges as a <strong>support tool for forest planning</strong>, offering a <strong>data-driven initial perspective</strong>.</p>
+<h2 id="main-functions">Main Functions</h2>
+<p>The module includes functions such as:</p>
+<ul>
+<li><code>stratify_kmeans</code>  </li>
+<li><code>stratify_hierarchical</code></li>
+</ul>
+<p>These functions use <strong>multivariate clustering algorithms</strong> (<code>k-means</code> and hierarchical, respectively) to identify patterns in continuous variables such as:</p>
+<ul>
+<li>Mean diameter  </li>
+<li>Mean height  </li>
+<li>Volume per hectare  </li>
+<li>Age  </li>
+<li>Site index  </li>
+</ul>
+<p>The algorithms group sample units into <strong>homogeneous strata</strong>, which can be used for:</p>
+<ul>
+<li>Forest inventory  </li>
+<li>Sample allocation  </li>
+<li>Management optimization  </li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Important</p>
+<p>The results do not replace expert technical interpretation, but provide an <strong>objective basis for exploratory analysis</strong>, helping to <strong>support decision-making</strong> in forest projects.</p>
+</div>
 <hr />
 <h3 id="class-parameters">Class Parameters</h3>
 <h2 id="stratifier_1">Stratifier</h2>
@@ -1024,7 +1191,7 @@
 <table>
 <thead>
 <tr>
-<th>Parameters</th>
+<th>Methods</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -1039,13 +1206,30 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="admonition-title">Important</p>
+<p>When the variable <code>k</code> is <strong>not defined</strong>, the algorithm will attempt to automatically determine the optimal number of strata using the <strong><code>elbow</code></strong> method by default.</p>
+<p>To choose a different method for automatic <code>k</code> selection, simply provide the <code>method</code> parameter with the desired method name. The available methods are:</p>
+<ul>
+<li><strong><code>elbow</code></strong>: Based on inertia analysis for different <code>k</code> values. Uses the second derivative to identify the inflection point.</li>
+<li><strong><code>silhouette</code></strong>: Uses the silhouette coefficient to evaluate group separation. Higher values indicate better clustering.</li>
+<li><strong><code>davies_bouldin</code></strong>: Assesses group compactness and separation. The <strong>lower</strong> the index, the better the clustering.</li>
+<li><strong><code>calinski_harabasz</code></strong>: Uses the ratio between inter-cluster dispersion and intra-cluster dispersion. The <strong>higher</strong> the index, the better the clustering.</li>
+</ul>
+<p>Each method adapts better to different data characteristics. Choosing the appropriate one can significantly improve the quality of the generated strata.</p>
+<p>Likewise, users can <strong>limit the maximum number of strata</strong> through the <code>max_k</code> variable, which sets the highest <code>k</code> value to be considered during the automatic evaluation process.</p>
+</div>
 <h3 id="example-usage">Example Usage</h3>
+<p>As an example, we will use an adapted dataset from Arce and Dobner Jr. (2024) for <em>Eucalyptus dunnii</em>. The dataset consists of 81 plots of 300 m², all with an age of 7 years.</p>
+<p><a href="../downloads/stratifier/dados_stratifier.xlsx" download style="text-decoration: none; font-weight: bold;">
+  <i class="fa-solid fa-file-arrow-down" style="margin-right: 8px;"></i>Download the file.
+</a></p>
 <p class="annotate"><div class="language-py3 highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">stratifier_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fptools.stratifier</span><span class="w"> </span><span class="kn">import</span> <span class="n">Stratifier</span><span class="c1">#(1)!</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span><span class="c1">#(2)!</span>
 </span></code></pre></div></td></tr></table></div></p>
 <ol>
-<li>Import <code>Stratifier</code> class.</li>
+<li>Import the <code>Stratifier</code> class.  </li>
 <li>Import <code>pandas</code> for data manipulation.</li>
 </ol>
 <p class="annotate"><div class="language-py3 highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">stratifier_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
@@ -1057,31 +1241,136 @@
 <span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-2-10">10</a></span>
 <span class="normal"><a href="#__codelineno-2-11">11</a></span>
-<span class="normal"><a href="#__codelineno-2-12">12</a></span>
-<span class="normal"><a href="#__codelineno-2-13">13</a></span>
-<span class="normal"><a href="#__codelineno-2-14">14</a></span>
-<span class="normal"><a href="#__codelineno-2-15">15</a></span>
-<span class="normal"><a href="#__codelineno-2-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Your\path\inventory_data.csv&#39;</span><span class="p">)</span><span class="c1">#(1)!</span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Your\path\dados_stratifier.xlsx&#39;</span><span class="p">)</span><span class="c1">#(1)!</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">columns_used_for_stratification</span> <span class="o">=</span> <span class="p">[</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="hll">                            <span class="s2">&quot;age&quot;</span><span class="p">,</span>
-</span></span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a>                            <span class="s2">&quot;shafts&quot;</span><span class="p">,</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a>                            <span class="s2">&quot;basal-area&quot;</span><span class="p">,</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a>                            <span class="s2">&quot;HMAX&quot;</span><span class="p">,</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a>                            <span class="s2">&quot;DMAX&quot;</span><span class="p">,</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a>                            <span class="s2">&quot;DG&quot;</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a>                            <span class="p">]</span><span class="c1">#(2)!</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="n">st</span> <span class="o">=</span> <span class="n">Stratifier</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="o">*</span><span class="n">columns_used_for_training</span><span class="p">,</span> <span class="n">iterator</span><span class="o">=</span><span class="s2">&quot;City&quot;</span><span class="p">)</span><span class="c1">#(3)!</span>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15"></a>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="n">stratified_df</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">stratify_kmeans</span><span class="p">()</span><span class="c1">#(4)!</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">columns_to_check</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="hll">    <span class="s1">&#39;Idade&#39;</span><span class="p">,</span> <span class="s1">&#39;N_ha&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;Hdom&#39;</span><span class="p">,</span>
+</span></span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a>    <span class="s1">&#39;G_m2_ha&#39;</span><span class="p">,</span> <span class="s1">&#39;V_m3_ha&#39;</span><span class="p">,</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="p">]</span><span class="c1">#(2)!</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="n">st</span> <span class="o">=</span> <span class="n">Stratifier</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="o">*</span><span class="n">columns_to_check</span><span class="p">)</span><span class="c1">#(3)!</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="n">stratified_df</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">stratify_kmeans</span><span class="p">(</span><span class="n">save_plots_dir</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;Your\path\to\save\plots&quot;</span><span class="p">)</span><span class="c1">#(4)!</span>
 </span></code></pre></div></td></tr></table></div></p>
 <ol>
-<li>Load your CSV file containing the inventory data.  </li>
-<li>Create a lista called <code>columns_used_for_stratification</code> containing the columns that will be used for the stratification.  </li>
-<li>Creates the variable <code>st</code> using the dataframe <code>df</code>, passing the columns <code>columns_used_for_training</code> as stratification parameters and using the column <code>City</code> as an iterator.   </li>
-<li>Performs stratification using the "KMeans" algorithm, allowing the algorithm to determine the number of strata. Save the results in <code>stratified_df</code> variable.  </li>
+<li>Load your <code>xlsx</code> file containing the inventory data.  </li>
+<li>Create a list called <code>columns_to_check</code> containing the columns to be used for stratification.  </li>
+<li>Create the variable <code>st</code> using the <code>df</code> dataframe, passing the <code>columns_to_check</code> as stratification parameters.  </li>
+<li>Perform stratification using the "KMeans" algorithm, allowing the algorithm to determine the number of strata. Save the results in the <code>stratified_df</code> variable. Save the generated radar chart in the specified directory.</li>
 </ol>
+<h2 id="outputs">Outputs</h2>
+<h3 id="tables">Tables</h3>
+<p class="annotate"><code>stratified_df</code> (1)</p>
+<ol>
+<li>Initial DataFrame with an additional column called <code>Cluster</code>, which contains the cluster number assigned to each data row, ranging from 0 to <code>n</code>.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Chave_Parcela</th>
+<th>Idade</th>
+<th>N_ha</th>
+<th>d</th>
+<th>h</th>
+<th>Hdom</th>
+<th>G_m2_ha</th>
+<th>V_m3_ha</th>
+<th>S</th>
+<th>Cluster</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>14401109002_P1</td>
+<td>7</td>
+<td>866.67</td>
+<td>16.63</td>
+<td>16.09</td>
+<td>16.50</td>
+<td>19.43</td>
+<td>112.77</td>
+<td>15.44</td>
+<td>0</td>
+</tr>
+<tr>
+<td>14401109003_P2</td>
+<td>7</td>
+<td>866.67</td>
+<td>16.55</td>
+<td>15.02</td>
+<td>16.47</td>
+<td>19.91</td>
+<td>110.36</td>
+<td>15.17</td>
+<td>0</td>
+</tr>
+<tr>
+<td>14401110009_P3</td>
+<td>7</td>
+<td>600.00</td>
+<td>16.96</td>
+<td>14.07</td>
+<td>15.32</td>
+<td>13.92</td>
+<td>64.83</td>
+<td>14.71</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1440817_P3</td>
+<td>7</td>
+<td>1066.67</td>
+<td>16.45</td>
+<td>14.53</td>
+<td>16.49</td>
+<td>24.24</td>
+<td>129.46</td>
+<td>14.61</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1440818_P6</td>
+<td>7</td>
+<td>833.33</td>
+<td>17.27</td>
+<td>14.62</td>
+<td>16.00</td>
+<td>20.79</td>
+<td>112.73</td>
+<td>12.64</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="charts">Charts</h3>
+<figure style="display: inline-block; text-align: center;">
+  <figcaption>
+    Example of a radar chart generated by the `stratify_kmeans` method. The chart shows the normalized mean of each variable for each cluster.
+  </figcaption>
+  <img src="../images/stratifier/radar_chart.png" alt="Plugin interface" 
+       style="width: 736px; height: 741px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);" />
+</figure>
+
+<h2 id="references">References</h2>
+<section id="references">
+  <div>
+    <p><strong>ARCE, JULIO EDUARDO; DOBNER JR., MARIO.</strong> (2024).  
+    <em>Management and planning of planted forests: with emphasis on the Pinus and Eucalyptus genera</em>. Curitiba, PR: Ed. dos Autores, 419p.</p>
+  </div>
+
+  <div>
+    <p><strong>KARCZMAREK, Pawel; KIERSZTYN, Adam; PEDRYCZ, Witold; AL, Ebru.</strong> K-Means-based isolation forest. <em>Knowledge-Based Systems</em>, Amsterdam, v. 195, p. 105659, May 11, 2020. Available at: 
+    <a href="https://doi.org/10.1016/j.knosys.2020.105659" target="_blank">https://doi.org/10.1016/j.knosys.2020.105659</a>. Accessed on: May 22, 2025.</p>
+  </div>
+
+  <div>
+    <p><strong>DETRINIDAD, E.; LÓPEZ-RUIZ, Víctor-Raúl.</strong> The Interplay of Happiness and Sustainability: A Multidimensional Scaling and K-Means Cluster Approach. <em>Sustainability</em>, v. 16, n. 22, p. 10068–10068, November 19, 2024.</p>
+  </div>
+
+  <div>
+    <p><strong>MÄRZINGER, T.; KOTÍK, J.; PFEIFER, C.</strong> Application of Hierarchical Agglomerative Clustering (HAC) for Systemic Classification of Pop-Up Housing (PUH) Environments. <em>Applied Sciences</em>, v. 11, n. 23, p. 11122, November 24, 2021.</p>
+  </div>
+</section>
 
 
 
