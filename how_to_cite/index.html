@@ -1050,9 +1050,9 @@ function copyFormatted(id) {
   const data = [new ClipboardItem({ [type]: blob })];
 
   navigator.clipboard.write(data).then(() => {
-    showToast("Citation copied with formatting!");
+    showToast("Citation copied!");
   }).catch(err => {
-    console.error("Error copying with formatting:", err);
+    console.error("Error copying citation:", err);
   });
 }
 
