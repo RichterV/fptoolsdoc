@@ -982,37 +982,29 @@
 <p>Se você utilizou a biblioteca <strong>ForestPyTools</strong> em seus trabalhos, utilize uma das formas abaixo para realizar a citação adequada.</p>
 <hr />
 <h2 id="formato-abnt">📄 Formato ABNT</h2>
-<!-- ABNT -->
 <div style="margin-bottom: 2em;">
   <div id="abnt" contenteditable="true" style="background: #f5f5f5; padding: 1em; border-radius: 6px;">
-    <span><b>RICHTER, V.</b> <i>ForestPyTools: Uma solução para o gerenciamento da mensuração de florestas plantadas</i>. 2025. Disponível em: https://www.forestpytools.com. Acesso em: 5 jun. 2025.</span>
+    <!-- Preenchido automaticamente -->
   </div>
-  <button onclick="copyToClipboard('abnt')" style="margin-top: 8px; background-color: #8bc34b; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer;">Copiar</button>
+  <button onclick="copyFormatted('abnt')" style="margin-top: 8px; background-color: #8bc34b; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer;">Copiar</button>
 </div>
 
 <hr />
 <h2 id="formato-apa">📄 Formato APA</h2>
-<!-- APA -->
 <div style="margin-bottom: 2em;">
   <div id="apa" contenteditable="true" style="background: #f5f5f5; padding: 1em; border-radius: 6px;">
     <span>Richter, V. (2025). <i>ForestPyTools: Uma solução para o gerenciamento da mensuração de florestas plantadas</i>. Recuperado de https://www.forestpytools.com</span>
   </div>
-  <button onclick="copyToClipboard('apa')" style="margin-top: 8px; background-color: #8bc34b; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer;">Copiar</button>
+  <button onclick="copyFormatted('apa')" style="margin-top: 8px; background-color: #8bc34b; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer;">Copiar</button>
 </div>
 
 <hr />
 <h2 id="formato-bibtex">📄 Formato BibTeX</h2>
 <div style="margin-bottom: 2em;">
   <pre id="bibtex" contenteditable="true" style="background: #f5f5f5; padding: 1em; border-radius: 6px; white-space: pre-wrap; overflow: hidden; word-break: break-word;">
-@misc{richter2025forestpytools,
-  author = {Richter, Vinicius},
-  title = {ForestPyTools: Uma solução para o gerenciamento da mensuração de florestas plantadas},
-  year = {2025},
-  url = {https://www.forestpytools.com},
-  note = {Acessado em: 5 de junho de 2025}
-}
+<!-- Preenchido automaticamente -->
   </pre>
-  <button onclick="copyToClipboard('bibtex')" style="margin-top: 8px; background-color: #8bc34b; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer;">Copiar</button>
+  <button onclick="copyFormatted('bibtex')" style="margin-top: 8px; background-color: #8bc34b; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer;">Copiar</button>
 </div>
 
 <hr />
@@ -1038,7 +1030,23 @@
 </div>
 
 <script>
-function copyToClipboard(id) {
+function formatDateToPortuguese(date) {
+  const meses = ["jan.", "fev.", "mar.", "abr.", "maio", "jun.", "jul.", "ago.", "set.", "out.", "nov.", "dez."];
+  const dia = date.getDate();
+  const mes = meses[date.getMonth()];
+  const ano = date.getFullYear();
+  return `${dia} ${mes} ${ano}`;
+}
+
+function formatDateToBibTeX(date) {
+  const meses = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
+  const dia = date.getDate();
+  const mes = meses[date.getMonth()];
+  const ano = date.getFullYear();
+  return `${dia} de ${mes} de ${ano}`;
+}
+
+function copyFormatted(id) {
   const element = document.getElementById(id);
   const html = element.innerHTML;
   const type = "text/html";
@@ -1046,18 +1054,9 @@ function copyToClipboard(id) {
   const data = [new ClipboardItem({ [type]: blob })];
 
   navigator.clipboard.write(data).then(() => {
-    showToast("Citação copiada com formatação!");
+    showToast("Citation copied with formatting!");
   }).catch(err => {
-    console.error("Erro ao copiar:", err);
-  });
-}
-
-function copyPlain(id) {
-  const text = document.getElementById(id).innerText;
-  navigator.clipboard.writeText(text).then(() => {
-    showToast("Citação copiada como texto!");
-  }).catch(err => {
-    console.error("Erro ao copiar texto:", err);
+    console.error("Error copying with formatting:", err);
   });
 }
 
@@ -1075,6 +1074,26 @@ function showToast(message) {
     }, 400);
   }, 2000);
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+  const hoje = new Date();
+
+  const abnt = document.getElementById("abnt");
+  if (abnt) {
+    abnt.innerHTML = `<b>RICHTER, V.</b> <i>ForestPyTools: Uma solução para o gerenciamento da mensuração de florestas plantadas</i>. 2025. Disponível em: https://www.forestpytools.com. Acesso em: ${formatDateToPortuguese(hoje)}.`;
+  }
+
+  const bibtex = document.getElementById("bibtex");
+  if (bibtex) {
+    bibtex.textContent = `@misc{richter2025forestpytools,
+  author = {Richter, Vinicius},
+  title = {ForestPyTools: Uma solução para o gerenciamento da mensuração de florestas plantadas},
+  year = {2025},
+  url = {https://www.forestpytools.com},
+  note = {Acessado em: ${formatDateToBibTeX(hoje)}}
+}`;
+  }
+});
 </script>
 
 
