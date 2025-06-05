@@ -2,224 +2,238 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://www.forestpytools.com/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/"/>
     </url>
     <url>
         <loc>https://www.forestpytools.com/about_the_author/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/about_the_author/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/about_the_author/"/>
     </url>
     <url>
         <loc>https://www.forestpytools.com/ann_forecast/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/ann_forecast/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/ann_forecast/"/>
     </url>
     <url>
         <loc>https://www.forestpytools.com/assortments/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/assortments/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/assortments/"/>
     </url>
     <url>
         <loc>https://www.forestpytools.com/bug_report/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/bug_report/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/bug_report/"/>
     </url>
     <url>
         <loc>https://www.forestpytools.com/clutter_forecast/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/clutter_forecast/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/clutter_forecast/"/>
     </url>
     <url>
         <loc>https://www.forestpytools.com/forest_report/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/forest_report/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/forest_report/"/>
     </url>
     <url>
         <loc>https://www.forestpytools.com/getting_started/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/getting_started/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/getting_started/"/>
     </url>
     <url>
+        <loc>https://www.forestpytools.com/how_to_cite/</loc>
+        <lastmod>2025-06-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/how_to_cite/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/how_to_cite/"/>
+    </url>
+    <url>
         <loc>https://www.forestpytools.com/hypsometric_relationship/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/hypsometric_relationship/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/hypsometric_relationship/"/>
     </url>
     <url>
         <loc>https://www.forestpytools.com/plot_allocation/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/plot_allocation/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/plot_allocation/"/>
     </url>
     <url>
         <loc>https://www.forestpytools.com/plot_allocation_qgis/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/plot_allocation_qgis/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/plot_allocation_qgis/"/>
     </url>
     <url>
         <loc>https://www.forestpytools.com/sampling_stats/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/sampling_stats/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/sampling_stats/"/>
     </url>
     <url>
         <loc>https://www.forestpytools.com/stratifier/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/stratifier/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/stratifier/"/>
     </url>
     <url>
         <loc>https://www.forestpytools.com/tree_volume_planning/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/tree_volume_planning/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/tree_volume_planning/"/>
     </url>
     <url>
         <loc>https://www.forestpytools.com/utils/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/utils/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/utils/"/>
     </url>
     <url>
         <loc>https://www.forestpytools.com/volumetrics/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/volumetrics/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/volumetrics/"/>
     </url>
     <url>
         <loc>https://www.forestpytools.com/pt-BR/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/"/>
     </url>
     <url>
         <loc>https://www.forestpytools.com/pt-BR/about_the_author/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/about_the_author/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/about_the_author/"/>
     </url>
     <url>
         <loc>https://www.forestpytools.com/pt-BR/ann_forecast/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/ann_forecast/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/ann_forecast/"/>
     </url>
     <url>
         <loc>https://www.forestpytools.com/pt-BR/assortments/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/assortments/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/assortments/"/>
     </url>
     <url>
         <loc>https://www.forestpytools.com/pt-BR/bug_report/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/bug_report/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/bug_report/"/>
     </url>
     <url>
         <loc>https://www.forestpytools.com/pt-BR/clutter_forecast/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/clutter_forecast/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/clutter_forecast/"/>
     </url>
     <url>
         <loc>https://www.forestpytools.com/pt-BR/forest_report/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/forest_report/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/forest_report/"/>
     </url>
     <url>
         <loc>https://www.forestpytools.com/pt-BR/getting_started/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/getting_started/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/getting_started/"/>
     </url>
     <url>
+        <loc>https://www.forestpytools.com/pt-BR/how_to_cite/</loc>
+        <lastmod>2025-06-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/how_to_cite/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/how_to_cite/"/>
+    </url>
+    <url>
         <loc>https://www.forestpytools.com/pt-BR/hypsometric_relationship/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/hypsometric_relationship/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/hypsometric_relationship/"/>
     </url>
     <url>
         <loc>https://www.forestpytools.com/pt-BR/plot_allocation/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/plot_allocation/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/plot_allocation/"/>
     </url>
     <url>
         <loc>https://www.forestpytools.com/pt-BR/plot_allocation_qgis/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/plot_allocation_qgis/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/plot_allocation_qgis/"/>
     </url>
     <url>
         <loc>https://www.forestpytools.com/pt-BR/sampling_stats/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/sampling_stats/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/sampling_stats/"/>
     </url>
     <url>
         <loc>https://www.forestpytools.com/pt-BR/stratifier/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/stratifier/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/stratifier/"/>
     </url>
     <url>
         <loc>https://www.forestpytools.com/pt-BR/tree_volume_planning/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/tree_volume_planning/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/tree_volume_planning/"/>
     </url>
     <url>
         <loc>https://www.forestpytools.com/pt-BR/utils/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/utils/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/utils/"/>
     </url>
     <url>
         <loc>https://www.forestpytools.com/pt-BR/volumetrics/</loc>
-        <lastmod>2025-05-28</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.forestpytools.com/pt-BR/volumetrics/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.forestpytools.com/volumetrics/"/>
