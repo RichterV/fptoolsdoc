@@ -1044,18 +1044,30 @@ function formatDateToEnglish(date) {
 
 function copyFormatted(id) {
   const element = document.getElementById(id);
-  const html = element.innerHTML;
-  const type = "text/html";
-  const blob = new Blob([html], { type });
-  const data = [new ClipboardItem({ [type]: blob })];
+  let textToCopy;
 
-  navigator.clipboard.write(data).then(() => {
+  if (id === 'bibtex') {
+    // For BibTeX, use textContent to preserve formatting
+    textToCopy = element.textContent;
+  } else {
+    // For other formats, use innerText to get visible text
+    textToCopy = element.innerText;
+  }
+
+  navigator.clipboard.writeText(textToCopy).then(() => {
     showToast("Citation copied!");
   }).catch(err => {
     console.error("Error copying citation:", err);
+    // Fallback for older browsers
+    const textarea = document.createElement('textarea');
+    textarea.value = textToCopy;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    showToast("Citation copied!");
   });
 }
-
 function showToast(message) {
   const toast = document.getElementById("toast");
   toast.textContent = message;

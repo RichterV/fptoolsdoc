@@ -1048,15 +1048,28 @@ function formatDateToBibTeX(date) {
 
 function copyFormatted(id) {
   const element = document.getElementById(id);
-  const html = element.innerHTML;
-  const type = "text/html";
-  const blob = new Blob([html], { type });
-  const data = [new ClipboardItem({ [type]: blob })];
+  let textToCopy;
 
-  navigator.clipboard.write(data).then(() => {
+  if (id === 'bibtex') {
+    // Para BibTeX, usamos textContent para preservar a formatação
+    textToCopy = element.textContent;
+  } else {
+    // Para outros formatos, usamos innerText para pegar o texto visível
+    textToCopy = element.innerText;
+  }
+
+  navigator.clipboard.writeText(textToCopy).then(() => {
     showToast("Citação copiada!");
   }).catch(err => {
     console.error("Erro ao copiar a citação:", err);
+    // Fallback para métodos mais antigos
+    const textarea = document.createElement('textarea');
+    textarea.value = textToCopy;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    showToast("Citação copiada!");
   });
 }
 
